@@ -54,7 +54,10 @@ def preprocess_dataset(dataset: str, output_dir: Optional[Path] = None) -> None:
     set_seed(42)
     info = DATASET_REGISTRY[dataset]
     raw_path = download_dataset(dataset)
-    df = pd.read_csv(raw_path)
+    df = pd.read_csv(raw_path, names=info.get("column_names"))
+    drop_cols = info.get("drop_cols", [])
+    if drop_cols:
+        df = df.drop(columns=[c for c in drop_cols if c in df.columns])
 
     print(f"\n[preprocess] Dataset: {dataset}")
     print_dataset_stats(df, target_col=info["target"])

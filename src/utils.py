@@ -10,15 +10,28 @@ BASE = Path(__file__).parent.parent
 DATASET_REGISTRY = {
     "wilt": {
         "url": "https://raw.githubusercontent.com/lwawrowski/adversarial_attacks_detection/master/data/wilt.csv",
-        "target": "class",
+        "target": "target",
+        "drop_cols": ["name", "is_train", "prediction"],
     },
     "banknote": {
-        "url": "https://raw.githubusercontent.com/lwawrowski/adversarial_attacks_detection/master/data/BankNote_Authentication.csv",
-        "target": "class",
+        "url": "https://huggingface.co/datasets/farish07/banknote-authentication-dataset/resolve/main/data_banknote_authentication.csv",
+        "target": "Class",
+        "column_names": ["variance", "skewness", "curtosis", "entropy", "Class"],
     },
     "diabetes": {
-        "url": "https://raw.githubusercontent.com/lwawrowski/adversarial_attacks_detection/master/data/diabetes.csv",
+        "url": "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv",
         "target": "Outcome",
+        "column_names": [
+            "Pregnancies",
+            "Glucose",
+            "BloodPressure",
+            "SkinThickness",
+            "Insulin",
+            "BMI",
+            "DiabetesPedigreeFunction",
+            "Age",
+            "Outcome",
+        ],
     },
 }
 

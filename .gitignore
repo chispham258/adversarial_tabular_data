@@ -1,14 +1,30 @@
-docs/superpowers/
+# Python/cache artifacts
 __pycache__/
-*.pyc
-.env
+*.py[cod]
+*$py.class
+.pytest_cache/
 *.egg-info/
 dist/
-.pytest_cache/
-models/
-data/raw/
-data/processed/
+build/
+
+# Local environment/secrets
+.env
+.venv/
+venv/
+.claude/settings.local.json
+.agents/
+.codex/
+HANDOFF.md
+
+# Project artifacts shared with contributors are intentionally tracked:
+# - models/
+# - data/raw/
+# - data/processed/
+# - data/adversarial_upstream/
+# - results/*.csv
+#
+# Keep only the removed legacy/non-upstream adversarial output ignored.
 data/adversarial/
-results/
-*.pt
-*.pkl
+
+# Local superpowers planning scratch docs
+docs/superpowers/
