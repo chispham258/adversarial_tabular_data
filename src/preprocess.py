@@ -23,14 +23,22 @@ def split_and_scale(
     random_state: int = 42,
 ):
     X = df.drop(columns=[target_col])
-    X = pd.get_dummies(X)
     y = df[target_col]
     if y.dtype == object:
-        y = pd.Series(LabelEncoder().fit_transform(y), name=target_col)
+        le = LabelEncoder()
+        y = pd.Series(le.fit_transform(y), name=target_col)
+    else:
+        le = None
 
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=test_size, random_state=random_state, stratify=y
     )
+
+    # apply dummies after split, align test to train columns
+    X_train = pd.get_dummies(X_train)
+    X_test = pd.get_dummies(X_test)
+    X_test = X_test.reindex(columns=X_train.columns, fill_value=0)
+
     scaler = StandardScaler()
     X_train_s = pd.DataFrame(
         scaler.fit_transform(X_train), columns=X_train.columns, index=X_train.index
@@ -38,7 +46,7 @@ def split_and_scale(
     X_test_s = pd.DataFrame(
         scaler.transform(X_test), columns=X_test.columns, index=X_test.index
     )
-    return X_train_s, X_test_s, y_train, y_test, scaler
+    return X_train_s, X_test_s, y_train, y_test, scaler, le
 
 
 def preprocess_dataset(dataset: str, output_dir: Path | None = None) -> None:
@@ -50,7 +58,7 @@ def preprocess_dataset(dataset: str, output_dir: Path | None = None) -> None:
     print(f"\n[preprocess] Dataset: {dataset}")
     print_dataset_stats(df, target_col=info["target"])
 
-    X_train, X_test, y_train, y_test, scaler = split_and_scale(
+    X_train, X_test, y_train, y_test, scaler, le = split_and_scale(
         df, target_col=info["target"]
     )
     ensure_dirs(dataset)
@@ -63,6 +71,8 @@ def preprocess_dataset(dataset: str, output_dir: Path | None = None) -> None:
     y_train.to_csv(out / "y_train.csv", index=False)
     y_test.to_csv(out / "y_test.csv", index=False)
     joblib.dump(scaler, out / "scaler.pkl")
+    if le is not None:
+        joblib.dump(le, out / "label_encoder.pkl")
     print(f"[preprocess] Saved splits to {out}")
 
 

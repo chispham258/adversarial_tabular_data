@@ -3,7 +3,7 @@ from src.preprocess import split_and_scale, print_dataset_stats
 
 
 def test_split_shapes(synthetic_df):
-    X_train, X_test, y_train, y_test, scaler = split_and_scale(
+    X_train, X_test, y_train, y_test, scaler, le = split_and_scale(
         synthetic_df, target_col="class", random_state=42
     )
     assert X_train.shape[1] == 5
@@ -14,7 +14,7 @@ def test_split_shapes(synthetic_df):
 
 def test_scaler_fit_on_train_only(synthetic_df):
     import numpy as np
-    X_train, X_test, y_train, y_test, scaler = split_and_scale(
+    X_train, X_test, y_train, y_test, scaler, le = split_and_scale(
         synthetic_df, target_col="class", random_state=42
     )
     assert abs(X_train.mean().mean()) < 0.2
@@ -22,7 +22,7 @@ def test_scaler_fit_on_train_only(synthetic_df):
 
 
 def test_no_target_in_features(synthetic_df):
-    X_train, X_test, y_train, y_test, scaler = split_and_scale(
+    X_train, X_test, y_train, y_test, scaler, le = split_and_scale(
         synthetic_df, target_col="class", random_state=42
     )
     assert "class" not in X_train.columns
