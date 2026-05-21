@@ -96,7 +96,7 @@ def evaluate_and_save(
     dataset: str,
     X_test: np.ndarray,
     y_test: np.ndarray,
-    device: torch.device | None = None,
+    device=None,
 ) -> dict:
     if model_name == "mlp":
         model.eval()
@@ -114,7 +114,7 @@ def evaluate_and_save(
     return row
 
 
-def train_all(dataset: str, model_names: list[str]) -> None:
+def train_all(dataset: str, model_names: list) -> None:
     set_seed(42)
     paths = get_paths(dataset)
     ensure_dirs(dataset)
