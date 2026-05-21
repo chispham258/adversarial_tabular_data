@@ -1,0 +1,13 @@
+numpy
+pandas
+scikit-learn
+xgboost
+lightgbm
+torch
+torchvision
+adversarial-robustness-toolbox[pytorch,sklearn]
+joblib
+matplotlib
+seaborn
+pytest
+requests

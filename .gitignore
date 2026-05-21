@@ -1,0 +1,14 @@
+docs/superpowers/
+__pycache__/
+*.pyc
+.env
+*.egg-info/
+dist/
+.pytest_cache/
+models/
+data/raw/
+data/processed/
+data/adversarial/
+results/
+*.pt
+*.pkl
