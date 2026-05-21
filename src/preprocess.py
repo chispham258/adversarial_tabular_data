@@ -1,5 +1,6 @@
 import argparse
 from pathlib import Path
+from typing import Optional
 
 import joblib
 import pandas as pd
@@ -49,7 +50,7 @@ def split_and_scale(
     return X_train_s, X_test_s, y_train, y_test, scaler, le
 
 
-def preprocess_dataset(dataset: str, output_dir: Path | None = None) -> None:
+def preprocess_dataset(dataset: str, output_dir: Optional[Path] = None) -> None:
     set_seed(42)
     info = DATASET_REGISTRY[dataset]
     raw_path = download_dataset(dataset)
