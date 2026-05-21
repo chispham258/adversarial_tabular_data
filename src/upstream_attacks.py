@@ -8,6 +8,7 @@ import numpy as np
 import pandas as pd
 import torch
 import torch.nn as nn
+import joblib
 from art.attacks.evasion import (
     BasicIterativeMethod,
     FastGradientMethod,
@@ -30,6 +31,7 @@ from src.utils import DATASET_REGISTRY, BASE, download_dataset, get_paths, set_s
 
 UPSTREAM_RESULTS = BASE / "results" / "upstream_attack_results.csv"
 UPSTREAM_ADV_DIR = BASE / "data" / "adversarial_upstream"
+UPSTREAM_MODEL_DIR = BASE / "models"
 FIELDNAMES = [
     "dataset",
     "model",
@@ -191,6 +193,33 @@ def train_sklearn_classifier(model_name: str, X_train: np.ndarray, y_train: np.n
     return model, SklearnClassifier(model=model)
 
 
+def save_upstream_model(
+    dataset: str,
+    model_name: str,
+    model,
+    model_root: Optional[Path] = None,
+) -> Path:
+    out_dir = (model_root or UPSTREAM_MODEL_DIR) / dataset
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    if model_name == "nn":
+        out_path = out_dir / "upstream_nn.pt"
+        torch.save(
+            {
+                "model": "TabDataModel2",
+                "input_dim": model.input.in_features,
+                "num_classes": model.output.out_features,
+                "state_dict": model.state_dict(),
+            },
+            out_path,
+        )
+        return out_path
+
+    out_path = out_dir / f"upstream_{model_name}.pkl"
+    joblib.dump(model, out_path)
+    return out_path
+
+
 def predict_nn(classifier: PyTorchClassifier, X: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
     scores = classifier.predict(X)
     exp = np.exp(scores - scores.max(axis=1, keepdims=True))
@@ -330,11 +359,13 @@ def run_one_attack(
     nn_epochs: int,
 ) -> Optional[dict]:
     if model_name == "nn":
-        _, classifier = train_nn_classifier(data.X_train, data.y_train, epochs=nn_epochs)
+        model, classifier = train_nn_classifier(data.X_train, data.y_train, epochs=nn_epochs)
+        save_upstream_model(dataset, model_name, model)
         clean_preds, _ = predict_nn(classifier, data.X_test)
         predict_fn = lambda X: predict_nn(classifier, X)
     else:
         model, classifier = train_sklearn_classifier(model_name, data.X_train, data.y_train)
+        save_upstream_model(dataset, model_name, model)
         clean_preds, _ = predict_sklearn(model, data.X_test)
         predict_fn = lambda X: predict_sklearn(model, X)
 
