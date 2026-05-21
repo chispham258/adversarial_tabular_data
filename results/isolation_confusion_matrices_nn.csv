@@ -1,0 +1,217 @@
+scenario,model_class,true,pred,count
+10-fold cross-validation,RF,bim,bim,0
+10-fold cross-validation,RF,bim,fgm,1
+10-fold cross-validation,RF,bim,hsj,0
+10-fold cross-validation,RF,bim,org,0
+10-fold cross-validation,RF,bim,pgd,2
+10-fold cross-validation,RF,bim,zoo,0
+10-fold cross-validation,RF,fgm,bim,2
+10-fold cross-validation,RF,fgm,fgm,0
+10-fold cross-validation,RF,fgm,hsj,0
+10-fold cross-validation,RF,fgm,org,0
+10-fold cross-validation,RF,fgm,pgd,0
+10-fold cross-validation,RF,fgm,zoo,1
+10-fold cross-validation,RF,hsj,bim,0
+10-fold cross-validation,RF,hsj,fgm,0
+10-fold cross-validation,RF,hsj,hsj,6
+10-fold cross-validation,RF,hsj,org,1
+10-fold cross-validation,RF,hsj,pgd,0
+10-fold cross-validation,RF,hsj,zoo,2
+10-fold cross-validation,RF,org,bim,0
+10-fold cross-validation,RF,org,fgm,0
+10-fold cross-validation,RF,org,hsj,0
+10-fold cross-validation,RF,org,org,12
+10-fold cross-validation,RF,org,pgd,0
+10-fold cross-validation,RF,org,zoo,0
+10-fold cross-validation,RF,pgd,bim,3
+10-fold cross-validation,RF,pgd,fgm,0
+10-fold cross-validation,RF,pgd,hsj,0
+10-fold cross-validation,RF,pgd,org,0
+10-fold cross-validation,RF,pgd,pgd,0
+10-fold cross-validation,RF,pgd,zoo,0
+10-fold cross-validation,RF,zoo,bim,0
+10-fold cross-validation,RF,zoo,fgm,0
+10-fold cross-validation,RF,zoo,hsj,2
+10-fold cross-validation,RF,zoo,org,1
+10-fold cross-validation,RF,zoo,pgd,0
+10-fold cross-validation,RF,zoo,zoo,6
+10-fold cross-validation,XGB,bim,bim,0
+10-fold cross-validation,XGB,bim,fgm,3
+10-fold cross-validation,XGB,bim,hsj,0
+10-fold cross-validation,XGB,bim,org,0
+10-fold cross-validation,XGB,bim,pgd,0
+10-fold cross-validation,XGB,bim,zoo,0
+10-fold cross-validation,XGB,fgm,bim,2
+10-fold cross-validation,XGB,fgm,fgm,0
+10-fold cross-validation,XGB,fgm,hsj,0
+10-fold cross-validation,XGB,fgm,org,0
+10-fold cross-validation,XGB,fgm,pgd,0
+10-fold cross-validation,XGB,fgm,zoo,1
+10-fold cross-validation,XGB,hsj,bim,0
+10-fold cross-validation,XGB,hsj,fgm,0
+10-fold cross-validation,XGB,hsj,hsj,4
+10-fold cross-validation,XGB,hsj,org,0
+10-fold cross-validation,XGB,hsj,pgd,1
+10-fold cross-validation,XGB,hsj,zoo,4
+10-fold cross-validation,XGB,org,bim,0
+10-fold cross-validation,XGB,org,fgm,0
+10-fold cross-validation,XGB,org,hsj,2
+10-fold cross-validation,XGB,org,org,9
+10-fold cross-validation,XGB,org,pgd,1
+10-fold cross-validation,XGB,org,zoo,0
+10-fold cross-validation,XGB,pgd,bim,2
+10-fold cross-validation,XGB,pgd,fgm,0
+10-fold cross-validation,XGB,pgd,hsj,0
+10-fold cross-validation,XGB,pgd,org,0
+10-fold cross-validation,XGB,pgd,pgd,0
+10-fold cross-validation,XGB,pgd,zoo,1
+10-fold cross-validation,XGB,zoo,bim,0
+10-fold cross-validation,XGB,zoo,fgm,0
+10-fold cross-validation,XGB,zoo,hsj,2
+10-fold cross-validation,XGB,zoo,org,0
+10-fold cross-validation,XGB,zoo,pgd,0
+10-fold cross-validation,XGB,zoo,zoo,7
+one-data-set-out,RF,bim,bim,1
+one-data-set-out,RF,bim,fgm,0
+one-data-set-out,RF,bim,hsj,0
+one-data-set-out,RF,bim,org,0
+one-data-set-out,RF,bim,pgd,0
+one-data-set-out,RF,bim,zoo,2
+one-data-set-out,RF,fgm,bim,1
+one-data-set-out,RF,fgm,fgm,0
+one-data-set-out,RF,fgm,hsj,0
+one-data-set-out,RF,fgm,org,0
+one-data-set-out,RF,fgm,pgd,0
+one-data-set-out,RF,fgm,zoo,2
+one-data-set-out,RF,hsj,bim,0
+one-data-set-out,RF,hsj,fgm,0
+one-data-set-out,RF,hsj,hsj,5
+one-data-set-out,RF,hsj,org,2
+one-data-set-out,RF,hsj,pgd,0
+one-data-set-out,RF,hsj,zoo,2
+one-data-set-out,RF,org,bim,0
+one-data-set-out,RF,org,fgm,0
+one-data-set-out,RF,org,hsj,4
+one-data-set-out,RF,org,org,8
+one-data-set-out,RF,org,pgd,0
+one-data-set-out,RF,org,zoo,0
+one-data-set-out,RF,pgd,bim,1
+one-data-set-out,RF,pgd,fgm,0
+one-data-set-out,RF,pgd,hsj,0
+one-data-set-out,RF,pgd,org,0
+one-data-set-out,RF,pgd,pgd,0
+one-data-set-out,RF,pgd,zoo,2
+one-data-set-out,RF,zoo,bim,0
+one-data-set-out,RF,zoo,fgm,0
+one-data-set-out,RF,zoo,hsj,2
+one-data-set-out,RF,zoo,org,1
+one-data-set-out,RF,zoo,pgd,0
+one-data-set-out,RF,zoo,zoo,6
+one-data-set-out,XGB,bim,bim,1
+one-data-set-out,XGB,bim,fgm,0
+one-data-set-out,XGB,bim,hsj,0
+one-data-set-out,XGB,bim,org,0
+one-data-set-out,XGB,bim,pgd,0
+one-data-set-out,XGB,bim,zoo,2
+one-data-set-out,XGB,fgm,bim,1
+one-data-set-out,XGB,fgm,fgm,0
+one-data-set-out,XGB,fgm,hsj,1
+one-data-set-out,XGB,fgm,org,0
+one-data-set-out,XGB,fgm,pgd,0
+one-data-set-out,XGB,fgm,zoo,1
+one-data-set-out,XGB,hsj,bim,0
+one-data-set-out,XGB,hsj,fgm,0
+one-data-set-out,XGB,hsj,hsj,6
+one-data-set-out,XGB,hsj,org,0
+one-data-set-out,XGB,hsj,pgd,1
+one-data-set-out,XGB,hsj,zoo,2
+one-data-set-out,XGB,org,bim,0
+one-data-set-out,XGB,org,fgm,0
+one-data-set-out,XGB,org,hsj,1
+one-data-set-out,XGB,org,org,7
+one-data-set-out,XGB,org,pgd,1
+one-data-set-out,XGB,org,zoo,3
+one-data-set-out,XGB,pgd,bim,1
+one-data-set-out,XGB,pgd,fgm,0
+one-data-set-out,XGB,pgd,hsj,0
+one-data-set-out,XGB,pgd,org,0
+one-data-set-out,XGB,pgd,pgd,1
+one-data-set-out,XGB,pgd,zoo,1
+one-data-set-out,XGB,zoo,bim,0
+one-data-set-out,XGB,zoo,fgm,1
+one-data-set-out,XGB,zoo,hsj,3
+one-data-set-out,XGB,zoo,org,0
+one-data-set-out,XGB,zoo,pgd,1
+one-data-set-out,XGB,zoo,zoo,4
+one-model-out,RF,bim,bim,0
+one-model-out,RF,bim,fgm,0
+one-model-out,RF,bim,hsj,0
+one-model-out,RF,bim,org,0
+one-model-out,RF,bim,pgd,0
+one-model-out,RF,bim,zoo,3
+one-model-out,RF,fgm,bim,0
+one-model-out,RF,fgm,fgm,0
+one-model-out,RF,fgm,hsj,0
+one-model-out,RF,fgm,org,0
+one-model-out,RF,fgm,pgd,0
+one-model-out,RF,fgm,zoo,3
+one-model-out,RF,hsj,bim,0
+one-model-out,RF,hsj,fgm,0
+one-model-out,RF,hsj,hsj,6
+one-model-out,RF,hsj,org,1
+one-model-out,RF,hsj,pgd,0
+one-model-out,RF,hsj,zoo,2
+one-model-out,RF,org,bim,0
+one-model-out,RF,org,fgm,0
+one-model-out,RF,org,hsj,0
+one-model-out,RF,org,org,12
+one-model-out,RF,org,pgd,0
+one-model-out,RF,org,zoo,0
+one-model-out,RF,pgd,bim,0
+one-model-out,RF,pgd,fgm,0
+one-model-out,RF,pgd,hsj,0
+one-model-out,RF,pgd,org,0
+one-model-out,RF,pgd,pgd,0
+one-model-out,RF,pgd,zoo,3
+one-model-out,RF,zoo,bim,0
+one-model-out,RF,zoo,fgm,1
+one-model-out,RF,zoo,hsj,1
+one-model-out,RF,zoo,org,0
+one-model-out,RF,zoo,pgd,0
+one-model-out,RF,zoo,zoo,7
+one-model-out,XGB,bim,bim,0
+one-model-out,XGB,bim,fgm,0
+one-model-out,XGB,bim,hsj,0
+one-model-out,XGB,bim,org,0
+one-model-out,XGB,bim,pgd,0
+one-model-out,XGB,bim,zoo,3
+one-model-out,XGB,fgm,bim,0
+one-model-out,XGB,fgm,fgm,0
+one-model-out,XGB,fgm,hsj,0
+one-model-out,XGB,fgm,org,0
+one-model-out,XGB,fgm,pgd,0
+one-model-out,XGB,fgm,zoo,3
+one-model-out,XGB,hsj,bim,0
+one-model-out,XGB,hsj,fgm,0
+one-model-out,XGB,hsj,hsj,4
+one-model-out,XGB,hsj,org,1
+one-model-out,XGB,hsj,pgd,0
+one-model-out,XGB,hsj,zoo,4
+one-model-out,XGB,org,bim,0
+one-model-out,XGB,org,fgm,0
+one-model-out,XGB,org,hsj,1
+one-model-out,XGB,org,org,11
+one-model-out,XGB,org,pgd,0
+one-model-out,XGB,org,zoo,0
+one-model-out,XGB,pgd,bim,0
+one-model-out,XGB,pgd,fgm,0
+one-model-out,XGB,pgd,hsj,0
+one-model-out,XGB,pgd,org,0
+one-model-out,XGB,pgd,pgd,0
+one-model-out,XGB,pgd,zoo,3
+one-model-out,XGB,zoo,bim,0
+one-model-out,XGB,zoo,fgm,1
+one-model-out,XGB,zoo,hsj,2
+one-model-out,XGB,zoo,org,0
+one-model-out,XGB,zoo,pgd,0
+one-model-out,XGB,zoo,zoo,6

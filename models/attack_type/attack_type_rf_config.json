@@ -1,0 +1,33 @@
+{
+  "task": "type",
+  "model_class": "rf",
+  "params": {
+    "max_depth": 50,
+    "min_samples_split": 2,
+    "n_estimators": 200
+  },
+  "drop_columns": [
+    "approx",
+    "target",
+    "pred",
+    "error",
+    "name",
+    "overall_mean_target",
+    "scores",
+    "mean_target_in_neighborhood",
+    "mean_approx_in_neighborhood",
+    "neighborhood_size_div_model_avg",
+    "neighborhood_size_pct",
+    "r_centered_entropy",
+    "entropy",
+    "logk_r_centered_entropy"
+  ],
+  "classes": [
+    "bim",
+    "fgm",
+    "hsj",
+    "org",
+    "pgd",
+    "zoo"
+  ]
+}

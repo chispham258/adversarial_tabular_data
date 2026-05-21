@@ -1,0 +1,45 @@
+dataset,bacc,kappa,precision,recall,f1,fnr,scenario,model_class,model,cv,attack
+banknote,1.0,1.0,1.0,1.0,1.0,0.0,one-data-set-out,XGB,,,
+diabetes,0.5,0.0,0.6923076923076923,1.0,0.8181818181818182,0.0,one-data-set-out,XGB,,,
+wilt,0.875,0.8059701492537313,0.9,1.0,0.9473684210526315,0.0,one-data-set-out,XGB,,,
+,0.8333333333333333,0.7272727272727273,0.8571428571428571,1.0,0.9230769230769231,0.0,one-model-out,XGB,lin,,
+,0.8333333333333333,0.5,1.0,0.6666666666666666,0.8,0.3333333333333333,one-model-out,XGB,nn,,
+,1.0,1.0,1.0,1.0,1.0,0.0,one-model-out,XGB,svm,,
+,1.0,1.0,1.0,1.0,1.0,0.0,one-model-out,XGB,xgb,,
+,1.0,1.0,1.0,1.0,1.0,0.0,10-fold cross-validation,XGB,,0.0,
+,1.0,1.0,1.0,1.0,1.0,0.0,10-fold cross-validation,XGB,,1.0,
+,1.0,1.0,1.0,1.0,1.0,0.0,10-fold cross-validation,XGB,,2.0,
+,1.0,1.0,1.0,1.0,1.0,0.0,10-fold cross-validation,XGB,,3.0,
+,1.0,1.0,1.0,1.0,1.0,0.0,10-fold cross-validation,XGB,,4.0,
+,0.8333333333333333,0.5,1.0,0.6666666666666666,0.8,0.3333333333333333,10-fold cross-validation,XGB,,5.0,
+,1.0,1.0,1.0,1.0,1.0,0.0,10-fold cross-validation,XGB,,6.0,
+,1.0,1.0,1.0,1.0,1.0,0.0,10-fold cross-validation,XGB,,7.0,
+,0.75,0.5,0.6666666666666666,1.0,0.8,0.0,10-fold cross-validation,XGB,,8.0,
+,1.0,1.0,1.0,1.0,1.0,0.0,10-fold cross-validation,XGB,,9.0,
+,1.0,,1.0,1.0,1.0,0.0,one-attack-out,XGB,,,bim
+,1.0,,1.0,1.0,1.0,0.0,one-attack-out,XGB,,,fgm
+,0.3333333333333333,0.0,1.0,0.3333333333333333,0.5,0.6666666666666666,one-attack-out,XGB,,,hsj
+,1.0,,1.0,1.0,1.0,0.0,one-attack-out,XGB,,,pgd
+,1.0,,1.0,1.0,1.0,0.0,one-attack-out,XGB,,,zoo
+banknote,1.0,1.0,1.0,1.0,1.0,0.0,one-data-set-out,RF,,,
+diabetes,0.75,0.5806451612903225,0.8181818181818182,1.0,0.9,0.0,one-data-set-out,RF,,,
+wilt,0.9444444444444444,0.8311688311688312,1.0,0.8888888888888888,0.9411764705882353,0.1111111111111111,one-data-set-out,RF,,,
+,0.9166666666666667,0.7692307692307692,1.0,0.8333333333333334,0.9090909090909091,0.16666666666666666,one-model-out,RF,lin,,
+,1.0,1.0,1.0,1.0,1.0,0.0,one-model-out,RF,nn,,
+,1.0,1.0,1.0,1.0,1.0,0.0,one-model-out,RF,svm,,
+,1.0,1.0,1.0,1.0,1.0,0.0,one-model-out,RF,xgb,,
+,1.0,1.0,1.0,1.0,1.0,0.0,10-fold cross-validation,RF,,0.0,
+,1.0,1.0,1.0,1.0,1.0,0.0,10-fold cross-validation,RF,,1.0,
+,1.0,1.0,1.0,1.0,1.0,0.0,10-fold cross-validation,RF,,2.0,
+,1.0,1.0,1.0,1.0,1.0,0.0,10-fold cross-validation,RF,,3.0,
+,1.0,1.0,1.0,1.0,1.0,0.0,10-fold cross-validation,RF,,4.0,
+,0.8333333333333333,0.5,1.0,0.6666666666666666,0.8,0.3333333333333333,10-fold cross-validation,RF,,5.0,
+,1.0,1.0,1.0,1.0,1.0,0.0,10-fold cross-validation,RF,,6.0,
+,1.0,1.0,1.0,1.0,1.0,0.0,10-fold cross-validation,RF,,7.0,
+,0.75,0.5,0.6666666666666666,1.0,0.8,0.0,10-fold cross-validation,RF,,8.0,
+,1.0,1.0,1.0,1.0,1.0,0.0,10-fold cross-validation,RF,,9.0,
+,1.0,,1.0,1.0,1.0,0.0,one-attack-out,RF,,,bim
+,1.0,,1.0,1.0,1.0,0.0,one-attack-out,RF,,,fgm
+,0.8888888888888888,0.0,1.0,0.8888888888888888,0.9411764705882353,0.1111111111111111,one-attack-out,RF,,,hsj
+,1.0,,1.0,1.0,1.0,0.0,one-attack-out,RF,,,pgd
+,1.0,,1.0,1.0,1.0,0.0,one-attack-out,RF,,,zoo

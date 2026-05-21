@@ -1,0 +1,33 @@
+scenario,model_class,true,pred,count
+10-fold cross-validation,RF,0,0,11
+10-fold cross-validation,RF,0,1,1
+10-fold cross-validation,RF,1,0,1
+10-fold cross-validation,RF,1,1,26
+10-fold cross-validation,XGB,0,0,11
+10-fold cross-validation,XGB,0,1,1
+10-fold cross-validation,XGB,1,0,1
+10-fold cross-validation,XGB,1,1,26
+one-attack-out,RF,0,0,0
+one-attack-out,RF,0,1,0
+one-attack-out,RF,1,0,1
+one-attack-out,RF,1,1,26
+one-attack-out,XGB,0,0,0
+one-attack-out,XGB,0,1,0
+one-attack-out,XGB,1,0,6
+one-attack-out,XGB,1,1,21
+one-data-set-out,RF,0,0,10
+one-data-set-out,RF,0,1,2
+one-data-set-out,RF,1,0,1
+one-data-set-out,RF,1,1,26
+one-data-set-out,XGB,0,0,7
+one-data-set-out,XGB,0,1,5
+one-data-set-out,XGB,1,0,0
+one-data-set-out,XGB,1,1,27
+one-model-out,RF,0,0,12
+one-model-out,RF,0,1,0
+one-model-out,RF,1,0,1
+one-model-out,RF,1,1,26
+one-model-out,XGB,0,0,11
+one-model-out,XGB,0,1,1
+one-model-out,XGB,1,0,3
+one-model-out,XGB,1,1,24

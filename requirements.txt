@@ -11,3 +11,5 @@ matplotlib
 seaborn
 pytest
 requests
+streamlit
+plotly

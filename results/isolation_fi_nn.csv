@@ -1,0 +1,1181 @@
+var,fi,fi_rank,dataset,scenario,model_class,heldout_model,cv
+bacc_test,0.10174114257097244,4.0,banknote,one-data-set-out,XGB,,
+n_test,0.002807958982884884,24.0,banknote,one-data-set-out,XGB,,
+n_classes,0.0,44.0,banknote,one-data-set-out,XGB,,
+neighborhood_size_mean,0.1487957239151001,3.0,banknote,one-data-set-out,XGB,,
+neighborhood_size_q0,0.0,44.0,banknote,one-data-set-out,XGB,,
+neighborhood_size_q25,0.0,44.0,banknote,one-data-set-out,XGB,,
+neighborhood_size_q50,0.0,44.0,banknote,one-data-set-out,XGB,,
+neighborhood_size_q75,0.0,44.0,banknote,one-data-set-out,XGB,,
+neighborhood_size_q1,0.0,44.0,banknote,one-data-set-out,XGB,,
+neighborhood_size_minmax,0.0,44.0,banknote,one-data-set-out,XGB,,
+uncertainty_mean,0.009679246693849564,13.0,banknote,one-data-set-out,XGB,,
+uncertainty_q0,0.01128440536558628,11.0,banknote,one-data-set-out,XGB,,
+uncertainty_q25,0.07561232894659042,5.0,banknote,one-data-set-out,XGB,,
+uncertainty_q50,0.06007992476224899,6.0,banknote,one-data-set-out,XGB,,
+uncertainty_q75,0.004181315656751394,19.0,banknote,one-data-set-out,XGB,,
+uncertainty_q1,0.054266903549432755,7.0,banknote,one-data-set-out,XGB,,
+uncertainty_minmax,0.010740433819591999,12.0,banknote,one-data-set-out,XGB,,
+target_approx_consistency_in_neighborhood_mean,0.0006731670582666993,27.0,banknote,one-data-set-out,XGB,,
+target_approx_consistency_in_neighborhood_q0,0.0,44.0,banknote,one-data-set-out,XGB,,
+target_approx_consistency_in_neighborhood_q25,0.21274434030056,1.0,banknote,one-data-set-out,XGB,,
+target_approx_consistency_in_neighborhood_q50,0.006228882819414139,16.0,banknote,one-data-set-out,XGB,,
+target_approx_consistency_in_neighborhood_q75,0.0,44.0,banknote,one-data-set-out,XGB,,
+target_approx_consistency_in_neighborhood_q1,0.0,44.0,banknote,one-data-set-out,XGB,,
+target_approx_consistency_in_neighborhood_minmax,0.0,44.0,banknote,one-data-set-out,XGB,,
+pred_targets_consistency_in_neighborhood_mean,0.014316190965473652,10.0,banknote,one-data-set-out,XGB,,
+pred_targets_consistency_in_neighborhood_q0,0.009506781585514545,14.0,banknote,one-data-set-out,XGB,,
+pred_targets_consistency_in_neighborhood_q25,0.0032113436609506607,22.0,banknote,one-data-set-out,XGB,,
+pred_targets_consistency_in_neighborhood_q50,0.0,44.0,banknote,one-data-set-out,XGB,,
+pred_targets_consistency_in_neighborhood_q75,0.005775023251771927,17.0,banknote,one-data-set-out,XGB,,
+pred_targets_consistency_in_neighborhood_q1,0.0,44.0,banknote,one-data-set-out,XGB,,
+pred_targets_consistency_in_neighborhood_minmax,0.04740773141384125,8.0,banknote,one-data-set-out,XGB,,
+target_targets_consistency_in_neighborhood_mean,0.008390391245484352,15.0,banknote,one-data-set-out,XGB,,
+target_targets_consistency_in_neighborhood_q0,0.0,44.0,banknote,one-data-set-out,XGB,,
+target_targets_consistency_in_neighborhood_q25,0.1506129652261734,2.0,banknote,one-data-set-out,XGB,,
+target_targets_consistency_in_neighborhood_q50,0.0018136868020519614,25.0,banknote,one-data-set-out,XGB,,
+target_targets_consistency_in_neighborhood_q75,0.0,44.0,banknote,one-data-set-out,XGB,,
+target_targets_consistency_in_neighborhood_q1,0.0,44.0,banknote,one-data-set-out,XGB,,
+target_targets_consistency_in_neighborhood_minmax,0.0,44.0,banknote,one-data-set-out,XGB,,
+targets_and_approxs_consistency_in_neighborhood_mean,0.0038159170653671026,21.0,banknote,one-data-set-out,XGB,,
+targets_and_approxs_consistency_in_neighborhood_q0,0.041889190673828125,9.0,banknote,one-data-set-out,XGB,,
+targets_and_approxs_consistency_in_neighborhood_q25,0.004124361556023359,20.0,banknote,one-data-set-out,XGB,,
+targets_and_approxs_consistency_in_neighborhood_q50,0.0,44.0,banknote,one-data-set-out,XGB,,
+targets_and_approxs_consistency_in_neighborhood_q75,0.0,44.0,banknote,one-data-set-out,XGB,,
+targets_and_approxs_consistency_in_neighborhood_q1,0.0,44.0,banknote,one-data-set-out,XGB,,
+targets_and_approxs_consistency_in_neighborhood_minmax,0.0,44.0,banknote,one-data-set-out,XGB,,
+target_diversity_in_neighborhood_mean,0.005586372222751379,18.0,banknote,one-data-set-out,XGB,,
+target_diversity_in_neighborhood_q0,0.0,44.0,banknote,one-data-set-out,XGB,,
+target_diversity_in_neighborhood_q25,0.0,44.0,banknote,one-data-set-out,XGB,,
+target_diversity_in_neighborhood_q50,0.0,44.0,banknote,one-data-set-out,XGB,,
+target_diversity_in_neighborhood_q75,0.0,44.0,banknote,one-data-set-out,XGB,,
+target_diversity_in_neighborhood_q1,0.0,44.0,banknote,one-data-set-out,XGB,,
+target_diversity_in_neighborhood_minmax,0.0,44.0,banknote,one-data-set-out,XGB,,
+approx_diversity_in_neighborhood_mean,0.00037412162055261433,28.0,banknote,one-data-set-out,XGB,,
+approx_diversity_in_neighborhood_q0,0.0,44.0,banknote,one-data-set-out,XGB,,
+approx_diversity_in_neighborhood_q25,0.0,44.0,banknote,one-data-set-out,XGB,,
+approx_diversity_in_neighborhood_q50,0.003036968410015106,23.0,banknote,one-data-set-out,XGB,,
+approx_diversity_in_neighborhood_q75,0.0013031320413574576,26.0,banknote,one-data-set-out,XGB,,
+approx_diversity_in_neighborhood_q1,0.0,44.0,banknote,one-data-set-out,XGB,,
+approx_diversity_in_neighborhood_minmax,0.0,44.0,banknote,one-data-set-out,XGB,,
+bacc_test,0.06526564806699753,7.0,diabetes,one-data-set-out,XGB,,
+n_test,3.890913285431452e-05,33.0,diabetes,one-data-set-out,XGB,,
+n_classes,0.0,46.5,diabetes,one-data-set-out,XGB,,
+neighborhood_size_mean,0.00722567830234766,19.0,diabetes,one-data-set-out,XGB,,
+neighborhood_size_q0,0.0,46.5,diabetes,one-data-set-out,XGB,,
+neighborhood_size_q25,0.009503776207566261,17.0,diabetes,one-data-set-out,XGB,,
+neighborhood_size_q50,0.024156002327799797,14.0,diabetes,one-data-set-out,XGB,,
+neighborhood_size_q75,0.0,46.5,diabetes,one-data-set-out,XGB,,
+neighborhood_size_q1,0.07962879538536072,4.0,diabetes,one-data-set-out,XGB,,
+neighborhood_size_minmax,0.0,46.5,diabetes,one-data-set-out,XGB,,
+uncertainty_mean,0.04160228371620178,11.0,diabetes,one-data-set-out,XGB,,
+uncertainty_q0,0.007350340019911528,18.0,diabetes,one-data-set-out,XGB,,
+uncertainty_q25,0.013700263574719429,16.0,diabetes,one-data-set-out,XGB,,
+uncertainty_q50,0.003327848855406046,24.0,diabetes,one-data-set-out,XGB,,
+uncertainty_q75,0.043287940323352814,10.0,diabetes,one-data-set-out,XGB,,
+uncertainty_q1,0.023080136626958847,15.0,diabetes,one-data-set-out,XGB,,
+uncertainty_minmax,0.06468426436185837,8.0,diabetes,one-data-set-out,XGB,,
+target_approx_consistency_in_neighborhood_mean,0.0005101255956105888,28.0,diabetes,one-data-set-out,XGB,,
+target_approx_consistency_in_neighborhood_q0,0.0,46.5,diabetes,one-data-set-out,XGB,,
+target_approx_consistency_in_neighborhood_q25,0.08243417739868164,3.0,diabetes,one-data-set-out,XGB,,
+target_approx_consistency_in_neighborhood_q50,0.0006398301920853555,26.0,diabetes,one-data-set-out,XGB,,
+target_approx_consistency_in_neighborhood_q75,0.0026134958025068045,25.0,diabetes,one-data-set-out,XGB,,
+target_approx_consistency_in_neighborhood_q1,0.0,46.5,diabetes,one-data-set-out,XGB,,
+target_approx_consistency_in_neighborhood_minmax,0.0,46.5,diabetes,one-data-set-out,XGB,,
+pred_targets_consistency_in_neighborhood_mean,0.004320510197430849,22.0,diabetes,one-data-set-out,XGB,,
+pred_targets_consistency_in_neighborhood_q0,0.0,46.5,diabetes,one-data-set-out,XGB,,
+pred_targets_consistency_in_neighborhood_q25,0.0006016772240400314,27.0,diabetes,one-data-set-out,XGB,,
+pred_targets_consistency_in_neighborhood_q50,0.0,46.5,diabetes,one-data-set-out,XGB,,
+pred_targets_consistency_in_neighborhood_q75,0.0001339485461357981,31.0,diabetes,one-data-set-out,XGB,,
+pred_targets_consistency_in_neighborhood_q1,0.0,46.5,diabetes,one-data-set-out,XGB,,
+pred_targets_consistency_in_neighborhood_minmax,0.03318525850772858,12.0,diabetes,one-data-set-out,XGB,,
+target_targets_consistency_in_neighborhood_mean,0.1088441014289856,2.0,diabetes,one-data-set-out,XGB,,
+target_targets_consistency_in_neighborhood_q0,0.024200165644288063,13.0,diabetes,one-data-set-out,XGB,,
+target_targets_consistency_in_neighborhood_q25,0.07784729450941086,5.0,diabetes,one-data-set-out,XGB,,
+target_targets_consistency_in_neighborhood_q50,0.00016365876945201308,30.0,diabetes,one-data-set-out,XGB,,
+target_targets_consistency_in_neighborhood_q75,0.0,46.5,diabetes,one-data-set-out,XGB,,
+target_targets_consistency_in_neighborhood_q1,0.0,46.5,diabetes,one-data-set-out,XGB,,
+target_targets_consistency_in_neighborhood_minmax,0.0,46.5,diabetes,one-data-set-out,XGB,,
+targets_and_approxs_consistency_in_neighborhood_mean,0.0004069659626111388,29.0,diabetes,one-data-set-out,XGB,,
+targets_and_approxs_consistency_in_neighborhood_q0,6.486603524535894e-05,32.0,diabetes,one-data-set-out,XGB,,
+targets_and_approxs_consistency_in_neighborhood_q25,0.005940635222941637,20.0,diabetes,one-data-set-out,XGB,,
+targets_and_approxs_consistency_in_neighborhood_q50,0.0,46.5,diabetes,one-data-set-out,XGB,,
+targets_and_approxs_consistency_in_neighborhood_q75,0.0,46.5,diabetes,one-data-set-out,XGB,,
+targets_and_approxs_consistency_in_neighborhood_q1,0.0,46.5,diabetes,one-data-set-out,XGB,,
+targets_and_approxs_consistency_in_neighborhood_minmax,0.0,46.5,diabetes,one-data-set-out,XGB,,
+target_diversity_in_neighborhood_mean,0.06744234263896942,6.0,diabetes,one-data-set-out,XGB,,
+target_diversity_in_neighborhood_q0,0.0,46.5,diabetes,one-data-set-out,XGB,,
+target_diversity_in_neighborhood_q25,0.0,46.5,diabetes,one-data-set-out,XGB,,
+target_diversity_in_neighborhood_q50,0.051926176995038986,9.0,diabetes,one-data-set-out,XGB,,
+target_diversity_in_neighborhood_q75,0.0,46.5,diabetes,one-data-set-out,XGB,,
+target_diversity_in_neighborhood_q1,0.1460912674665451,1.0,diabetes,one-data-set-out,XGB,,
+target_diversity_in_neighborhood_minmax,0.0,46.5,diabetes,one-data-set-out,XGB,,
+approx_diversity_in_neighborhood_mean,0.005598678253591061,21.0,diabetes,one-data-set-out,XGB,,
+approx_diversity_in_neighborhood_q0,0.0,46.5,diabetes,one-data-set-out,XGB,,
+approx_diversity_in_neighborhood_q25,0.0,46.5,diabetes,one-data-set-out,XGB,,
+approx_diversity_in_neighborhood_q50,0.0,46.5,diabetes,one-data-set-out,XGB,,
+approx_diversity_in_neighborhood_q75,0.0,46.5,diabetes,one-data-set-out,XGB,,
+approx_diversity_in_neighborhood_q1,0.004182861652225256,23.0,diabetes,one-data-set-out,XGB,,
+approx_diversity_in_neighborhood_minmax,0.0,46.5,diabetes,one-data-set-out,XGB,,
+bacc_test,0.21854393184185028,1.0,wilt,one-data-set-out,XGB,,
+n_test,0.0,44.0,wilt,one-data-set-out,XGB,,
+n_classes,0.0,44.0,wilt,one-data-set-out,XGB,,
+neighborhood_size_mean,0.09353144466876984,4.0,wilt,one-data-set-out,XGB,,
+neighborhood_size_q0,0.0,44.0,wilt,one-data-set-out,XGB,,
+neighborhood_size_q25,0.0,44.0,wilt,one-data-set-out,XGB,,
+neighborhood_size_q50,0.02181178145110607,11.0,wilt,one-data-set-out,XGB,,
+neighborhood_size_q75,0.0,44.0,wilt,one-data-set-out,XGB,,
+neighborhood_size_q1,0.0,44.0,wilt,one-data-set-out,XGB,,
+neighborhood_size_minmax,0.0,44.0,wilt,one-data-set-out,XGB,,
+uncertainty_mean,0.005061589181423187,18.0,wilt,one-data-set-out,XGB,,
+uncertainty_q0,0.0021467870101332664,22.0,wilt,one-data-set-out,XGB,,
+uncertainty_q25,0.0016847285442054272,23.0,wilt,one-data-set-out,XGB,,
+uncertainty_q50,0.029609819874167442,9.0,wilt,one-data-set-out,XGB,,
+uncertainty_q75,0.043085601180791855,7.0,wilt,one-data-set-out,XGB,,
+uncertainty_q1,0.007562040351331234,14.0,wilt,one-data-set-out,XGB,,
+uncertainty_minmax,0.0050113387405872345,19.0,wilt,one-data-set-out,XGB,,
+target_approx_consistency_in_neighborhood_mean,0.06611395627260208,6.0,wilt,one-data-set-out,XGB,,
+target_approx_consistency_in_neighborhood_q0,0.0,44.0,wilt,one-data-set-out,XGB,,
+target_approx_consistency_in_neighborhood_q25,0.0,44.0,wilt,one-data-set-out,XGB,,
+target_approx_consistency_in_neighborhood_q50,0.06851579993963242,5.0,wilt,one-data-set-out,XGB,,
+target_approx_consistency_in_neighborhood_q75,0.0024219548795372248,21.0,wilt,one-data-set-out,XGB,,
+target_approx_consistency_in_neighborhood_q1,0.0,44.0,wilt,one-data-set-out,XGB,,
+target_approx_consistency_in_neighborhood_minmax,0.0,44.0,wilt,one-data-set-out,XGB,,
+pred_targets_consistency_in_neighborhood_mean,0.1209263801574707,3.0,wilt,one-data-set-out,XGB,,
+pred_targets_consistency_in_neighborhood_q0,0.0,44.0,wilt,one-data-set-out,XGB,,
+pred_targets_consistency_in_neighborhood_q25,0.022624602541327477,10.0,wilt,one-data-set-out,XGB,,
+pred_targets_consistency_in_neighborhood_q50,0.0008624896872788668,26.0,wilt,one-data-set-out,XGB,,
+pred_targets_consistency_in_neighborhood_q75,0.1985180377960205,2.0,wilt,one-data-set-out,XGB,,
+pred_targets_consistency_in_neighborhood_q1,0.0,44.0,wilt,one-data-set-out,XGB,,
+pred_targets_consistency_in_neighborhood_minmax,0.0,44.0,wilt,one-data-set-out,XGB,,
+target_targets_consistency_in_neighborhood_mean,0.017011770978569984,12.0,wilt,one-data-set-out,XGB,,
+target_targets_consistency_in_neighborhood_q0,0.03321641683578491,8.0,wilt,one-data-set-out,XGB,,
+target_targets_consistency_in_neighborhood_q25,0.0,44.0,wilt,one-data-set-out,XGB,,
+target_targets_consistency_in_neighborhood_q50,0.0,44.0,wilt,one-data-set-out,XGB,,
+target_targets_consistency_in_neighborhood_q75,0.001187118119560182,24.0,wilt,one-data-set-out,XGB,,
+target_targets_consistency_in_neighborhood_q1,0.0,44.0,wilt,one-data-set-out,XGB,,
+target_targets_consistency_in_neighborhood_minmax,0.0,44.0,wilt,one-data-set-out,XGB,,
+targets_and_approxs_consistency_in_neighborhood_mean,0.0005489275208674371,27.0,wilt,one-data-set-out,XGB,,
+targets_and_approxs_consistency_in_neighborhood_q0,0.0002522007271181792,28.0,wilt,one-data-set-out,XGB,,
+targets_and_approxs_consistency_in_neighborhood_q25,0.0,44.0,wilt,one-data-set-out,XGB,,
+targets_and_approxs_consistency_in_neighborhood_q50,0.0,44.0,wilt,one-data-set-out,XGB,,
+targets_and_approxs_consistency_in_neighborhood_q75,0.0,44.0,wilt,one-data-set-out,XGB,,
+targets_and_approxs_consistency_in_neighborhood_q1,0.0,44.0,wilt,one-data-set-out,XGB,,
+targets_and_approxs_consistency_in_neighborhood_minmax,0.0,44.0,wilt,one-data-set-out,XGB,,
+target_diversity_in_neighborhood_mean,0.007203041110187769,15.0,wilt,one-data-set-out,XGB,,
+target_diversity_in_neighborhood_q0,0.0,44.0,wilt,one-data-set-out,XGB,,
+target_diversity_in_neighborhood_q25,0.0,44.0,wilt,one-data-set-out,XGB,,
+target_diversity_in_neighborhood_q50,0.0055972980335354805,17.0,wilt,one-data-set-out,XGB,,
+target_diversity_in_neighborhood_q75,0.006467609200626612,16.0,wilt,one-data-set-out,XGB,,
+target_diversity_in_neighborhood_q1,0.0,44.0,wilt,one-data-set-out,XGB,,
+target_diversity_in_neighborhood_minmax,0.0,44.0,wilt,one-data-set-out,XGB,,
+approx_diversity_in_neighborhood_mean,0.0009605871746316552,25.0,wilt,one-data-set-out,XGB,,
+approx_diversity_in_neighborhood_q0,0.0,44.0,wilt,one-data-set-out,XGB,,
+approx_diversity_in_neighborhood_q25,0.0,44.0,wilt,one-data-set-out,XGB,,
+approx_diversity_in_neighborhood_q50,0.015706200152635574,13.0,wilt,one-data-set-out,XGB,,
+approx_diversity_in_neighborhood_q75,0.003816579934209585,20.0,wilt,one-data-set-out,XGB,,
+approx_diversity_in_neighborhood_q1,0.0,44.0,wilt,one-data-set-out,XGB,,
+approx_diversity_in_neighborhood_minmax,0.0,44.0,wilt,one-data-set-out,XGB,,
+bacc_test,0.1299092024564743,2.0,,one-model-out,XGB,lin,
+n_test,0.006525980308651924,21.0,,one-model-out,XGB,lin,
+n_classes,0.0,43.5,,one-model-out,XGB,lin,
+neighborhood_size_mean,0.05856781825423241,7.0,,one-model-out,XGB,lin,
+neighborhood_size_q0,0.0,43.5,,one-model-out,XGB,lin,
+neighborhood_size_q25,0.0,43.5,,one-model-out,XGB,lin,
+neighborhood_size_q50,0.09373041987419128,5.0,,one-model-out,XGB,lin,
+neighborhood_size_q75,0.0,43.5,,one-model-out,XGB,lin,
+neighborhood_size_q1,0.026484858244657516,12.0,,one-model-out,XGB,lin,
+neighborhood_size_minmax,0.0,43.5,,one-model-out,XGB,lin,
+uncertainty_mean,0.03523827716708183,9.0,,one-model-out,XGB,lin,
+uncertainty_q0,0.021630682051181793,13.0,,one-model-out,XGB,lin,
+uncertainty_q25,0.010383717715740204,16.0,,one-model-out,XGB,lin,
+uncertainty_q50,0.00031331501668319106,27.0,,one-model-out,XGB,lin,
+uncertainty_q75,0.11257331073284149,3.0,,one-model-out,XGB,lin,
+uncertainty_q1,0.07503505796194077,6.0,,one-model-out,XGB,lin,
+uncertainty_minmax,0.02155786007642746,14.0,,one-model-out,XGB,lin,
+target_approx_consistency_in_neighborhood_mean,0.00818684697151184,19.0,,one-model-out,XGB,lin,
+target_approx_consistency_in_neighborhood_q0,0.0,43.5,,one-model-out,XGB,lin,
+target_approx_consistency_in_neighborhood_q25,0.13213816285133362,1.0,,one-model-out,XGB,lin,
+target_approx_consistency_in_neighborhood_q50,0.0,43.5,,one-model-out,XGB,lin,
+target_approx_consistency_in_neighborhood_q75,0.002946458524093032,25.0,,one-model-out,XGB,lin,
+target_approx_consistency_in_neighborhood_q1,0.0,43.5,,one-model-out,XGB,lin,
+target_approx_consistency_in_neighborhood_minmax,0.0,43.5,,one-model-out,XGB,lin,
+pred_targets_consistency_in_neighborhood_mean,0.03852519765496254,8.0,,one-model-out,XGB,lin,
+pred_targets_consistency_in_neighborhood_q0,0.0,43.5,,one-model-out,XGB,lin,
+pred_targets_consistency_in_neighborhood_q25,0.0,43.5,,one-model-out,XGB,lin,
+pred_targets_consistency_in_neighborhood_q50,0.0,43.5,,one-model-out,XGB,lin,
+pred_targets_consistency_in_neighborhood_q75,0.11187136918306351,4.0,,one-model-out,XGB,lin,
+pred_targets_consistency_in_neighborhood_q1,0.0,43.5,,one-model-out,XGB,lin,
+pred_targets_consistency_in_neighborhood_minmax,0.0,43.5,,one-model-out,XGB,lin,
+target_targets_consistency_in_neighborhood_mean,0.0,43.5,,one-model-out,XGB,lin,
+target_targets_consistency_in_neighborhood_q0,0.02699570544064045,11.0,,one-model-out,XGB,lin,
+target_targets_consistency_in_neighborhood_q25,0.005169666837900877,23.0,,one-model-out,XGB,lin,
+target_targets_consistency_in_neighborhood_q50,0.0,43.5,,one-model-out,XGB,lin,
+target_targets_consistency_in_neighborhood_q75,0.008353699930012226,18.0,,one-model-out,XGB,lin,
+target_targets_consistency_in_neighborhood_q1,0.0,43.5,,one-model-out,XGB,lin,
+target_targets_consistency_in_neighborhood_minmax,0.0,43.5,,one-model-out,XGB,lin,
+targets_and_approxs_consistency_in_neighborhood_mean,0.005652397871017456,22.0,,one-model-out,XGB,lin,
+targets_and_approxs_consistency_in_neighborhood_q0,0.0027853406500071287,26.0,,one-model-out,XGB,lin,
+targets_and_approxs_consistency_in_neighborhood_q25,0.0,43.5,,one-model-out,XGB,lin,
+targets_and_approxs_consistency_in_neighborhood_q50,0.013980591669678688,15.0,,one-model-out,XGB,lin,
+targets_and_approxs_consistency_in_neighborhood_q75,0.0,43.5,,one-model-out,XGB,lin,
+targets_and_approxs_consistency_in_neighborhood_q1,0.0,43.5,,one-model-out,XGB,lin,
+targets_and_approxs_consistency_in_neighborhood_minmax,0.0,43.5,,one-model-out,XGB,lin,
+target_diversity_in_neighborhood_mean,0.006587841548025608,20.0,,one-model-out,XGB,lin,
+target_diversity_in_neighborhood_q0,0.0,43.5,,one-model-out,XGB,lin,
+target_diversity_in_neighborhood_q25,0.0,43.5,,one-model-out,XGB,lin,
+target_diversity_in_neighborhood_q50,0.032172832638025284,10.0,,one-model-out,XGB,lin,
+target_diversity_in_neighborhood_q75,0.0,43.5,,one-model-out,XGB,lin,
+target_diversity_in_neighborhood_q1,0.0,43.5,,one-model-out,XGB,lin,
+target_diversity_in_neighborhood_minmax,0.0,43.5,,one-model-out,XGB,lin,
+approx_diversity_in_neighborhood_mean,0.0038497862406075,24.0,,one-model-out,XGB,lin,
+approx_diversity_in_neighborhood_q0,0.0,43.5,,one-model-out,XGB,lin,
+approx_diversity_in_neighborhood_q25,0.0,43.5,,one-model-out,XGB,lin,
+approx_diversity_in_neighborhood_q50,0.008833588100969791,17.0,,one-model-out,XGB,lin,
+approx_diversity_in_neighborhood_q75,0.0,43.5,,one-model-out,XGB,lin,
+approx_diversity_in_neighborhood_q1,0.0,43.5,,one-model-out,XGB,lin,
+approx_diversity_in_neighborhood_minmax,0.0,43.5,,one-model-out,XGB,lin,
+bacc_test,0.17847037315368652,1.0,,one-model-out,XGB,nn,
+n_test,0.03891623765230179,9.0,,one-model-out,XGB,nn,
+n_classes,0.0,43.5,,one-model-out,XGB,nn,
+neighborhood_size_mean,0.0555400587618351,6.0,,one-model-out,XGB,nn,
+neighborhood_size_q0,0.0,43.5,,one-model-out,XGB,nn,
+neighborhood_size_q25,0.04300457611680031,7.0,,one-model-out,XGB,nn,
+neighborhood_size_q50,0.1444147527217865,2.0,,one-model-out,XGB,nn,
+neighborhood_size_q75,0.0,43.5,,one-model-out,XGB,nn,
+neighborhood_size_q1,0.0,43.5,,one-model-out,XGB,nn,
+neighborhood_size_minmax,0.0,43.5,,one-model-out,XGB,nn,
+uncertainty_mean,0.0203318540006876,17.0,,one-model-out,XGB,nn,
+uncertainty_q0,0.014050639234483242,18.0,,one-model-out,XGB,nn,
+uncertainty_q25,0.024782950058579445,13.0,,one-model-out,XGB,nn,
+uncertainty_q50,0.0567941777408123,5.0,,one-model-out,XGB,nn,
+uncertainty_q75,0.02401512674987316,14.0,,one-model-out,XGB,nn,
+uncertainty_q1,0.011103425174951553,21.0,,one-model-out,XGB,nn,
+uncertainty_minmax,0.021012160927057266,16.0,,one-model-out,XGB,nn,
+target_approx_consistency_in_neighborhood_mean,0.006577474530786276,23.0,,one-model-out,XGB,nn,
+target_approx_consistency_in_neighborhood_q0,0.0,43.5,,one-model-out,XGB,nn,
+target_approx_consistency_in_neighborhood_q25,0.03987705707550049,8.0,,one-model-out,XGB,nn,
+target_approx_consistency_in_neighborhood_q50,0.006073168944567442,24.0,,one-model-out,XGB,nn,
+target_approx_consistency_in_neighborhood_q75,0.00152738974429667,26.0,,one-model-out,XGB,nn,
+target_approx_consistency_in_neighborhood_q1,0.0,43.5,,one-model-out,XGB,nn,
+target_approx_consistency_in_neighborhood_minmax,0.0,43.5,,one-model-out,XGB,nn,
+pred_targets_consistency_in_neighborhood_mean,0.09026464819908142,3.0,,one-model-out,XGB,nn,
+pred_targets_consistency_in_neighborhood_q0,0.07015451788902283,4.0,,one-model-out,XGB,nn,
+pred_targets_consistency_in_neighborhood_q25,0.008035588078200817,22.0,,one-model-out,XGB,nn,
+pred_targets_consistency_in_neighborhood_q50,0.0,43.5,,one-model-out,XGB,nn,
+pred_targets_consistency_in_neighborhood_q75,0.021965689957141876,15.0,,one-model-out,XGB,nn,
+pred_targets_consistency_in_neighborhood_q1,0.0,43.5,,one-model-out,XGB,nn,
+pred_targets_consistency_in_neighborhood_minmax,0.032052215188741684,11.0,,one-model-out,XGB,nn,
+target_targets_consistency_in_neighborhood_mean,0.03327406197786331,10.0,,one-model-out,XGB,nn,
+target_targets_consistency_in_neighborhood_q0,0.030265696346759796,12.0,,one-model-out,XGB,nn,
+target_targets_consistency_in_neighborhood_q25,0.002003713045269251,25.0,,one-model-out,XGB,nn,
+target_targets_consistency_in_neighborhood_q50,0.0,43.5,,one-model-out,XGB,nn,
+target_targets_consistency_in_neighborhood_q75,0.0,43.5,,one-model-out,XGB,nn,
+target_targets_consistency_in_neighborhood_q1,0.0,43.5,,one-model-out,XGB,nn,
+target_targets_consistency_in_neighborhood_minmax,0.0,43.5,,one-model-out,XGB,nn,
+targets_and_approxs_consistency_in_neighborhood_mean,0.012042071670293808,20.0,,one-model-out,XGB,nn,
+targets_and_approxs_consistency_in_neighborhood_q0,0.0,43.5,,one-model-out,XGB,nn,
+targets_and_approxs_consistency_in_neighborhood_q25,0.012074480764567852,19.0,,one-model-out,XGB,nn,
+targets_and_approxs_consistency_in_neighborhood_q50,0.0,43.5,,one-model-out,XGB,nn,
+targets_and_approxs_consistency_in_neighborhood_q75,0.0,43.5,,one-model-out,XGB,nn,
+targets_and_approxs_consistency_in_neighborhood_q1,0.0,43.5,,one-model-out,XGB,nn,
+targets_and_approxs_consistency_in_neighborhood_minmax,0.0,43.5,,one-model-out,XGB,nn,
+target_diversity_in_neighborhood_mean,0.0013758690329268575,27.0,,one-model-out,XGB,nn,
+target_diversity_in_neighborhood_q0,0.0,43.5,,one-model-out,XGB,nn,
+target_diversity_in_neighborhood_q25,0.0,43.5,,one-model-out,XGB,nn,
+target_diversity_in_neighborhood_q50,0.0,43.5,,one-model-out,XGB,nn,
+target_diversity_in_neighborhood_q75,0.0,43.5,,one-model-out,XGB,nn,
+target_diversity_in_neighborhood_q1,0.0,43.5,,one-model-out,XGB,nn,
+target_diversity_in_neighborhood_minmax,0.0,43.5,,one-model-out,XGB,nn,
+approx_diversity_in_neighborhood_mean,0.0,43.5,,one-model-out,XGB,nn,
+approx_diversity_in_neighborhood_q0,0.0,43.5,,one-model-out,XGB,nn,
+approx_diversity_in_neighborhood_q25,0.0,43.5,,one-model-out,XGB,nn,
+approx_diversity_in_neighborhood_q50,0.0,43.5,,one-model-out,XGB,nn,
+approx_diversity_in_neighborhood_q75,0.0,43.5,,one-model-out,XGB,nn,
+approx_diversity_in_neighborhood_q1,0.0,43.5,,one-model-out,XGB,nn,
+approx_diversity_in_neighborhood_minmax,0.0,43.5,,one-model-out,XGB,nn,
+bacc_test,0.0958697721362114,2.0,,one-model-out,XGB,svm,
+n_test,0.015343138948082924,19.0,,one-model-out,XGB,svm,
+n_classes,0.0,47.5,,one-model-out,XGB,svm,
+neighborhood_size_mean,0.06763499230146408,6.0,,one-model-out,XGB,svm,
+neighborhood_size_q0,0.0,47.5,,one-model-out,XGB,svm,
+neighborhood_size_q25,0.0,47.5,,one-model-out,XGB,svm,
+neighborhood_size_q50,0.0469534769654274,7.0,,one-model-out,XGB,svm,
+neighborhood_size_q75,0.0,47.5,,one-model-out,XGB,svm,
+neighborhood_size_q1,0.025933178141713142,14.0,,one-model-out,XGB,svm,
+neighborhood_size_minmax,0.0,47.5,,one-model-out,XGB,svm,
+uncertainty_mean,0.021487601101398468,16.0,,one-model-out,XGB,svm,
+uncertainty_q0,0.017493069171905518,18.0,,one-model-out,XGB,svm,
+uncertainty_q25,0.022905942052602768,15.0,,one-model-out,XGB,svm,
+uncertainty_q50,0.004394399467855692,25.0,,one-model-out,XGB,svm,
+uncertainty_q75,0.12707021832466125,1.0,,one-model-out,XGB,svm,
+uncertainty_q1,0.07115878909826279,5.0,,one-model-out,XGB,svm,
+uncertainty_minmax,0.0121974628418684,22.0,,one-model-out,XGB,svm,
+target_approx_consistency_in_neighborhood_mean,0.012881525792181492,20.0,,one-model-out,XGB,svm,
+target_approx_consistency_in_neighborhood_q0,0.0,47.5,,one-model-out,XGB,svm,
+target_approx_consistency_in_neighborhood_q25,0.08439426869153976,4.0,,one-model-out,XGB,svm,
+target_approx_consistency_in_neighborhood_q50,0.0,47.5,,one-model-out,XGB,svm,
+target_approx_consistency_in_neighborhood_q75,0.0014624405885115266,30.0,,one-model-out,XGB,svm,
+target_approx_consistency_in_neighborhood_q1,0.0,47.5,,one-model-out,XGB,svm,
+target_approx_consistency_in_neighborhood_minmax,0.0,47.5,,one-model-out,XGB,svm,
+pred_targets_consistency_in_neighborhood_mean,0.0018667447147890925,29.0,,one-model-out,XGB,svm,
+pred_targets_consistency_in_neighborhood_q0,0.04524606093764305,9.0,,one-model-out,XGB,svm,
+pred_targets_consistency_in_neighborhood_q25,0.005987971555441618,24.0,,one-model-out,XGB,svm,
+pred_targets_consistency_in_neighborhood_q50,0.0029263319447636604,26.0,,one-model-out,XGB,svm,
+pred_targets_consistency_in_neighborhood_q75,0.01894385926425457,17.0,,one-model-out,XGB,svm,
+pred_targets_consistency_in_neighborhood_q1,0.0,47.5,,one-model-out,XGB,svm,
+pred_targets_consistency_in_neighborhood_minmax,0.03085876628756523,12.0,,one-model-out,XGB,svm,
+target_targets_consistency_in_neighborhood_mean,0.002839613240212202,27.0,,one-model-out,XGB,svm,
+target_targets_consistency_in_neighborhood_q0,0.030269501730799675,13.0,,one-model-out,XGB,svm,
+target_targets_consistency_in_neighborhood_q25,0.007121474482119083,23.0,,one-model-out,XGB,svm,
+target_targets_consistency_in_neighborhood_q50,0.08595599234104156,3.0,,one-model-out,XGB,svm,
+target_targets_consistency_in_neighborhood_q75,0.0014262791955843568,31.0,,one-model-out,XGB,svm,
+target_targets_consistency_in_neighborhood_q1,0.0,47.5,,one-model-out,XGB,svm,
+target_targets_consistency_in_neighborhood_minmax,0.0,47.5,,one-model-out,XGB,svm,
+targets_and_approxs_consistency_in_neighborhood_mean,0.012830130755901337,21.0,,one-model-out,XGB,svm,
+targets_and_approxs_consistency_in_neighborhood_q0,0.0,47.5,,one-model-out,XGB,svm,
+targets_and_approxs_consistency_in_neighborhood_q25,0.001160819549113512,33.0,,one-model-out,XGB,svm,
+targets_and_approxs_consistency_in_neighborhood_q50,0.0,47.5,,one-model-out,XGB,svm,
+targets_and_approxs_consistency_in_neighborhood_q75,0.032583147287368774,11.0,,one-model-out,XGB,svm,
+targets_and_approxs_consistency_in_neighborhood_q1,0.0,47.5,,one-model-out,XGB,svm,
+targets_and_approxs_consistency_in_neighborhood_minmax,0.0,47.5,,one-model-out,XGB,svm,
+target_diversity_in_neighborhood_mean,0.0006154570146463811,35.0,,one-model-out,XGB,svm,
+target_diversity_in_neighborhood_q0,0.0,47.5,,one-model-out,XGB,svm,
+target_diversity_in_neighborhood_q25,0.0,47.5,,one-model-out,XGB,svm,
+target_diversity_in_neighborhood_q50,0.041290801018476486,10.0,,one-model-out,XGB,svm,
+target_diversity_in_neighborhood_q75,0.0,47.5,,one-model-out,XGB,svm,
+target_diversity_in_neighborhood_q1,0.0,47.5,,one-model-out,XGB,svm,
+target_diversity_in_neighborhood_minmax,0.0,47.5,,one-model-out,XGB,svm,
+approx_diversity_in_neighborhood_mean,0.0013090523425489664,32.0,,one-model-out,XGB,svm,
+approx_diversity_in_neighborhood_q0,0.0,47.5,,one-model-out,XGB,svm,
+approx_diversity_in_neighborhood_q25,0.0,47.5,,one-model-out,XGB,svm,
+approx_diversity_in_neighborhood_q50,0.04673939198255539,8.0,,one-model-out,XGB,svm,
+approx_diversity_in_neighborhood_q75,0.000828513060696423,34.0,,one-model-out,XGB,svm,
+approx_diversity_in_neighborhood_q1,0.00201971922069788,28.0,,one-model-out,XGB,svm,
+approx_diversity_in_neighborhood_minmax,0.0,47.5,,one-model-out,XGB,svm,
+bacc_test,0.09468625485897064,1.0,,one-model-out,XGB,xgb,
+n_test,0.02009747363626957,17.0,,one-model-out,XGB,xgb,
+n_classes,0.0,47.0,,one-model-out,XGB,xgb,
+neighborhood_size_mean,0.0689682736992836,4.0,,one-model-out,XGB,xgb,
+neighborhood_size_q0,0.0,47.0,,one-model-out,XGB,xgb,
+neighborhood_size_q25,0.016376564279198647,22.0,,one-model-out,XGB,xgb,
+neighborhood_size_q50,0.022008061408996582,15.0,,one-model-out,XGB,xgb,
+neighborhood_size_q75,0.0,47.0,,one-model-out,XGB,xgb,
+neighborhood_size_q1,0.09108371287584305,2.0,,one-model-out,XGB,xgb,
+neighborhood_size_minmax,0.0,47.0,,one-model-out,XGB,xgb,
+uncertainty_mean,0.054851386696100235,6.0,,one-model-out,XGB,xgb,
+uncertainty_q0,0.018709897994995117,20.0,,one-model-out,XGB,xgb,
+uncertainty_q25,0.021412402391433716,16.0,,one-model-out,XGB,xgb,
+uncertainty_q50,0.06163999065756798,5.0,,one-model-out,XGB,xgb,
+uncertainty_q75,0.05462949723005295,7.0,,one-model-out,XGB,xgb,
+uncertainty_q1,0.019358262419700623,19.0,,one-model-out,XGB,xgb,
+uncertainty_minmax,0.02730737440288067,14.0,,one-model-out,XGB,xgb,
+target_approx_consistency_in_neighborhood_mean,0.01009443774819374,26.0,,one-model-out,XGB,xgb,
+target_approx_consistency_in_neighborhood_q0,0.0,47.0,,one-model-out,XGB,xgb,
+target_approx_consistency_in_neighborhood_q25,0.04182777926325798,12.0,,one-model-out,XGB,xgb,
+target_approx_consistency_in_neighborhood_q50,0.0,47.0,,one-model-out,XGB,xgb,
+target_approx_consistency_in_neighborhood_q75,4.514711326919496e-05,31.0,,one-model-out,XGB,xgb,
+target_approx_consistency_in_neighborhood_q1,0.0,47.0,,one-model-out,XGB,xgb,
+target_approx_consistency_in_neighborhood_minmax,0.0,47.0,,one-model-out,XGB,xgb,
+pred_targets_consistency_in_neighborhood_mean,0.01964486576616764,18.0,,one-model-out,XGB,xgb,
+pred_targets_consistency_in_neighborhood_q0,0.0,47.0,,one-model-out,XGB,xgb,
+pred_targets_consistency_in_neighborhood_q25,0.005316872615367174,28.0,,one-model-out,XGB,xgb,
+pred_targets_consistency_in_neighborhood_q50,2.6827397960005328e-05,32.0,,one-model-out,XGB,xgb,
+pred_targets_consistency_in_neighborhood_q75,0.018704794347286224,21.0,,one-model-out,XGB,xgb,
+pred_targets_consistency_in_neighborhood_q1,0.0,47.0,,one-model-out,XGB,xgb,
+pred_targets_consistency_in_neighborhood_minmax,0.04770288243889809,9.0,,one-model-out,XGB,xgb,
+target_targets_consistency_in_neighborhood_mean,0.008602132089436054,27.0,,one-model-out,XGB,xgb,
+target_targets_consistency_in_neighborhood_q0,0.00456160819157958,29.0,,one-model-out,XGB,xgb,
+target_targets_consistency_in_neighborhood_q25,0.011751111596822739,24.0,,one-model-out,XGB,xgb,
+target_targets_consistency_in_neighborhood_q50,0.0,47.0,,one-model-out,XGB,xgb,
+target_targets_consistency_in_neighborhood_q75,0.06917764991521835,3.0,,one-model-out,XGB,xgb,
+target_targets_consistency_in_neighborhood_q1,0.0,47.0,,one-model-out,XGB,xgb,
+target_targets_consistency_in_neighborhood_minmax,0.0,47.0,,one-model-out,XGB,xgb,
+targets_and_approxs_consistency_in_neighborhood_mean,0.010853620246052742,25.0,,one-model-out,XGB,xgb,
+targets_and_approxs_consistency_in_neighborhood_q0,0.0027194726280868053,30.0,,one-model-out,XGB,xgb,
+targets_and_approxs_consistency_in_neighborhood_q25,0.04840783029794693,8.0,,one-model-out,XGB,xgb,
+targets_and_approxs_consistency_in_neighborhood_q50,0.0,47.0,,one-model-out,XGB,xgb,
+targets_and_approxs_consistency_in_neighborhood_q75,0.0441100150346756,10.0,,one-model-out,XGB,xgb,
+targets_and_approxs_consistency_in_neighborhood_q1,0.0,47.0,,one-model-out,XGB,xgb,
+targets_and_approxs_consistency_in_neighborhood_minmax,0.0,47.0,,one-model-out,XGB,xgb,
+target_diversity_in_neighborhood_mean,0.014454379677772522,23.0,,one-model-out,XGB,xgb,
+target_diversity_in_neighborhood_q0,0.0,47.0,,one-model-out,XGB,xgb,
+target_diversity_in_neighborhood_q25,0.0,47.0,,one-model-out,XGB,xgb,
+target_diversity_in_neighborhood_q50,0.04269109293818474,11.0,,one-model-out,XGB,xgb,
+target_diversity_in_neighborhood_q75,0.0,47.0,,one-model-out,XGB,xgb,
+target_diversity_in_neighborhood_q1,0.0,47.0,,one-model-out,XGB,xgb,
+target_diversity_in_neighborhood_minmax,0.0,47.0,,one-model-out,XGB,xgb,
+approx_diversity_in_neighborhood_mean,1.4615881809731945e-05,33.0,,one-model-out,XGB,xgb,
+approx_diversity_in_neighborhood_q0,0.0,47.0,,one-model-out,XGB,xgb,
+approx_diversity_in_neighborhood_q25,0.0,47.0,,one-model-out,XGB,xgb,
+approx_diversity_in_neighborhood_q50,0.02815968729555607,13.0,,one-model-out,XGB,xgb,
+approx_diversity_in_neighborhood_q75,3.977369942731457e-06,34.0,,one-model-out,XGB,xgb,
+approx_diversity_in_neighborhood_q1,0.0,47.0,,one-model-out,XGB,xgb,
+approx_diversity_in_neighborhood_minmax,0.0,47.0,,one-model-out,XGB,xgb,
+bacc_test,0.04618411138653755,8.0,,10-fold cross-validation,XGB,,0.0
+n_test,0.0,48.5,,10-fold cross-validation,XGB,,0.0
+n_classes,0.0,48.5,,10-fold cross-validation,XGB,,0.0
+neighborhood_size_mean,0.04945700988173485,7.0,,10-fold cross-validation,XGB,,0.0
+neighborhood_size_q0,0.0,48.5,,10-fold cross-validation,XGB,,0.0
+neighborhood_size_q25,0.015664666891098022,21.0,,10-fold cross-validation,XGB,,0.0
+neighborhood_size_q50,0.026370272040367126,15.0,,10-fold cross-validation,XGB,,0.0
+neighborhood_size_q75,0.0,48.5,,10-fold cross-validation,XGB,,0.0
+neighborhood_size_q1,0.0007991776801645756,34.0,,10-fold cross-validation,XGB,,0.0
+neighborhood_size_minmax,0.0,48.5,,10-fold cross-validation,XGB,,0.0
+uncertainty_mean,0.010188715532422066,25.0,,10-fold cross-validation,XGB,,0.0
+uncertainty_q0,0.013457806780934334,22.0,,10-fold cross-validation,XGB,,0.0
+uncertainty_q25,0.02540064975619316,16.0,,10-fold cross-validation,XGB,,0.0
+uncertainty_q50,0.03507673740386963,11.0,,10-fold cross-validation,XGB,,0.0
+uncertainty_q75,0.01878771185874939,19.0,,10-fold cross-validation,XGB,,0.0
+uncertainty_q1,0.02989894710481167,13.0,,10-fold cross-validation,XGB,,0.0
+uncertainty_minmax,0.016193896532058716,20.0,,10-fold cross-validation,XGB,,0.0
+target_approx_consistency_in_neighborhood_mean,0.020689230412244797,18.0,,10-fold cross-validation,XGB,,0.0
+target_approx_consistency_in_neighborhood_q0,0.08822173625230789,3.0,,10-fold cross-validation,XGB,,0.0
+target_approx_consistency_in_neighborhood_q25,0.06788202375173569,4.0,,10-fold cross-validation,XGB,,0.0
+target_approx_consistency_in_neighborhood_q50,0.06166970357298851,5.0,,10-fold cross-validation,XGB,,0.0
+target_approx_consistency_in_neighborhood_q75,0.011696837842464447,23.0,,10-fold cross-validation,XGB,,0.0
+target_approx_consistency_in_neighborhood_q1,0.0,48.5,,10-fold cross-validation,XGB,,0.0
+target_approx_consistency_in_neighborhood_minmax,0.0,48.5,,10-fold cross-validation,XGB,,0.0
+pred_targets_consistency_in_neighborhood_mean,0.010801001451909542,24.0,,10-fold cross-validation,XGB,,0.0
+pred_targets_consistency_in_neighborhood_q0,0.044276174157857895,9.0,,10-fold cross-validation,XGB,,0.0
+pred_targets_consistency_in_neighborhood_q25,0.10230154544115067,1.0,,10-fold cross-validation,XGB,,0.0
+pred_targets_consistency_in_neighborhood_q50,0.0008215824491344392,33.0,,10-fold cross-validation,XGB,,0.0
+pred_targets_consistency_in_neighborhood_q75,0.0034591099247336388,29.0,,10-fold cross-validation,XGB,,0.0
+pred_targets_consistency_in_neighborhood_q1,0.0,48.5,,10-fold cross-validation,XGB,,0.0
+pred_targets_consistency_in_neighborhood_minmax,0.03447480499744415,12.0,,10-fold cross-validation,XGB,,0.0
+target_targets_consistency_in_neighborhood_mean,0.025020109489560127,17.0,,10-fold cross-validation,XGB,,0.0
+target_targets_consistency_in_neighborhood_q0,0.004824977833777666,27.0,,10-fold cross-validation,XGB,,0.0
+target_targets_consistency_in_neighborhood_q25,0.059822436422109604,6.0,,10-fold cross-validation,XGB,,0.0
+target_targets_consistency_in_neighborhood_q50,0.09309744089841843,2.0,,10-fold cross-validation,XGB,,0.0
+target_targets_consistency_in_neighborhood_q75,0.003139094915241003,30.0,,10-fold cross-validation,XGB,,0.0
+target_targets_consistency_in_neighborhood_q1,0.0,48.5,,10-fold cross-validation,XGB,,0.0
+target_targets_consistency_in_neighborhood_minmax,0.0,48.5,,10-fold cross-validation,XGB,,0.0
+targets_and_approxs_consistency_in_neighborhood_mean,0.0004101445956621319,36.0,,10-fold cross-validation,XGB,,0.0
+targets_and_approxs_consistency_in_neighborhood_q0,0.0007745065377093852,35.0,,10-fold cross-validation,XGB,,0.0
+targets_and_approxs_consistency_in_neighborhood_q25,0.00397003348916769,28.0,,10-fold cross-validation,XGB,,0.0
+targets_and_approxs_consistency_in_neighborhood_q50,0.0,48.5,,10-fold cross-validation,XGB,,0.0
+targets_and_approxs_consistency_in_neighborhood_q75,0.0,48.5,,10-fold cross-validation,XGB,,0.0
+targets_and_approxs_consistency_in_neighborhood_q1,0.0,48.5,,10-fold cross-validation,XGB,,0.0
+targets_and_approxs_consistency_in_neighborhood_minmax,0.0,48.5,,10-fold cross-validation,XGB,,0.0
+target_diversity_in_neighborhood_mean,0.007325382437556982,26.0,,10-fold cross-validation,XGB,,0.0
+target_diversity_in_neighborhood_q0,0.0,48.5,,10-fold cross-validation,XGB,,0.0
+target_diversity_in_neighborhood_q25,0.0,48.5,,10-fold cross-validation,XGB,,0.0
+target_diversity_in_neighborhood_q50,0.0016388515941798687,31.0,,10-fold cross-validation,XGB,,0.0
+target_diversity_in_neighborhood_q75,2.906205054387101e-06,37.0,,10-fold cross-validation,XGB,,0.0
+target_diversity_in_neighborhood_q1,0.0,48.5,,10-fold cross-validation,XGB,,0.0
+target_diversity_in_neighborhood_minmax,0.0,48.5,,10-fold cross-validation,XGB,,0.0
+approx_diversity_in_neighborhood_mean,0.028068242594599724,14.0,,10-fold cross-validation,XGB,,0.0
+approx_diversity_in_neighborhood_q0,0.0,48.5,,10-fold cross-validation,XGB,,0.0
+approx_diversity_in_neighborhood_q25,0.0,48.5,,10-fold cross-validation,XGB,,0.0
+approx_diversity_in_neighborhood_q50,0.0367182195186615,10.0,,10-fold cross-validation,XGB,,0.0
+approx_diversity_in_neighborhood_q75,0.001414127997122705,32.0,,10-fold cross-validation,XGB,,0.0
+approx_diversity_in_neighborhood_q1,0.0,48.5,,10-fold cross-validation,XGB,,0.0
+approx_diversity_in_neighborhood_minmax,0.0,48.5,,10-fold cross-validation,XGB,,0.0
+bacc_test,0.14070382714271545,1.0,,10-fold cross-validation,XGB,,1.0
+n_test,0.055050138384103775,7.0,,10-fold cross-validation,XGB,,1.0
+n_classes,0.0,46.5,,10-fold cross-validation,XGB,,1.0
+neighborhood_size_mean,0.09544398635625839,3.0,,10-fold cross-validation,XGB,,1.0
+neighborhood_size_q0,0.0,46.5,,10-fold cross-validation,XGB,,1.0
+neighborhood_size_q25,0.0,46.5,,10-fold cross-validation,XGB,,1.0
+neighborhood_size_q50,0.04910176619887352,8.0,,10-fold cross-validation,XGB,,1.0
+neighborhood_size_q75,0.0,46.5,,10-fold cross-validation,XGB,,1.0
+neighborhood_size_q1,0.0036001065745949745,24.0,,10-fold cross-validation,XGB,,1.0
+neighborhood_size_minmax,0.0,46.5,,10-fold cross-validation,XGB,,1.0
+uncertainty_mean,0.08838804066181183,4.0,,10-fold cross-validation,XGB,,1.0
+uncertainty_q0,0.004823864903301001,21.0,,10-fold cross-validation,XGB,,1.0
+uncertainty_q25,0.04639320820569992,9.0,,10-fold cross-validation,XGB,,1.0
+uncertainty_q50,0.002683724742382765,26.0,,10-fold cross-validation,XGB,,1.0
+uncertainty_q75,0.016766175627708435,15.0,,10-fold cross-validation,XGB,,1.0
+uncertainty_q1,0.024170126765966415,14.0,,10-fold cross-validation,XGB,,1.0
+uncertainty_minmax,0.027630766853690147,13.0,,10-fold cross-validation,XGB,,1.0
+target_approx_consistency_in_neighborhood_mean,0.0009323309059254825,31.0,,10-fold cross-validation,XGB,,1.0
+target_approx_consistency_in_neighborhood_q0,0.0,46.5,,10-fold cross-validation,XGB,,1.0
+target_approx_consistency_in_neighborhood_q25,0.030405469238758087,12.0,,10-fold cross-validation,XGB,,1.0
+target_approx_consistency_in_neighborhood_q50,0.0025897023733705282,27.0,,10-fold cross-validation,XGB,,1.0
+target_approx_consistency_in_neighborhood_q75,0.00038658661651425064,32.0,,10-fold cross-validation,XGB,,1.0
+target_approx_consistency_in_neighborhood_q1,0.0,46.5,,10-fold cross-validation,XGB,,1.0
+target_approx_consistency_in_neighborhood_minmax,0.0,46.5,,10-fold cross-validation,XGB,,1.0
+pred_targets_consistency_in_neighborhood_mean,0.001502983388490975,29.0,,10-fold cross-validation,XGB,,1.0
+pred_targets_consistency_in_neighborhood_q0,0.00642050988972187,20.0,,10-fold cross-validation,XGB,,1.0
+pred_targets_consistency_in_neighborhood_q25,0.004647586029022932,23.0,,10-fold cross-validation,XGB,,1.0
+pred_targets_consistency_in_neighborhood_q50,0.03668640926480293,10.0,,10-fold cross-validation,XGB,,1.0
+pred_targets_consistency_in_neighborhood_q75,0.11966262012720108,2.0,,10-fold cross-validation,XGB,,1.0
+pred_targets_consistency_in_neighborhood_q1,0.0,46.5,,10-fold cross-validation,XGB,,1.0
+pred_targets_consistency_in_neighborhood_minmax,0.012404394336044788,19.0,,10-fold cross-validation,XGB,,1.0
+target_targets_consistency_in_neighborhood_mean,0.00036209571408107877,33.0,,10-fold cross-validation,XGB,,1.0
+target_targets_consistency_in_neighborhood_q0,0.035279132425785065,11.0,,10-fold cross-validation,XGB,,1.0
+target_targets_consistency_in_neighborhood_q25,0.07203148305416107,5.0,,10-fold cross-validation,XGB,,1.0
+target_targets_consistency_in_neighborhood_q50,0.0,46.5,,10-fold cross-validation,XGB,,1.0
+target_targets_consistency_in_neighborhood_q75,0.0012478785356506705,30.0,,10-fold cross-validation,XGB,,1.0
+target_targets_consistency_in_neighborhood_q1,0.0,46.5,,10-fold cross-validation,XGB,,1.0
+target_targets_consistency_in_neighborhood_minmax,0.0,46.5,,10-fold cross-validation,XGB,,1.0
+targets_and_approxs_consistency_in_neighborhood_mean,0.012498469091951847,18.0,,10-fold cross-validation,XGB,,1.0
+targets_and_approxs_consistency_in_neighborhood_q0,0.013149863108992577,17.0,,10-fold cross-validation,XGB,,1.0
+targets_and_approxs_consistency_in_neighborhood_q25,0.0,46.5,,10-fold cross-validation,XGB,,1.0
+targets_and_approxs_consistency_in_neighborhood_q50,0.0,46.5,,10-fold cross-validation,XGB,,1.0
+targets_and_approxs_consistency_in_neighborhood_q75,0.0,46.5,,10-fold cross-validation,XGB,,1.0
+targets_and_approxs_consistency_in_neighborhood_q1,0.0,46.5,,10-fold cross-validation,XGB,,1.0
+targets_and_approxs_consistency_in_neighborhood_minmax,0.0,46.5,,10-fold cross-validation,XGB,,1.0
+target_diversity_in_neighborhood_mean,0.06977099180221558,6.0,,10-fold cross-validation,XGB,,1.0
+target_diversity_in_neighborhood_q0,0.0,46.5,,10-fold cross-validation,XGB,,1.0
+target_diversity_in_neighborhood_q25,0.002421233570203185,28.0,,10-fold cross-validation,XGB,,1.0
+target_diversity_in_neighborhood_q50,0.0,46.5,,10-fold cross-validation,XGB,,1.0
+target_diversity_in_neighborhood_q75,0.0,46.5,,10-fold cross-validation,XGB,,1.0
+target_diversity_in_neighborhood_q1,0.0,46.5,,10-fold cross-validation,XGB,,1.0
+target_diversity_in_neighborhood_minmax,0.0,46.5,,10-fold cross-validation,XGB,,1.0
+approx_diversity_in_neighborhood_mean,0.014728326350450516,16.0,,10-fold cross-validation,XGB,,1.0
+approx_diversity_in_neighborhood_q0,0.0,46.5,,10-fold cross-validation,XGB,,1.0
+approx_diversity_in_neighborhood_q25,0.0,46.5,,10-fold cross-validation,XGB,,1.0
+approx_diversity_in_neighborhood_q50,0.003359951078891754,25.0,,10-fold cross-validation,XGB,,1.0
+approx_diversity_in_neighborhood_q75,0.0,46.5,,10-fold cross-validation,XGB,,1.0
+approx_diversity_in_neighborhood_q1,0.0047563668340444565,22.0,,10-fold cross-validation,XGB,,1.0
+approx_diversity_in_neighborhood_minmax,0.0,46.5,,10-fold cross-validation,XGB,,1.0
+bacc_test,0.058292608708143234,5.0,,10-fold cross-validation,XGB,,2.0
+n_test,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+n_classes,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+neighborhood_size_mean,0.04446157440543175,8.0,,10-fold cross-validation,XGB,,2.0
+neighborhood_size_q0,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+neighborhood_size_q25,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+neighborhood_size_q50,0.14888937771320343,3.0,,10-fold cross-validation,XGB,,2.0
+neighborhood_size_q75,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+neighborhood_size_q1,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+neighborhood_size_minmax,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+uncertainty_mean,0.017280930653214455,13.0,,10-fold cross-validation,XGB,,2.0
+uncertainty_q0,0.005252276547253132,18.0,,10-fold cross-validation,XGB,,2.0
+uncertainty_q25,0.0019875208381563425,22.0,,10-fold cross-validation,XGB,,2.0
+uncertainty_q50,0.03215387091040611,9.0,,10-fold cross-validation,XGB,,2.0
+uncertainty_q75,0.05375352501869202,6.0,,10-fold cross-validation,XGB,,2.0
+uncertainty_q1,0.01625952497124672,14.0,,10-fold cross-validation,XGB,,2.0
+uncertainty_minmax,0.00872054137289524,16.0,,10-fold cross-validation,XGB,,2.0
+target_approx_consistency_in_neighborhood_mean,0.02858632430434227,11.0,,10-fold cross-validation,XGB,,2.0
+target_approx_consistency_in_neighborhood_q0,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+target_approx_consistency_in_neighborhood_q25,0.02938467264175415,10.0,,10-fold cross-validation,XGB,,2.0
+target_approx_consistency_in_neighborhood_q50,0.017453014850616455,12.0,,10-fold cross-validation,XGB,,2.0
+target_approx_consistency_in_neighborhood_q75,0.09246029704809189,4.0,,10-fold cross-validation,XGB,,2.0
+target_approx_consistency_in_neighborhood_q1,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+target_approx_consistency_in_neighborhood_minmax,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+pred_targets_consistency_in_neighborhood_mean,0.04579741880297661,7.0,,10-fold cross-validation,XGB,,2.0
+pred_targets_consistency_in_neighborhood_q0,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+pred_targets_consistency_in_neighborhood_q25,0.0007814993732608855,24.0,,10-fold cross-validation,XGB,,2.0
+pred_targets_consistency_in_neighborhood_q50,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+pred_targets_consistency_in_neighborhood_q75,0.010272384621202946,15.0,,10-fold cross-validation,XGB,,2.0
+pred_targets_consistency_in_neighborhood_q1,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+pred_targets_consistency_in_neighborhood_minmax,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+target_targets_consistency_in_neighborhood_mean,0.0034748194739222527,20.0,,10-fold cross-validation,XGB,,2.0
+target_targets_consistency_in_neighborhood_q0,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+target_targets_consistency_in_neighborhood_q25,0.19244572520256042,1.0,,10-fold cross-validation,XGB,,2.0
+target_targets_consistency_in_neighborhood_q50,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+target_targets_consistency_in_neighborhood_q75,0.1774018257856369,2.0,,10-fold cross-validation,XGB,,2.0
+target_targets_consistency_in_neighborhood_q1,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+target_targets_consistency_in_neighborhood_minmax,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+targets_and_approxs_consistency_in_neighborhood_mean,0.0028180740773677826,21.0,,10-fold cross-validation,XGB,,2.0
+targets_and_approxs_consistency_in_neighborhood_q0,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+targets_and_approxs_consistency_in_neighborhood_q25,0.005640141665935516,17.0,,10-fold cross-validation,XGB,,2.0
+targets_and_approxs_consistency_in_neighborhood_q50,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+targets_and_approxs_consistency_in_neighborhood_q75,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+targets_and_approxs_consistency_in_neighborhood_q1,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+targets_and_approxs_consistency_in_neighborhood_minmax,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+target_diversity_in_neighborhood_mean,0.00025742623256519437,26.0,,10-fold cross-validation,XGB,,2.0
+target_diversity_in_neighborhood_q0,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+target_diversity_in_neighborhood_q25,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+target_diversity_in_neighborhood_q50,0.0006618376937694848,25.0,,10-fold cross-validation,XGB,,2.0
+target_diversity_in_neighborhood_q75,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+target_diversity_in_neighborhood_q1,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+target_diversity_in_neighborhood_minmax,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+approx_diversity_in_neighborhood_mean,0.0011970651103183627,23.0,,10-fold cross-validation,XGB,,2.0
+approx_diversity_in_neighborhood_q0,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+approx_diversity_in_neighborhood_q25,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+approx_diversity_in_neighborhood_q50,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+approx_diversity_in_neighborhood_q75,0.0043157124891877174,19.0,,10-fold cross-validation,XGB,,2.0
+approx_diversity_in_neighborhood_q1,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+approx_diversity_in_neighborhood_minmax,0.0,43.0,,10-fold cross-validation,XGB,,2.0
+bacc_test,0.08160155898920636,1.0,banknote,one-data-set-out,RF,,
+n_test,0.0008899800162368078,50.0,banknote,one-data-set-out,RF,,
+n_classes,0.0,55.5,banknote,one-data-set-out,RF,,
+neighborhood_size_mean,0.06686312457973072,2.0,banknote,one-data-set-out,RF,,
+neighborhood_size_q0,0.0,55.5,banknote,one-data-set-out,RF,,
+neighborhood_size_q25,0.05108922133646032,4.0,banknote,one-data-set-out,RF,,
+neighborhood_size_q50,0.05985949473341698,3.0,banknote,one-data-set-out,RF,,
+neighborhood_size_q75,0.020685234811108337,19.0,banknote,one-data-set-out,RF,,
+neighborhood_size_q1,0.003606034274544998,46.0,banknote,one-data-set-out,RF,,
+neighborhood_size_minmax,0.0060763029067148755,41.0,banknote,one-data-set-out,RF,,
+uncertainty_mean,0.024328812505963762,15.0,banknote,one-data-set-out,RF,,
+uncertainty_q0,0.01918847579048086,20.0,banknote,one-data-set-out,RF,,
+uncertainty_q25,0.03589968927078722,8.0,banknote,one-data-set-out,RF,,
+uncertainty_q50,0.02354529847378525,16.0,banknote,one-data-set-out,RF,,
+uncertainty_q75,0.02327417528489807,17.0,banknote,one-data-set-out,RF,,
+uncertainty_q1,0.03366370076219763,10.0,banknote,one-data-set-out,RF,,
+uncertainty_minmax,0.03402516826403942,9.0,banknote,one-data-set-out,RF,,
+target_approx_consistency_in_neighborhood_mean,0.017367533410286438,21.0,banknote,one-data-set-out,RF,,
+target_approx_consistency_in_neighborhood_q0,0.0007358490566037738,51.0,banknote,one-data-set-out,RF,,
+target_approx_consistency_in_neighborhood_q25,0.021722829274072895,18.0,banknote,one-data-set-out,RF,,
+target_approx_consistency_in_neighborhood_q50,0.014564591915536697,26.0,banknote,one-data-set-out,RF,,
+target_approx_consistency_in_neighborhood_q75,0.006694631981995884,38.0,banknote,one-data-set-out,RF,,
+target_approx_consistency_in_neighborhood_q1,0.0,55.5,banknote,one-data-set-out,RF,,
+target_approx_consistency_in_neighborhood_minmax,0.0,55.5,banknote,one-data-set-out,RF,,
+pred_targets_consistency_in_neighborhood_mean,0.047923730119043925,5.0,banknote,one-data-set-out,RF,,
+pred_targets_consistency_in_neighborhood_q0,0.0032455574823907316,47.0,banknote,one-data-set-out,RF,,
+pred_targets_consistency_in_neighborhood_q25,0.03672921083968935,7.0,banknote,one-data-set-out,RF,,
+pred_targets_consistency_in_neighborhood_q50,0.042653962179797854,6.0,banknote,one-data-set-out,RF,,
+pred_targets_consistency_in_neighborhood_q75,0.03110773144172076,12.0,banknote,one-data-set-out,RF,,
+pred_targets_consistency_in_neighborhood_q1,0.0025841861882057436,49.0,banknote,one-data-set-out,RF,,
+pred_targets_consistency_in_neighborhood_minmax,0.00733488469232143,36.0,banknote,one-data-set-out,RF,,
+target_targets_consistency_in_neighborhood_mean,0.015455768377591106,23.0,banknote,one-data-set-out,RF,,
+target_targets_consistency_in_neighborhood_q0,0.028137115686873364,14.0,banknote,one-data-set-out,RF,,
+target_targets_consistency_in_neighborhood_q25,0.028953931057535288,13.0,banknote,one-data-set-out,RF,,
+target_targets_consistency_in_neighborhood_q50,0.015579619734284811,22.0,banknote,one-data-set-out,RF,,
+target_targets_consistency_in_neighborhood_q75,0.006243608944832222,39.0,banknote,one-data-set-out,RF,,
+target_targets_consistency_in_neighborhood_q1,0.0,55.5,banknote,one-data-set-out,RF,,
+target_targets_consistency_in_neighborhood_minmax,0.03164764089899736,11.0,banknote,one-data-set-out,RF,,
+targets_and_approxs_consistency_in_neighborhood_mean,0.01440929138314528,27.0,banknote,one-data-set-out,RF,,
+targets_and_approxs_consistency_in_neighborhood_q0,0.0028965295246261274,48.0,banknote,one-data-set-out,RF,,
+targets_and_approxs_consistency_in_neighborhood_q25,0.011802106481965703,29.0,banknote,one-data-set-out,RF,,
+targets_and_approxs_consistency_in_neighborhood_q50,0.004351539831894742,43.0,banknote,one-data-set-out,RF,,
+targets_and_approxs_consistency_in_neighborhood_q75,0.008440068238718396,33.0,banknote,one-data-set-out,RF,,
+targets_and_approxs_consistency_in_neighborhood_q1,0.0,55.5,banknote,one-data-set-out,RF,,
+targets_and_approxs_consistency_in_neighborhood_minmax,0.003962886044678819,45.0,banknote,one-data-set-out,RF,,
+target_diversity_in_neighborhood_mean,0.014906586846269547,24.0,banknote,one-data-set-out,RF,,
+target_diversity_in_neighborhood_q0,0.0,55.5,banknote,one-data-set-out,RF,,
+target_diversity_in_neighborhood_q25,0.009439401116492805,32.0,banknote,one-data-set-out,RF,,
+target_diversity_in_neighborhood_q50,0.01187326072455052,28.0,banknote,one-data-set-out,RF,,
+target_diversity_in_neighborhood_q75,0.011230525650942865,30.0,banknote,one-data-set-out,RF,,
+target_diversity_in_neighborhood_q1,0.006160048995179721,40.0,banknote,one-data-set-out,RF,,
+target_diversity_in_neighborhood_minmax,0.007798271634803229,35.0,banknote,one-data-set-out,RF,,
+approx_diversity_in_neighborhood_mean,0.011175134836863587,31.0,banknote,one-data-set-out,RF,,
+approx_diversity_in_neighborhood_q0,0.0,55.5,banknote,one-data-set-out,RF,,
+approx_diversity_in_neighborhood_q25,0.0043966477516425295,42.0,banknote,one-data-set-out,RF,,
+approx_diversity_in_neighborhood_q50,0.007864576944275288,34.0,banknote,one-data-set-out,RF,,
+approx_diversity_in_neighborhood_q75,0.014741477487331704,25.0,banknote,one-data-set-out,RF,,
+approx_diversity_in_neighborhood_q1,0.0041275443938863406,44.0,banknote,one-data-set-out,RF,,
+approx_diversity_in_neighborhood_minmax,0.007145446831381642,37.0,banknote,one-data-set-out,RF,,
+bacc_test,0.07587294185723242,1.0,diabetes,one-data-set-out,RF,,
+n_test,0.0001150133855480331,52.0,diabetes,one-data-set-out,RF,,
+n_classes,0.0,56.0,diabetes,one-data-set-out,RF,,
+neighborhood_size_mean,0.0361134694450958,8.0,diabetes,one-data-set-out,RF,,
+neighborhood_size_q0,0.0,56.0,diabetes,one-data-set-out,RF,,
+neighborhood_size_q25,0.022987658853623198,17.0,diabetes,one-data-set-out,RF,,
+neighborhood_size_q50,0.06011113735132523,2.0,diabetes,one-data-set-out,RF,,
+neighborhood_size_q75,0.027371219570768685,13.0,diabetes,one-data-set-out,RF,,
+neighborhood_size_q1,0.009836895127978081,35.0,diabetes,one-data-set-out,RF,,
+neighborhood_size_minmax,0.01270225901389993,29.0,diabetes,one-data-set-out,RF,,
+uncertainty_mean,0.05960350528301985,3.0,diabetes,one-data-set-out,RF,,
+uncertainty_q0,0.01340661546888215,28.0,diabetes,one-data-set-out,RF,,
+uncertainty_q25,0.02336237047010824,16.0,diabetes,one-data-set-out,RF,,
+uncertainty_q50,0.03925154113013072,5.0,diabetes,one-data-set-out,RF,,
+uncertainty_q75,0.04845763321811081,4.0,diabetes,one-data-set-out,RF,,
+uncertainty_q1,0.028977329256681523,10.0,diabetes,one-data-set-out,RF,,
+uncertainty_minmax,0.03120985155112921,9.0,diabetes,one-data-set-out,RF,,
+target_approx_consistency_in_neighborhood_mean,0.016547214949498894,24.0,diabetes,one-data-set-out,RF,,
+target_approx_consistency_in_neighborhood_q0,0.011922168068264771,30.0,diabetes,one-data-set-out,RF,,
+target_approx_consistency_in_neighborhood_q25,0.020549160884849337,20.0,diabetes,one-data-set-out,RF,,
+target_approx_consistency_in_neighborhood_q50,0.010305819951959123,32.0,diabetes,one-data-set-out,RF,,
+target_approx_consistency_in_neighborhood_q75,0.0021875632638391706,48.0,diabetes,one-data-set-out,RF,,
+target_approx_consistency_in_neighborhood_q1,0.0,56.0,diabetes,one-data-set-out,RF,,
+target_approx_consistency_in_neighborhood_minmax,0.010052526172273858,34.0,diabetes,one-data-set-out,RF,,
+pred_targets_consistency_in_neighborhood_mean,0.028729817837249344,11.0,diabetes,one-data-set-out,RF,,
+pred_targets_consistency_in_neighborhood_q0,0.008209388202390977,40.0,diabetes,one-data-set-out,RF,,
+pred_targets_consistency_in_neighborhood_q25,0.018601115251209725,22.0,diabetes,one-data-set-out,RF,,
+pred_targets_consistency_in_neighborhood_q50,0.021866046750484383,19.0,diabetes,one-data-set-out,RF,,
+pred_targets_consistency_in_neighborhood_q75,0.01781420705849099,23.0,diabetes,one-data-set-out,RF,,
+pred_targets_consistency_in_neighborhood_q1,0.0004772393538913364,51.0,diabetes,one-data-set-out,RF,,
+pred_targets_consistency_in_neighborhood_minmax,0.006227026585579194,44.0,diabetes,one-data-set-out,RF,,
+target_targets_consistency_in_neighborhood_mean,0.03737691965767438,6.0,diabetes,one-data-set-out,RF,,
+target_targets_consistency_in_neighborhood_q0,0.014756581767457129,26.0,diabetes,one-data-set-out,RF,,
+target_targets_consistency_in_neighborhood_q25,0.02604350756567557,14.0,diabetes,one-data-set-out,RF,,
+target_targets_consistency_in_neighborhood_q50,0.009608145589917773,37.0,diabetes,one-data-set-out,RF,,
+target_targets_consistency_in_neighborhood_q75,0.009579844726468415,38.0,diabetes,one-data-set-out,RF,,
+target_targets_consistency_in_neighborhood_q1,0.0,56.0,diabetes,one-data-set-out,RF,,
+target_targets_consistency_in_neighborhood_minmax,0.014858647533512731,25.0,diabetes,one-data-set-out,RF,,
+targets_and_approxs_consistency_in_neighborhood_mean,0.01144511759419894,31.0,diabetes,one-data-set-out,RF,,
+targets_and_approxs_consistency_in_neighborhood_q0,0.004554835648775426,46.0,diabetes,one-data-set-out,RF,,
+targets_and_approxs_consistency_in_neighborhood_q25,0.0073551325771155805,42.0,diabetes,one-data-set-out,RF,,
+targets_and_approxs_consistency_in_neighborhood_q50,0.0018548059287441221,49.0,diabetes,one-data-set-out,RF,,
+targets_and_approxs_consistency_in_neighborhood_q75,0.0006971946128572632,50.0,diabetes,one-data-set-out,RF,,
+targets_and_approxs_consistency_in_neighborhood_q1,0.0,56.0,diabetes,one-data-set-out,RF,,
+targets_and_approxs_consistency_in_neighborhood_minmax,0.0067813978826532,43.0,diabetes,one-data-set-out,RF,,
+target_diversity_in_neighborhood_mean,0.03705117707638611,7.0,diabetes,one-data-set-out,RF,,
+target_diversity_in_neighborhood_q0,0.0,56.0,diabetes,one-data-set-out,RF,,
+target_diversity_in_neighborhood_q25,0.0035901116876566413,47.0,diabetes,one-data-set-out,RF,,
+target_diversity_in_neighborhood_q50,0.009054384744399286,39.0,diabetes,one-data-set-out,RF,,
+target_diversity_in_neighborhood_q75,0.022759626557382028,18.0,diabetes,one-data-set-out,RF,,
+target_diversity_in_neighborhood_q1,0.020142785067902725,21.0,diabetes,one-data-set-out,RF,,
+target_diversity_in_neighborhood_minmax,0.027976105127759207,12.0,diabetes,one-data-set-out,RF,,
+approx_diversity_in_neighborhood_mean,0.01405279611434562,27.0,diabetes,one-data-set-out,RF,,
+approx_diversity_in_neighborhood_q0,0.0,56.0,diabetes,one-data-set-out,RF,,
+approx_diversity_in_neighborhood_q25,0.00566117556494721,45.0,diabetes,one-data-set-out,RF,,
+approx_diversity_in_neighborhood_q50,0.009786839615453909,36.0,diabetes,one-data-set-out,RF,,
+approx_diversity_in_neighborhood_q75,0.024185065036243777,15.0,diabetes,one-data-set-out,RF,,
+approx_diversity_in_neighborhood_q1,0.010159953542593646,33.0,diabetes,one-data-set-out,RF,,
+approx_diversity_in_neighborhood_minmax,0.007799113466364287,41.0,diabetes,one-data-set-out,RF,,
+bacc_test,0.07560706975858493,1.0,wilt,one-data-set-out,RF,,
+n_test,0.00013541666666666666,48.0,wilt,one-data-set-out,RF,,
+n_classes,0.0,54.0,wilt,one-data-set-out,RF,,
+neighborhood_size_mean,0.048065750584931656,5.0,wilt,one-data-set-out,RF,,
+neighborhood_size_q0,0.0,54.0,wilt,one-data-set-out,RF,,
+neighborhood_size_q25,0.027101137838920163,15.0,wilt,one-data-set-out,RF,,
+neighborhood_size_q50,0.05394799205881788,3.0,wilt,one-data-set-out,RF,,
+neighborhood_size_q75,0.020972450682901874,18.0,wilt,one-data-set-out,RF,,
+neighborhood_size_q1,0.0036087876798614705,40.0,wilt,one-data-set-out,RF,,
+neighborhood_size_minmax,0.008737390491052446,34.0,wilt,one-data-set-out,RF,,
+uncertainty_mean,0.019184484851682712,23.0,wilt,one-data-set-out,RF,,
+uncertainty_q0,0.01167399279753375,30.0,wilt,one-data-set-out,RF,,
+uncertainty_q25,0.01640641473275174,26.0,wilt,one-data-set-out,RF,,
+uncertainty_q50,0.011994194361593762,29.0,wilt,one-data-set-out,RF,,
+uncertainty_q75,0.033295023817487036,10.0,wilt,one-data-set-out,RF,,
+uncertainty_q1,0.02386352366731015,17.0,wilt,one-data-set-out,RF,,
+uncertainty_minmax,0.019552698222220274,22.0,wilt,one-data-set-out,RF,,
+target_approx_consistency_in_neighborhood_mean,0.030844904460192245,12.0,wilt,one-data-set-out,RF,,
+target_approx_consistency_in_neighborhood_q0,0.002565305188954482,44.0,wilt,one-data-set-out,RF,,
+target_approx_consistency_in_neighborhood_q25,0.008682313722959936,35.0,wilt,one-data-set-out,RF,,
+target_approx_consistency_in_neighborhood_q50,0.04138700428436733,8.0,wilt,one-data-set-out,RF,,
+target_approx_consistency_in_neighborhood_q75,0.01961472453794252,21.0,wilt,one-data-set-out,RF,,
+target_approx_consistency_in_neighborhood_q1,0.0,54.0,wilt,one-data-set-out,RF,,
+target_approx_consistency_in_neighborhood_minmax,0.0027046157293218387,43.0,wilt,one-data-set-out,RF,,
+pred_targets_consistency_in_neighborhood_mean,0.04900843743001177,4.0,wilt,one-data-set-out,RF,,
+pred_targets_consistency_in_neighborhood_q0,0.0,54.0,wilt,one-data-set-out,RF,,
+pred_targets_consistency_in_neighborhood_q25,0.04166795238490445,6.0,wilt,one-data-set-out,RF,,
+pred_targets_consistency_in_neighborhood_q50,0.04146701462222132,7.0,wilt,one-data-set-out,RF,,
+pred_targets_consistency_in_neighborhood_q75,0.061309957666116535,2.0,wilt,one-data-set-out,RF,,
+pred_targets_consistency_in_neighborhood_q1,0.0,54.0,wilt,one-data-set-out,RF,,
+pred_targets_consistency_in_neighborhood_minmax,0.0,54.0,wilt,one-data-set-out,RF,,
+target_targets_consistency_in_neighborhood_mean,0.030605955802030915,13.0,wilt,one-data-set-out,RF,,
+target_targets_consistency_in_neighborhood_q0,0.020716505848830225,19.0,wilt,one-data-set-out,RF,,
+target_targets_consistency_in_neighborhood_q25,0.03149613816695897,11.0,wilt,one-data-set-out,RF,,
+target_targets_consistency_in_neighborhood_q50,0.03823527015411486,9.0,wilt,one-data-set-out,RF,,
+target_targets_consistency_in_neighborhood_q75,0.015915986864940893,27.0,wilt,one-data-set-out,RF,,
+target_targets_consistency_in_neighborhood_q1,0.0,54.0,wilt,one-data-set-out,RF,,
+target_targets_consistency_in_neighborhood_minmax,0.014935150378020661,28.0,wilt,one-data-set-out,RF,,
+targets_and_approxs_consistency_in_neighborhood_mean,0.007476517401507657,36.0,wilt,one-data-set-out,RF,,
+targets_and_approxs_consistency_in_neighborhood_q0,0.004018781632263775,39.0,wilt,one-data-set-out,RF,,
+targets_and_approxs_consistency_in_neighborhood_q25,0.00935324555891709,32.0,wilt,one-data-set-out,RF,,
+targets_and_approxs_consistency_in_neighborhood_q50,0.006519095849770871,37.0,wilt,one-data-set-out,RF,,
+targets_and_approxs_consistency_in_neighborhood_q75,0.0028452272727272727,42.0,wilt,one-data-set-out,RF,,
+targets_and_approxs_consistency_in_neighborhood_q1,0.0,54.0,wilt,one-data-set-out,RF,,
+targets_and_approxs_consistency_in_neighborhood_minmax,0.003042129422164811,41.0,wilt,one-data-set-out,RF,,
+target_diversity_in_neighborhood_mean,0.009492775605356975,31.0,wilt,one-data-set-out,RF,,
+target_diversity_in_neighborhood_q0,0.0,54.0,wilt,one-data-set-out,RF,,
+target_diversity_in_neighborhood_q25,0.01799180465497132,25.0,wilt,one-data-set-out,RF,,
+target_diversity_in_neighborhood_q50,0.006384733254513978,38.0,wilt,one-data-set-out,RF,,
+target_diversity_in_neighborhood_q75,0.009233154248854278,33.0,wilt,one-data-set-out,RF,,
+target_diversity_in_neighborhood_q1,0.001505098850595764,46.0,wilt,one-data-set-out,RF,,
+target_diversity_in_neighborhood_minmax,0.0005944805856803333,47.0,wilt,one-data-set-out,RF,,
+approx_diversity_in_neighborhood_mean,0.02579304257764377,16.0,wilt,one-data-set-out,RF,,
+approx_diversity_in_neighborhood_q0,0.0,54.0,wilt,one-data-set-out,RF,,
+approx_diversity_in_neighborhood_q25,0.01988339758673406,20.0,wilt,one-data-set-out,RF,,
+approx_diversity_in_neighborhood_q50,0.029472953424984464,14.0,wilt,one-data-set-out,RF,,
+approx_diversity_in_neighborhood_q75,0.018547222938461536,24.0,wilt,one-data-set-out,RF,,
+approx_diversity_in_neighborhood_q1,0.0025427736806465395,45.0,wilt,one-data-set-out,RF,,
+approx_diversity_in_neighborhood_minmax,0.0,54.0,wilt,one-data-set-out,RF,,
+bacc_test,0.08458618564489583,1.0,,one-model-out,RF,lin,
+n_test,0.0008042472228223367,50.0,,one-model-out,RF,lin,
+n_classes,0.0,55.0,,one-model-out,RF,lin,
+neighborhood_size_mean,0.0493412164458924,4.0,,one-model-out,RF,lin,
+neighborhood_size_q0,0.0,55.0,,one-model-out,RF,lin,
+neighborhood_size_q25,0.038615662502500564,7.0,,one-model-out,RF,lin,
+neighborhood_size_q50,0.061558377351509,2.0,,one-model-out,RF,lin,
+neighborhood_size_q75,0.03278955667282395,10.0,,one-model-out,RF,lin,
+neighborhood_size_q1,0.006581744205942134,39.0,,one-model-out,RF,lin,
+neighborhood_size_minmax,0.008079403829382829,36.0,,one-model-out,RF,lin,
+uncertainty_mean,0.025573049630809395,16.0,,one-model-out,RF,lin,
+uncertainty_q0,0.007289815600188025,37.0,,one-model-out,RF,lin,
+uncertainty_q25,0.022787651726995265,18.0,,one-model-out,RF,lin,
+uncertainty_q50,0.02113519250078753,20.0,,one-model-out,RF,lin,
+uncertainty_q75,0.030405024817840152,13.0,,one-model-out,RF,lin,
+uncertainty_q1,0.033843274340294084,9.0,,one-model-out,RF,lin,
+uncertainty_minmax,0.030829788932357365,11.0,,one-model-out,RF,lin,
+target_approx_consistency_in_neighborhood_mean,0.019242421286484852,21.0,,one-model-out,RF,lin,
+target_approx_consistency_in_neighborhood_q0,0.0,55.0,,one-model-out,RF,lin,
+target_approx_consistency_in_neighborhood_q25,0.017242270181463966,23.0,,one-model-out,RF,lin,
+target_approx_consistency_in_neighborhood_q50,0.015839309547680643,24.0,,one-model-out,RF,lin,
+target_approx_consistency_in_neighborhood_q75,0.008522932170541855,35.0,,one-model-out,RF,lin,
+target_approx_consistency_in_neighborhood_q1,0.0,55.0,,one-model-out,RF,lin,
+target_approx_consistency_in_neighborhood_minmax,0.0,55.0,,one-model-out,RF,lin,
+pred_targets_consistency_in_neighborhood_mean,0.052676894006332915,3.0,,one-model-out,RF,lin,
+pred_targets_consistency_in_neighborhood_q0,0.0032934475638160634,45.0,,one-model-out,RF,lin,
+pred_targets_consistency_in_neighborhood_q25,0.03794244458125953,8.0,,one-model-out,RF,lin,
+pred_targets_consistency_in_neighborhood_q50,0.04669312031791365,5.0,,one-model-out,RF,lin,
+pred_targets_consistency_in_neighborhood_q75,0.04450540232804856,6.0,,one-model-out,RF,lin,
+pred_targets_consistency_in_neighborhood_q1,0.002790631189076319,46.0,,one-model-out,RF,lin,
+pred_targets_consistency_in_neighborhood_minmax,0.0009903919011673855,49.0,,one-model-out,RF,lin,
+target_targets_consistency_in_neighborhood_mean,0.022561500424470887,19.0,,one-model-out,RF,lin,
+target_targets_consistency_in_neighborhood_q0,0.0307291437025955,12.0,,one-model-out,RF,lin,
+target_targets_consistency_in_neighborhood_q25,0.02736057308490254,15.0,,one-model-out,RF,lin,
+target_targets_consistency_in_neighborhood_q50,0.010704164676969266,28.0,,one-model-out,RF,lin,
+target_targets_consistency_in_neighborhood_q75,0.013813259078720743,25.0,,one-model-out,RF,lin,
+target_targets_consistency_in_neighborhood_q1,0.0,55.0,,one-model-out,RF,lin,
+target_targets_consistency_in_neighborhood_minmax,0.0238401062462071,17.0,,one-model-out,RF,lin,
+targets_and_approxs_consistency_in_neighborhood_mean,0.010537318509437562,29.0,,one-model-out,RF,lin,
+targets_and_approxs_consistency_in_neighborhood_q0,0.0017479105441903428,48.0,,one-model-out,RF,lin,
+targets_and_approxs_consistency_in_neighborhood_q25,0.008839447005751505,32.0,,one-model-out,RF,lin,
+targets_and_approxs_consistency_in_neighborhood_q50,0.0033371776778640594,44.0,,one-model-out,RF,lin,
+targets_and_approxs_consistency_in_neighborhood_q75,0.001981265367552302,47.0,,one-model-out,RF,lin,
+targets_and_approxs_consistency_in_neighborhood_q1,0.0,55.0,,one-model-out,RF,lin,
+targets_and_approxs_consistency_in_neighborhood_minmax,0.006219571609873806,40.0,,one-model-out,RF,lin,
+target_diversity_in_neighborhood_mean,0.019240217953329752,22.0,,one-model-out,RF,lin,
+target_diversity_in_neighborhood_q0,0.0,55.0,,one-model-out,RF,lin,
+target_diversity_in_neighborhood_q25,0.008728172511532066,33.0,,one-model-out,RF,lin,
+target_diversity_in_neighborhood_q50,0.007237195365056813,38.0,,one-model-out,RF,lin,
+target_diversity_in_neighborhood_q75,0.005110754908564667,43.0,,one-model-out,RF,lin,
+target_diversity_in_neighborhood_q1,0.00854004888661805,34.0,,one-model-out,RF,lin,
+target_diversity_in_neighborhood_minmax,0.012431430607018913,27.0,,one-model-out,RF,lin,
+approx_diversity_in_neighborhood_mean,0.02886643310792884,14.0,,one-model-out,RF,lin,
+approx_diversity_in_neighborhood_q0,0.0,55.0,,one-model-out,RF,lin,
+approx_diversity_in_neighborhood_q25,0.009845812035920273,30.0,,one-model-out,RF,lin,
+approx_diversity_in_neighborhood_q50,0.0128176459244733,26.0,,one-model-out,RF,lin,
+approx_diversity_in_neighborhood_q75,0.00951040265800765,31.0,,one-model-out,RF,lin,
+approx_diversity_in_neighborhood_q1,0.006090643057101758,41.0,,one-model-out,RF,lin,
+approx_diversity_in_neighborhood_minmax,0.0059503485570859,42.0,,one-model-out,RF,lin,
+bacc_test,0.09110541551180702,1.0,,one-model-out,RF,nn,
+n_test,0.002626551360571247,43.0,,one-model-out,RF,nn,
+n_classes,0.0,54.0,,one-model-out,RF,nn,
+neighborhood_size_mean,0.05231917504879573,7.0,,one-model-out,RF,nn,
+neighborhood_size_q0,0.0,54.0,,one-model-out,RF,nn,
+neighborhood_size_q25,0.061069573860290126,4.0,,one-model-out,RF,nn,
+neighborhood_size_q50,0.06142932843445374,3.0,,one-model-out,RF,nn,
+neighborhood_size_q75,0.007665968959967858,33.0,,one-model-out,RF,nn,
+neighborhood_size_q1,0.0,54.0,,one-model-out,RF,nn,
+neighborhood_size_minmax,0.0,54.0,,one-model-out,RF,nn,
+uncertainty_mean,0.01693633043425822,20.0,,one-model-out,RF,nn,
+uncertainty_q0,0.015522017755537942,23.0,,one-model-out,RF,nn,
+uncertainty_q25,0.026472962861902653,13.0,,one-model-out,RF,nn,
+uncertainty_q50,0.02264099993156981,14.0,,one-model-out,RF,nn,
+uncertainty_q75,0.03268409669159947,9.0,,one-model-out,RF,nn,
+uncertainty_q1,0.01294678357184787,24.0,,one-model-out,RF,nn,
+uncertainty_minmax,0.018180447992792673,18.0,,one-model-out,RF,nn,
+target_approx_consistency_in_neighborhood_mean,0.011008497159565613,27.0,,one-model-out,RF,nn,
+target_approx_consistency_in_neighborhood_q0,0.0026234224435740753,44.0,,one-model-out,RF,nn,
+target_approx_consistency_in_neighborhood_q25,0.010458160475250422,29.0,,one-model-out,RF,nn,
+target_approx_consistency_in_neighborhood_q50,0.021878439381780832,15.0,,one-model-out,RF,nn,
+target_approx_consistency_in_neighborhood_q75,0.010509521245289678,28.0,,one-model-out,RF,nn,
+target_approx_consistency_in_neighborhood_q1,0.0,54.0,,one-model-out,RF,nn,
+target_approx_consistency_in_neighborhood_minmax,0.006145719680856614,38.0,,one-model-out,RF,nn,
+pred_targets_consistency_in_neighborhood_mean,0.0599126373899566,5.0,,one-model-out,RF,nn,
+pred_targets_consistency_in_neighborhood_q0,0.003603549159197212,40.0,,one-model-out,RF,nn,
+pred_targets_consistency_in_neighborhood_q25,0.04874217705127195,8.0,,one-model-out,RF,nn,
+pred_targets_consistency_in_neighborhood_q50,0.07072772681081213,2.0,,one-model-out,RF,nn,
+pred_targets_consistency_in_neighborhood_q75,0.059859275261650656,6.0,,one-model-out,RF,nn,
+pred_targets_consistency_in_neighborhood_q1,0.0009046003284000586,47.0,,one-model-out,RF,nn,
+pred_targets_consistency_in_neighborhood_minmax,0.0064344333502203,36.0,,one-model-out,RF,nn,
+target_targets_consistency_in_neighborhood_mean,0.028365451233648975,11.0,,one-model-out,RF,nn,
+target_targets_consistency_in_neighborhood_q0,0.028908624788374776,10.0,,one-model-out,RF,nn,
+target_targets_consistency_in_neighborhood_q25,0.01728602629215711,19.0,,one-model-out,RF,nn,
+target_targets_consistency_in_neighborhood_q50,0.009372590266609148,31.0,,one-model-out,RF,nn,
+target_targets_consistency_in_neighborhood_q75,0.0075055971583616096,34.0,,one-model-out,RF,nn,
+target_targets_consistency_in_neighborhood_q1,0.0,54.0,,one-model-out,RF,nn,
+target_targets_consistency_in_neighborhood_minmax,0.028038155086981705,12.0,,one-model-out,RF,nn,
+targets_and_approxs_consistency_in_neighborhood_mean,0.006314468310621986,37.0,,one-model-out,RF,nn,
+targets_and_approxs_consistency_in_neighborhood_q0,0.007471458503308517,35.0,,one-model-out,RF,nn,
+targets_and_approxs_consistency_in_neighborhood_q25,0.016306036972700496,21.0,,one-model-out,RF,nn,
+targets_and_approxs_consistency_in_neighborhood_q50,0.002505705099984761,45.0,,one-model-out,RF,nn,
+targets_and_approxs_consistency_in_neighborhood_q75,0.0014075603973316775,46.0,,one-model-out,RF,nn,
+targets_and_approxs_consistency_in_neighborhood_q1,0.0,54.0,,one-model-out,RF,nn,
+targets_and_approxs_consistency_in_neighborhood_minmax,0.003866139066400628,39.0,,one-model-out,RF,nn,
+target_diversity_in_neighborhood_mean,0.016039013642583446,22.0,,one-model-out,RF,nn,
+target_diversity_in_neighborhood_q0,0.0,54.0,,one-model-out,RF,nn,
+target_diversity_in_neighborhood_q25,0.011495683135925411,26.0,,one-model-out,RF,nn,
+target_diversity_in_neighborhood_q50,0.0030122225555411293,42.0,,one-model-out,RF,nn,
+target_diversity_in_neighborhood_q75,0.010243424049919951,30.0,,one-model-out,RF,nn,
+target_diversity_in_neighborhood_q1,0.0,54.0,,one-model-out,RF,nn,
+target_diversity_in_neighborhood_minmax,0.0,54.0,,one-model-out,RF,nn,
+approx_diversity_in_neighborhood_mean,0.02139850772030583,16.0,,one-model-out,RF,nn,
+approx_diversity_in_neighborhood_q0,0.0,54.0,,one-model-out,RF,nn,
+approx_diversity_in_neighborhood_q25,0.008625088417645884,32.0,,one-model-out,RF,nn,
+approx_diversity_in_neighborhood_q50,0.02099640019380606,17.0,,one-model-out,RF,nn,
+approx_diversity_in_neighborhood_q75,0.012531479771342065,25.0,,one-model-out,RF,nn,
+approx_diversity_in_neighborhood_q1,0.00310606665903479,41.0,,one-model-out,RF,nn,
+approx_diversity_in_neighborhood_minmax,0.0007964885241935641,48.0,,one-model-out,RF,nn,
+bacc_test,0.08668682350823151,1.0,,one-model-out,RF,svm,
+n_test,0.0025120690768350804,50.0,,one-model-out,RF,svm,
+n_classes,0.0,56.0,,one-model-out,RF,svm,
+neighborhood_size_mean,0.06082588481258215,3.0,,one-model-out,RF,svm,
+neighborhood_size_q0,0.0,56.0,,one-model-out,RF,svm,
+neighborhood_size_q25,0.037031771393123254,5.0,,one-model-out,RF,svm,
+neighborhood_size_q50,0.06784378323002538,2.0,,one-model-out,RF,svm,
+neighborhood_size_q75,0.03310905118488525,8.0,,one-model-out,RF,svm,
+neighborhood_size_q1,0.006262723745258068,42.0,,one-model-out,RF,svm,
+neighborhood_size_minmax,0.010419150764901394,29.0,,one-model-out,RF,svm,
+uncertainty_mean,0.031093321807254673,11.0,,one-model-out,RF,svm,
+uncertainty_q0,0.018790896279761334,18.0,,one-model-out,RF,svm,
+uncertainty_q25,0.027112955798108972,15.0,,one-model-out,RF,svm,
+uncertainty_q50,0.019886231858262923,17.0,,one-model-out,RF,svm,
+uncertainty_q75,0.035482924338880645,7.0,,one-model-out,RF,svm,
+uncertainty_q1,0.05069980569712293,4.0,,one-model-out,RF,svm,
+uncertainty_minmax,0.024730400330421544,16.0,,one-model-out,RF,svm,
+target_approx_consistency_in_neighborhood_mean,0.018551349574024115,19.0,,one-model-out,RF,svm,
+target_approx_consistency_in_neighborhood_q0,0.002044307618147961,51.0,,one-model-out,RF,svm,
+target_approx_consistency_in_neighborhood_q25,0.01684843715469017,24.0,,one-model-out,RF,svm,
+target_approx_consistency_in_neighborhood_q50,0.009801599666529725,32.0,,one-model-out,RF,svm,
+target_approx_consistency_in_neighborhood_q75,0.01010896657378789,31.0,,one-model-out,RF,svm,
+target_approx_consistency_in_neighborhood_q1,0.0,56.0,,one-model-out,RF,svm,
+target_approx_consistency_in_neighborhood_minmax,0.004662294158574536,45.0,,one-model-out,RF,svm,
+pred_targets_consistency_in_neighborhood_mean,0.030554991072413783,12.0,,one-model-out,RF,svm,
+pred_targets_consistency_in_neighborhood_q0,0.0037291537172519044,48.0,,one-model-out,RF,svm,
+pred_targets_consistency_in_neighborhood_q25,0.028776387595636842,13.0,,one-model-out,RF,svm,
+pred_targets_consistency_in_neighborhood_q50,0.027717322597204004,14.0,,one-model-out,RF,svm,
+pred_targets_consistency_in_neighborhood_q75,0.033012837113441794,9.0,,one-model-out,RF,svm,
+pred_targets_consistency_in_neighborhood_q1,0.0009110258295914603,52.0,,one-model-out,RF,svm,
+pred_targets_consistency_in_neighborhood_minmax,0.004176994257219398,46.0,,one-model-out,RF,svm,
+target_targets_consistency_in_neighborhood_mean,0.018518838533436416,20.0,,one-model-out,RF,svm,
+target_targets_consistency_in_neighborhood_q0,0.03165835439066696,10.0,,one-model-out,RF,svm,
+target_targets_consistency_in_neighborhood_q25,0.035759760668880106,6.0,,one-model-out,RF,svm,
+target_targets_consistency_in_neighborhood_q50,0.011226412772046335,28.0,,one-model-out,RF,svm,
+target_targets_consistency_in_neighborhood_q75,0.009616721965220473,33.0,,one-model-out,RF,svm,
+target_targets_consistency_in_neighborhood_q1,0.0,56.0,,one-model-out,RF,svm,
+target_targets_consistency_in_neighborhood_minmax,0.017019244372194667,22.0,,one-model-out,RF,svm,
+targets_and_approxs_consistency_in_neighborhood_mean,0.014504881501909934,25.0,,one-model-out,RF,svm,
+targets_and_approxs_consistency_in_neighborhood_q0,0.006645453547697222,41.0,,one-model-out,RF,svm,
+targets_and_approxs_consistency_in_neighborhood_q25,0.008145896513090502,40.0,,one-model-out,RF,svm,
+targets_and_approxs_consistency_in_neighborhood_q50,0.0036839935354273513,49.0,,one-model-out,RF,svm,
+targets_and_approxs_consistency_in_neighborhood_q75,0.0041697842152879925,47.0,,one-model-out,RF,svm,
+targets_and_approxs_consistency_in_neighborhood_q1,0.0,56.0,,one-model-out,RF,svm,
+targets_and_approxs_consistency_in_neighborhood_minmax,0.006092672976351481,43.0,,one-model-out,RF,svm,
+target_diversity_in_neighborhood_mean,0.017257032690111144,21.0,,one-model-out,RF,svm,
+target_diversity_in_neighborhood_q0,0.0,56.0,,one-model-out,RF,svm,
+target_diversity_in_neighborhood_q25,0.008777207926573789,35.0,,one-model-out,RF,svm,
+target_diversity_in_neighborhood_q50,0.008499402265035096,37.0,,one-model-out,RF,svm,
+target_diversity_in_neighborhood_q75,0.008224801707624517,38.0,,one-model-out,RF,svm,
+target_diversity_in_neighborhood_q1,0.008169607586566867,39.0,,one-model-out,RF,svm,
+target_diversity_in_neighborhood_minmax,0.014184367328445323,26.0,,one-model-out,RF,svm,
+approx_diversity_in_neighborhood_mean,0.016885782005178755,23.0,,one-model-out,RF,svm,
+approx_diversity_in_neighborhood_q0,0.0,56.0,,one-model-out,RF,svm,
+approx_diversity_in_neighborhood_q25,0.006079214028279048,44.0,,one-model-out,RF,svm,
+approx_diversity_in_neighborhood_q50,0.013723251196838721,27.0,,one-model-out,RF,svm,
+approx_diversity_in_neighborhood_q75,0.010250600442738934,30.0,,one-model-out,RF,svm,
+approx_diversity_in_neighborhood_q1,0.008924701095303755,34.0,,one-model-out,RF,svm,
+approx_diversity_in_neighborhood_minmax,0.008598555980925978,36.0,,one-model-out,RF,svm,
+bacc_test,0.08468199805143904,1.0,,one-model-out,RF,xgb,
+n_test,0.002410202830509648,49.0,,one-model-out,RF,xgb,
+n_classes,0.0,55.5,,one-model-out,RF,xgb,
+neighborhood_size_mean,0.05055457903949363,2.0,,one-model-out,RF,xgb,
+neighborhood_size_q0,0.0,55.5,,one-model-out,RF,xgb,
+neighborhood_size_q25,0.034644595298263935,10.0,,one-model-out,RF,xgb,
+neighborhood_size_q50,0.0501709946587711,3.0,,one-model-out,RF,xgb,
+neighborhood_size_q75,0.03362059554651215,11.0,,one-model-out,RF,xgb,
+neighborhood_size_q1,0.007097171759515734,38.0,,one-model-out,RF,xgb,
+neighborhood_size_minmax,0.011497284741290503,28.0,,one-model-out,RF,xgb,
+uncertainty_mean,0.04473326261982221,6.0,,one-model-out,RF,xgb,
+uncertainty_q0,0.018288762263434195,20.0,,one-model-out,RF,xgb,
+uncertainty_q25,0.04495602976739891,5.0,,one-model-out,RF,xgb,
+uncertainty_q50,0.03492110562890302,9.0,,one-model-out,RF,xgb,
+uncertainty_q75,0.047448105709814406,4.0,,one-model-out,RF,xgb,
+uncertainty_q1,0.03735729730023141,7.0,,one-model-out,RF,xgb,
+uncertainty_minmax,0.032113341997331825,12.0,,one-model-out,RF,xgb,
+target_approx_consistency_in_neighborhood_mean,0.017063899275873085,21.0,,one-model-out,RF,xgb,
+target_approx_consistency_in_neighborhood_q0,0.0015034206113823058,50.0,,one-model-out,RF,xgb,
+target_approx_consistency_in_neighborhood_q25,0.015944408388186556,24.0,,one-model-out,RF,xgb,
+target_approx_consistency_in_neighborhood_q50,0.010653368588512617,31.0,,one-model-out,RF,xgb,
+target_approx_consistency_in_neighborhood_q75,0.007218934358013981,37.0,,one-model-out,RF,xgb,
+target_approx_consistency_in_neighborhood_q1,0.0,55.5,,one-model-out,RF,xgb,
+target_approx_consistency_in_neighborhood_minmax,0.002988590059175226,44.0,,one-model-out,RF,xgb,
+pred_targets_consistency_in_neighborhood_mean,0.03150295532559175,13.0,,one-model-out,RF,xgb,
+pred_targets_consistency_in_neighborhood_q0,0.001008171413452548,51.0,,one-model-out,RF,xgb,
+pred_targets_consistency_in_neighborhood_q25,0.02675316934519065,17.0,,one-model-out,RF,xgb,
+pred_targets_consistency_in_neighborhood_q50,0.02981080059730694,14.0,,one-model-out,RF,xgb,
+pred_targets_consistency_in_neighborhood_q75,0.03496954695656009,8.0,,one-model-out,RF,xgb,
+pred_targets_consistency_in_neighborhood_q1,0.0,55.5,,one-model-out,RF,xgb,
+pred_targets_consistency_in_neighborhood_minmax,0.0029336596961773258,45.0,,one-model-out,RF,xgb,
+target_targets_consistency_in_neighborhood_mean,0.018713664862749488,19.0,,one-model-out,RF,xgb,
+target_targets_consistency_in_neighborhood_q0,0.026373731645776683,18.0,,one-model-out,RF,xgb,
+target_targets_consistency_in_neighborhood_q25,0.02849854687091143,15.0,,one-model-out,RF,xgb,
+target_targets_consistency_in_neighborhood_q50,0.010547998972267814,32.0,,one-model-out,RF,xgb,
+target_targets_consistency_in_neighborhood_q75,0.016903505438455577,22.0,,one-model-out,RF,xgb,
+target_targets_consistency_in_neighborhood_q1,0.0,55.5,,one-model-out,RF,xgb,
+target_targets_consistency_in_neighborhood_minmax,0.027696675751903762,16.0,,one-model-out,RF,xgb,
+targets_and_approxs_consistency_in_neighborhood_mean,0.012389159438892768,27.0,,one-model-out,RF,xgb,
+targets_and_approxs_consistency_in_neighborhood_q0,0.002662366864594659,48.0,,one-model-out,RF,xgb,
+targets_and_approxs_consistency_in_neighborhood_q25,0.00953066955436523,34.0,,one-model-out,RF,xgb,
+targets_and_approxs_consistency_in_neighborhood_q50,0.002858951261619306,46.0,,one-model-out,RF,xgb,
+targets_and_approxs_consistency_in_neighborhood_q75,0.002676176446206913,47.0,,one-model-out,RF,xgb,
+targets_and_approxs_consistency_in_neighborhood_q1,0.0,55.5,,one-model-out,RF,xgb,
+targets_and_approxs_consistency_in_neighborhood_minmax,0.004233207399706898,43.0,,one-model-out,RF,xgb,
+target_diversity_in_neighborhood_mean,0.012773562159280015,26.0,,one-model-out,RF,xgb,
+target_diversity_in_neighborhood_q0,0.0,55.5,,one-model-out,RF,xgb,
+target_diversity_in_neighborhood_q25,0.009219527438114971,35.0,,one-model-out,RF,xgb,
+target_diversity_in_neighborhood_q50,0.00574481327153782,42.0,,one-model-out,RF,xgb,
+target_diversity_in_neighborhood_q75,0.006729149987784331,40.0,,one-model-out,RF,xgb,
+target_diversity_in_neighborhood_q1,0.009006133167850238,36.0,,one-model-out,RF,xgb,
+target_diversity_in_neighborhood_minmax,0.011045527791386064,29.0,,one-model-out,RF,xgb,
+approx_diversity_in_neighborhood_mean,0.015109742796139997,25.0,,one-model-out,RF,xgb,
+approx_diversity_in_neighborhood_q0,0.0,55.5,,one-model-out,RF,xgb,
+approx_diversity_in_neighborhood_q25,0.011008058302674465,30.0,,one-model-out,RF,xgb,
+approx_diversity_in_neighborhood_q50,0.0163048202985377,23.0,,one-model-out,RF,xgb,
+approx_diversity_in_neighborhood_q75,0.010389430691570747,33.0,,one-model-out,RF,xgb,
+approx_diversity_in_neighborhood_q1,0.005909012092040257,41.0,,one-model-out,RF,xgb,
+approx_diversity_in_neighborhood_minmax,0.006829315667477922,39.0,,one-model-out,RF,xgb,
+bacc_test,0.0734756852159618,1.0,,10-fold cross-validation,RF,,0.0
+n_test,0.0050200318072805145,45.0,,10-fold cross-validation,RF,,0.0
+n_classes,0.0,55.5,,10-fold cross-validation,RF,,0.0
+neighborhood_size_mean,0.0385291003057115,3.0,,10-fold cross-validation,RF,,0.0
+neighborhood_size_q0,0.0,55.5,,10-fold cross-validation,RF,,0.0
+neighborhood_size_q25,0.028217438821990435,14.0,,10-fold cross-validation,RF,,0.0
+neighborhood_size_q50,0.062236260218324346,2.0,,10-fold cross-validation,RF,,0.0
+neighborhood_size_q75,0.025643333411344824,17.0,,10-fold cross-validation,RF,,0.0
+neighborhood_size_q1,0.004474784297886677,49.0,,10-fold cross-validation,RF,,0.0
+neighborhood_size_minmax,0.00522235948378018,44.0,,10-fold cross-validation,RF,,0.0
+uncertainty_mean,0.03376136056950035,7.0,,10-fold cross-validation,RF,,0.0
+uncertainty_q0,0.022341490801113084,21.0,,10-fold cross-validation,RF,,0.0
+uncertainty_q25,0.03119171356588074,9.0,,10-fold cross-validation,RF,,0.0
+uncertainty_q50,0.02782801351105938,15.0,,10-fold cross-validation,RF,,0.0
+uncertainty_q75,0.037872774729917374,4.0,,10-fold cross-validation,RF,,0.0
+uncertainty_q1,0.03672480734239192,5.0,,10-fold cross-validation,RF,,0.0
+uncertainty_minmax,0.029445901003609887,12.0,,10-fold cross-validation,RF,,0.0
+target_approx_consistency_in_neighborhood_mean,0.025099366212273724,18.0,,10-fold cross-validation,RF,,0.0
+target_approx_consistency_in_neighborhood_q0,0.004293879722312861,50.0,,10-fold cross-validation,RF,,0.0
+target_approx_consistency_in_neighborhood_q25,0.027693255925278083,16.0,,10-fold cross-validation,RF,,0.0
+target_approx_consistency_in_neighborhood_q50,0.018793429221504388,26.0,,10-fold cross-validation,RF,,0.0
+target_approx_consistency_in_neighborhood_q75,0.010244856245045428,33.0,,10-fold cross-validation,RF,,0.0
+target_approx_consistency_in_neighborhood_q1,0.0,55.5,,10-fold cross-validation,RF,,0.0
+target_approx_consistency_in_neighborhood_minmax,0.00623442504227956,39.0,,10-fold cross-validation,RF,,0.0
+pred_targets_consistency_in_neighborhood_mean,0.030162801916821576,11.0,,10-fold cross-validation,RF,,0.0
+pred_targets_consistency_in_neighborhood_q0,0.0023970004106811512,51.0,,10-fold cross-validation,RF,,0.0
+pred_targets_consistency_in_neighborhood_q25,0.023646916282688595,20.0,,10-fold cross-validation,RF,,0.0
+pred_targets_consistency_in_neighborhood_q50,0.030174241107548377,10.0,,10-fold cross-validation,RF,,0.0
+pred_targets_consistency_in_neighborhood_q75,0.02867081581607237,13.0,,10-fold cross-validation,RF,,0.0
+pred_targets_consistency_in_neighborhood_q1,0.0,55.5,,10-fold cross-validation,RF,,0.0
+pred_targets_consistency_in_neighborhood_minmax,0.004738307784015447,48.0,,10-fold cross-validation,RF,,0.0
+target_targets_consistency_in_neighborhood_mean,0.03561582807419489,6.0,,10-fold cross-validation,RF,,0.0
+target_targets_consistency_in_neighborhood_q0,0.0248358908021878,19.0,,10-fold cross-validation,RF,,0.0
+target_targets_consistency_in_neighborhood_q25,0.03191637747041995,8.0,,10-fold cross-validation,RF,,0.0
+target_targets_consistency_in_neighborhood_q50,0.021398516749879595,22.0,,10-fold cross-validation,RF,,0.0
+target_targets_consistency_in_neighborhood_q75,0.020951330696538612,23.0,,10-fold cross-validation,RF,,0.0
+target_targets_consistency_in_neighborhood_q1,0.0,55.5,,10-fold cross-validation,RF,,0.0
+target_targets_consistency_in_neighborhood_minmax,0.01676314233031333,27.0,,10-fold cross-validation,RF,,0.0
+targets_and_approxs_consistency_in_neighborhood_mean,0.00999609887433958,34.0,,10-fold cross-validation,RF,,0.0
+targets_and_approxs_consistency_in_neighborhood_q0,0.006100049515306204,40.0,,10-fold cross-validation,RF,,0.0
+targets_and_approxs_consistency_in_neighborhood_q25,0.010568388904691315,32.0,,10-fold cross-validation,RF,,0.0
+targets_and_approxs_consistency_in_neighborhood_q50,0.006583498199194085,37.0,,10-fold cross-validation,RF,,0.0
+targets_and_approxs_consistency_in_neighborhood_q75,0.0054105187946875384,43.0,,10-fold cross-validation,RF,,0.0
+targets_and_approxs_consistency_in_neighborhood_q1,0.0,55.5,,10-fold cross-validation,RF,,0.0
+targets_and_approxs_consistency_in_neighborhood_minmax,0.004800801013643122,47.0,,10-fold cross-validation,RF,,0.0
+target_diversity_in_neighborhood_mean,0.013364775169610932,30.0,,10-fold cross-validation,RF,,0.0
+target_diversity_in_neighborhood_q0,0.0,55.5,,10-fold cross-validation,RF,,0.0
+target_diversity_in_neighborhood_q25,0.006525143919178571,38.0,,10-fold cross-validation,RF,,0.0
+target_diversity_in_neighborhood_q50,0.00588906461595753,41.0,,10-fold cross-validation,RF,,0.0
+target_diversity_in_neighborhood_q75,0.019093344986801288,25.0,,10-fold cross-validation,RF,,0.0
+target_diversity_in_neighborhood_q1,0.007503029145282368,36.0,,10-fold cross-validation,RF,,0.0
+target_diversity_in_neighborhood_minmax,0.004870453900155174,46.0,,10-fold cross-validation,RF,,0.0
+approx_diversity_in_neighborhood_mean,0.014829431142178395,29.0,,10-fold cross-validation,RF,,0.0
+approx_diversity_in_neighborhood_q0,0.0,55.5,,10-fold cross-validation,RF,,0.0
+approx_diversity_in_neighborhood_q25,0.011248964097663735,31.0,,10-fold cross-validation,RF,,0.0
+approx_diversity_in_neighborhood_q50,0.019096259211271758,24.0,,10-fold cross-validation,RF,,0.0
+approx_diversity_in_neighborhood_q75,0.015158850054267918,28.0,,10-fold cross-validation,RF,,0.0
+approx_diversity_in_neighborhood_q1,0.005731054802546288,42.0,,10-fold cross-validation,RF,,0.0
+approx_diversity_in_neighborhood_minmax,0.007614836757415573,35.0,,10-fold cross-validation,RF,,0.0
+bacc_test,0.08662567010378001,1.0,,10-fold cross-validation,RF,,1.0
+n_test,0.0018699437530282775,51.0,,10-fold cross-validation,RF,,1.0
+n_classes,0.0,56.0,,10-fold cross-validation,RF,,1.0
+neighborhood_size_mean,0.05427519076338606,3.0,,10-fold cross-validation,RF,,1.0
+neighborhood_size_q0,0.0,56.0,,10-fold cross-validation,RF,,1.0
+neighborhood_size_q25,0.04219243850098365,6.0,,10-fold cross-validation,RF,,1.0
+neighborhood_size_q50,0.0626444482263497,2.0,,10-fold cross-validation,RF,,1.0
+neighborhood_size_q75,0.013821720496270243,24.0,,10-fold cross-validation,RF,,1.0
+neighborhood_size_q1,0.008680163164080289,39.0,,10-fold cross-validation,RF,,1.0
+neighborhood_size_minmax,0.004711291628442301,46.0,,10-fold cross-validation,RF,,1.0
+uncertainty_mean,0.04088501394139436,7.0,,10-fold cross-validation,RF,,1.0
+uncertainty_q0,0.0169559910143235,21.0,,10-fold cross-validation,RF,,1.0
+uncertainty_q25,0.03458959498324776,10.0,,10-fold cross-validation,RF,,1.0
+uncertainty_q50,0.01758522177636624,19.0,,10-fold cross-validation,RF,,1.0
+uncertainty_q75,0.03569946311229329,9.0,,10-fold cross-validation,RF,,1.0
+uncertainty_q1,0.027253566571951233,12.0,,10-fold cross-validation,RF,,1.0
+uncertainty_minmax,0.03108511692674015,11.0,,10-fold cross-validation,RF,,1.0
+target_approx_consistency_in_neighborhood_mean,0.01740106195632917,20.0,,10-fold cross-validation,RF,,1.0
+target_approx_consistency_in_neighborhood_q0,0.0035065785271007647,48.0,,10-fold cross-validation,RF,,1.0
+target_approx_consistency_in_neighborhood_q25,0.015384576329846411,23.0,,10-fold cross-validation,RF,,1.0
+target_approx_consistency_in_neighborhood_q50,0.018047565023559906,18.0,,10-fold cross-validation,RF,,1.0
+target_approx_consistency_in_neighborhood_q75,0.010315031999197836,33.0,,10-fold cross-validation,RF,,1.0
+target_approx_consistency_in_neighborhood_q1,0.0,56.0,,10-fold cross-validation,RF,,1.0
+target_approx_consistency_in_neighborhood_minmax,0.0019010056468791536,50.0,,10-fold cross-validation,RF,,1.0
+pred_targets_consistency_in_neighborhood_mean,0.0462508816379265,4.0,,10-fold cross-validation,RF,,1.0
+pred_targets_consistency_in_neighborhood_q0,0.009259349204518898,38.0,,10-fold cross-validation,RF,,1.0
+pred_targets_consistency_in_neighborhood_q25,0.039912286771970965,8.0,,10-fold cross-validation,RF,,1.0
+pred_targets_consistency_in_neighborhood_q50,0.026544601253714675,13.0,,10-fold cross-validation,RF,,1.0
+pred_targets_consistency_in_neighborhood_q75,0.04501928830691333,5.0,,10-fold cross-validation,RF,,1.0
+pred_targets_consistency_in_neighborhood_q1,0.0015412062262270692,52.0,,10-fold cross-validation,RF,,1.0
+pred_targets_consistency_in_neighborhood_minmax,0.006253477500977347,44.0,,10-fold cross-validation,RF,,1.0
+target_targets_consistency_in_neighborhood_mean,0.012519967190391425,26.0,,10-fold cross-validation,RF,,1.0
+target_targets_consistency_in_neighborhood_q0,0.022266959502235128,15.0,,10-fold cross-validation,RF,,1.0
+target_targets_consistency_in_neighborhood_q25,0.021966404130677,17.0,,10-fold cross-validation,RF,,1.0
+target_targets_consistency_in_neighborhood_q50,0.010721780356945508,29.0,,10-fold cross-validation,RF,,1.0
+target_targets_consistency_in_neighborhood_q75,0.010488302549428802,30.0,,10-fold cross-validation,RF,,1.0
+target_targets_consistency_in_neighborhood_q1,0.0,56.0,,10-fold cross-validation,RF,,1.0
+target_targets_consistency_in_neighborhood_minmax,0.01227324206449346,27.0,,10-fold cross-validation,RF,,1.0
+targets_and_approxs_consistency_in_neighborhood_mean,0.012922308837411894,25.0,,10-fold cross-validation,RF,,1.0
+targets_and_approxs_consistency_in_neighborhood_q0,0.006733267072289733,43.0,,10-fold cross-validation,RF,,1.0
+targets_and_approxs_consistency_in_neighborhood_q25,0.006160987462071055,45.0,,10-fold cross-validation,RF,,1.0
+targets_and_approxs_consistency_in_neighborhood_q50,0.0036494363829834083,47.0,,10-fold cross-validation,RF,,1.0
+targets_and_approxs_consistency_in_neighborhood_q75,0.0034933533561608203,49.0,,10-fold cross-validation,RF,,1.0
+targets_and_approxs_consistency_in_neighborhood_q1,0.0,56.0,,10-fold cross-validation,RF,,1.0
+targets_and_approxs_consistency_in_neighborhood_minmax,0.008008297830397977,40.0,,10-fold cross-validation,RF,,1.0
+target_diversity_in_neighborhood_mean,0.02370372551851707,14.0,,10-fold cross-validation,RF,,1.0
+target_diversity_in_neighborhood_q0,0.0,56.0,,10-fold cross-validation,RF,,1.0
+target_diversity_in_neighborhood_q25,0.007802363329806763,41.0,,10-fold cross-validation,RF,,1.0
+target_diversity_in_neighborhood_q50,0.007627469816979058,42.0,,10-fold cross-validation,RF,,1.0
+target_diversity_in_neighborhood_q75,0.010140906243379544,34.0,,10-fold cross-validation,RF,,1.0
+target_diversity_in_neighborhood_q1,0.010431227508092515,31.0,,10-fold cross-validation,RF,,1.0
+target_diversity_in_neighborhood_minmax,0.015659119789660184,22.0,,10-fold cross-validation,RF,,1.0
+approx_diversity_in_neighborhood_mean,0.022080953419057008,16.0,,10-fold cross-validation,RF,,1.0
+approx_diversity_in_neighborhood_q0,0.0,56.0,,10-fold cross-validation,RF,,1.0
+approx_diversity_in_neighborhood_q25,0.009971920968962253,35.0,,10-fold cross-validation,RF,,1.0
+approx_diversity_in_neighborhood_q50,0.011343878361694273,28.0,,10-fold cross-validation,RF,,1.0
+approx_diversity_in_neighborhood_q75,0.009684694981687248,37.0,,10-fold cross-validation,RF,,1.0
+approx_diversity_in_neighborhood_q1,0.009710131622338322,36.0,,10-fold cross-validation,RF,,1.0
+approx_diversity_in_neighborhood_minmax,0.010427556356540418,32.0,,10-fold cross-validation,RF,,1.0
+bacc_test,0.0873508937084005,1.0,,10-fold cross-validation,RF,,2.0
+n_test,0.003566526200818594,44.0,,10-fold cross-validation,RF,,2.0
+n_classes,0.0,56.0,,10-fold cross-validation,RF,,2.0
+neighborhood_size_mean,0.04529711623478436,7.0,,10-fold cross-validation,RF,,2.0
+neighborhood_size_q0,0.0,56.0,,10-fold cross-validation,RF,,2.0
+neighborhood_size_q25,0.03659232744536681,8.0,,10-fold cross-validation,RF,,2.0
+neighborhood_size_q50,0.04932950907290598,6.0,,10-fold cross-validation,RF,,2.0
+neighborhood_size_q75,0.025466370509728584,12.0,,10-fold cross-validation,RF,,2.0
+neighborhood_size_q1,0.001991960274501512,49.0,,10-fold cross-validation,RF,,2.0
+neighborhood_size_minmax,0.0017761995619120646,50.0,,10-fold cross-validation,RF,,2.0
+uncertainty_mean,0.02242390129852306,14.0,,10-fold cross-validation,RF,,2.0
+uncertainty_q0,0.009024464469524608,33.0,,10-fold cross-validation,RF,,2.0
+uncertainty_q25,0.033565744012612454,10.0,,10-fold cross-validation,RF,,2.0
+uncertainty_q50,0.03461061101249617,9.0,,10-fold cross-validation,RF,,2.0
+uncertainty_q75,0.021338452461063157,16.0,,10-fold cross-validation,RF,,2.0
+uncertainty_q1,0.01987488257769246,17.0,,10-fold cross-validation,RF,,2.0
+uncertainty_minmax,0.017387718041659134,24.0,,10-fold cross-validation,RF,,2.0
+target_approx_consistency_in_neighborhood_mean,0.01749413312726861,23.0,,10-fold cross-validation,RF,,2.0
+target_approx_consistency_in_neighborhood_q0,0.007744062209783301,38.0,,10-fold cross-validation,RF,,2.0
+target_approx_consistency_in_neighborhood_q25,0.009892071672259816,31.0,,10-fold cross-validation,RF,,2.0
+target_approx_consistency_in_neighborhood_q50,0.017667090302045753,22.0,,10-fold cross-validation,RF,,2.0
+target_approx_consistency_in_neighborhood_q75,0.01801392165893676,21.0,,10-fold cross-validation,RF,,2.0
+target_approx_consistency_in_neighborhood_q1,0.0,56.0,,10-fold cross-validation,RF,,2.0
+target_approx_consistency_in_neighborhood_minmax,0.0016748668527816985,51.0,,10-fold cross-validation,RF,,2.0
+pred_targets_consistency_in_neighborhood_mean,0.06031333620621148,2.0,,10-fold cross-validation,RF,,2.0
+pred_targets_consistency_in_neighborhood_q0,0.0021397901868131495,48.0,,10-fold cross-validation,RF,,2.0
+pred_targets_consistency_in_neighborhood_q25,0.05831921519209089,3.0,,10-fold cross-validation,RF,,2.0
+pred_targets_consistency_in_neighborhood_q50,0.05738987942859631,4.0,,10-fold cross-validation,RF,,2.0
+pred_targets_consistency_in_neighborhood_q75,0.053541390972697354,5.0,,10-fold cross-validation,RF,,2.0
+pred_targets_consistency_in_neighborhood_q1,0.0042695980580139785,43.0,,10-fold cross-validation,RF,,2.0
+pred_targets_consistency_in_neighborhood_minmax,0.0013761164045367467,52.0,,10-fold cross-validation,RF,,2.0
+target_targets_consistency_in_neighborhood_mean,0.021785415070489124,15.0,,10-fold cross-validation,RF,,2.0
+target_targets_consistency_in_neighborhood_q0,0.030465854522596345,11.0,,10-fold cross-validation,RF,,2.0
+target_targets_consistency_in_neighborhood_q25,0.018346891796350503,20.0,,10-fold cross-validation,RF,,2.0
+target_targets_consistency_in_neighborhood_q50,0.01854681662474747,19.0,,10-fold cross-validation,RF,,2.0
+target_targets_consistency_in_neighborhood_q75,0.013354078466549693,26.0,,10-fold cross-validation,RF,,2.0
+target_targets_consistency_in_neighborhood_q1,0.0,56.0,,10-fold cross-validation,RF,,2.0
+target_targets_consistency_in_neighborhood_minmax,0.024085397081984525,13.0,,10-fold cross-validation,RF,,2.0
+targets_and_approxs_consistency_in_neighborhood_mean,0.008828108171201271,34.0,,10-fold cross-validation,RF,,2.0
+targets_and_approxs_consistency_in_neighborhood_q0,0.004624096236318391,41.0,,10-fold cross-validation,RF,,2.0
+targets_and_approxs_consistency_in_neighborhood_q25,0.009895283243941875,30.0,,10-fold cross-validation,RF,,2.0
+targets_and_approxs_consistency_in_neighborhood_q50,0.0030532058026052043,47.0,,10-fold cross-validation,RF,,2.0
+targets_and_approxs_consistency_in_neighborhood_q75,0.0033529955371529867,45.0,,10-fold cross-validation,RF,,2.0
+targets_and_approxs_consistency_in_neighborhood_q1,0.0,56.0,,10-fold cross-validation,RF,,2.0
+targets_and_approxs_consistency_in_neighborhood_minmax,0.0042777936184780025,42.0,,10-fold cross-validation,RF,,2.0
+target_diversity_in_neighborhood_mean,0.01882279139958018,18.0,,10-fold cross-validation,RF,,2.0
+target_diversity_in_neighborhood_q0,0.0,56.0,,10-fold cross-validation,RF,,2.0
+target_diversity_in_neighborhood_q25,0.009526547067930465,32.0,,10-fold cross-validation,RF,,2.0
+target_diversity_in_neighborhood_q50,0.008589057956436956,35.0,,10-fold cross-validation,RF,,2.0
+target_diversity_in_neighborhood_q75,0.012272404344806555,28.0,,10-fold cross-validation,RF,,2.0
+target_diversity_in_neighborhood_q1,0.007788559247054311,37.0,,10-fold cross-validation,RF,,2.0
+target_diversity_in_neighborhood_minmax,0.004651595009743789,40.0,,10-fold cross-validation,RF,,2.0
+approx_diversity_in_neighborhood_mean,0.01227758681917174,27.0,,10-fold cross-validation,RF,,2.0
+approx_diversity_in_neighborhood_q0,0.0,56.0,,10-fold cross-validation,RF,,2.0
+approx_diversity_in_neighborhood_q25,0.008484362627600389,36.0,,10-fold cross-validation,RF,,2.0
+approx_diversity_in_neighborhood_q50,0.01685800823350394,25.0,,10-fold cross-validation,RF,,2.0
+approx_diversity_in_neighborhood_q75,0.011349622826477309,29.0,,10-fold cross-validation,RF,,2.0
+approx_diversity_in_neighborhood_q1,0.0033173810313083564,46.0,,10-fold cross-validation,RF,,2.0
+approx_diversity_in_neighborhood_minmax,0.0060139981099453,39.0,,10-fold cross-validation,RF,,2.0

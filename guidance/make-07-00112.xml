@@ -1,0 +1,2099 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Publishing DTD v1.3 20210610//EN" "JATS-journalpublishing1-3.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" article-type="research-article" dtd-version="1.3" xml:lang="en">
+  <front>
+    <journal-meta>
+      <journal-id journal-id-type="publisher-id">make</journal-id>
+      <journal-title-group>
+        <journal-title>Machine Learning and Knowledge Extraction</journal-title>
+        <abbrev-journal-title abbrev-type="publisher">Mach. Learn. Knowl. Extr.</abbrev-journal-title>
+        <abbrev-journal-title abbrev-type="pubmed">Machine Learning and Knowledge Extraction</abbrev-journal-title>
+      </journal-title-group>
+      <issn pub-type="epub">2504-4990</issn>
+      <publisher>
+        <publisher-name>MDPI</publisher-name>
+      </publisher>
+    </journal-meta>
+    <article-meta>
+      <article-id pub-id-type="doi">10.3390/make7040112</article-id>
+      <article-id pub-id-type="publisher-id">make-07-00112</article-id>
+      <article-categories>
+        <subj-group>
+          <subject>Article</subject>
+        </subj-group>
+      </article-categories>
+      <title-group>
+        <article-title>Adversarial Attacks Detection Method for Tabular Data</article-title>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author">
+          <contrib-id contrib-id-type="orcid" authenticated="true">https://orcid.org/0000-0002-1201-5344</contrib-id>
+          <name>
+            <surname>Wawrowski</surname>
+            <given-names>&#x141;ukasz</given-names>
+          </name>
+          <role vocab="credit" vocab-identifier="https://credit.niso.org/" vocab-term="Methodology" vocab-term-identifier="https://credit.niso.org/contributor-roles/methodology/">Methodology</role>
+          <role vocab="credit" vocab-identifier="https://credit.niso.org/" vocab-term="Software" vocab-term-identifier="https://credit.niso.org/contributor-roles/software/">Software</role>
+          <role vocab="credit" vocab-identifier="https://credit.niso.org/" vocab-term="Investigation" vocab-term-identifier="https://credit.niso.org/contributor-roles/investigation/">Investigation</role>
+          <role vocab="credit" vocab-identifier="https://credit.niso.org/" vocab-term="Data curation" vocab-term-identifier="https://credit.niso.org/contributor-roles/data-curation/">Data curation</role>
+          <role vocab="credit" vocab-identifier="https://credit.niso.org/" vocab-term="Writing &#x2013; original draft" vocab-term-identifier="https://credit.niso.org/contributor-roles/writing-original-draft/">Writing &#x2013; original draft</role>
+          <role vocab="credit" vocab-identifier="https://credit.niso.org/" vocab-term="Visualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/visualization/">Visualization</role>
+          <xref rid="af1-make-07-00112" ref-type="aff">1</xref>
+          <xref rid="af2-make-07-00112" ref-type="aff">2</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <contrib-id contrib-id-type="orcid" authenticated="true">https://orcid.org/0009-0009-5837-7891</contrib-id>
+          <name>
+            <surname>Biczyk</surname>
+            <given-names>Piotr</given-names>
+          </name>
+          <role vocab="credit" vocab-identifier="https://credit.niso.org/" vocab-term="Conceptualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/conceptualization/">Conceptualization</role>
+          <role vocab="credit" vocab-identifier="https://credit.niso.org/" vocab-term="Methodology" vocab-term-identifier="https://credit.niso.org/contributor-roles/methodology/">Methodology</role>
+          <role vocab="credit" vocab-identifier="https://credit.niso.org/" vocab-term="Validation" vocab-term-identifier="https://credit.niso.org/contributor-roles/validation/">Validation</role>
+          <role vocab="credit" vocab-identifier="https://credit.niso.org/" vocab-term="Formal analysis" vocab-term-identifier="https://credit.niso.org/contributor-roles/formal-analysis/">Formal analysis</role>
+          <role vocab="credit" vocab-identifier="https://credit.niso.org/" vocab-term="Investigation" vocab-term-identifier="https://credit.niso.org/contributor-roles/investigation/">Investigation</role>
+          <role vocab="credit" vocab-identifier="https://credit.niso.org/" vocab-term="Resources" vocab-term-identifier="https://credit.niso.org/contributor-roles/resources/">Resources</role>
+          <role vocab="credit" vocab-identifier="https://credit.niso.org/" vocab-term="Writing &#x2013; original draft" vocab-term-identifier="https://credit.niso.org/contributor-roles/writing-original-draft/">Writing &#x2013; original draft</role>
+          <xref rid="af3-make-07-00112" ref-type="aff">3</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <contrib-id contrib-id-type="orcid" authenticated="true">https://orcid.org/0000-0003-2453-4974</contrib-id>
+          <name>
+            <surname>&#x15A;l&#x119;zak</surname>
+            <given-names>Dominik</given-names>
+          </name>
+          <role vocab="credit" vocab-identifier="https://credit.niso.org/" vocab-term="Methodology" vocab-term-identifier="https://credit.niso.org/contributor-roles/methodology/">Methodology</role>
+          <role vocab="credit" vocab-identifier="https://credit.niso.org/" vocab-term="Writing &#x2013; review &amp; editing" vocab-term-identifier="https://credit.niso.org/contributor-roles/writing-review-editing/">Writing &#x2013; review &amp; editing</role>
+          <role vocab="credit" vocab-identifier="https://credit.niso.org/" vocab-term="Supervision" vocab-term-identifier="https://credit.niso.org/contributor-roles/supervision/">Supervision</role>
+          <xref rid="af4-make-07-00112" ref-type="aff">4</xref>
+        </contrib>
+        <contrib contrib-type="author">
+          <contrib-id contrib-id-type="orcid" authenticated="true">https://orcid.org/0000-0002-2393-9761</contrib-id>
+          <name>
+            <surname>Sikora</surname>
+            <given-names>Marek</given-names>
+          </name>
+          <role vocab="credit" vocab-identifier="https://credit.niso.org/" vocab-term="Conceptualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/conceptualization/">Conceptualization</role>
+          <role vocab="credit" vocab-identifier="https://credit.niso.org/" vocab-term="Methodology" vocab-term-identifier="https://credit.niso.org/contributor-roles/methodology/">Methodology</role>
+          <role vocab="credit" vocab-identifier="https://credit.niso.org/" vocab-term="Writing &#x2013; review &amp; editing" vocab-term-identifier="https://credit.niso.org/contributor-roles/writing-review-editing/">Writing &#x2013; review &amp; editing</role>
+          <role vocab="credit" vocab-identifier="https://credit.niso.org/" vocab-term="Supervision" vocab-term-identifier="https://credit.niso.org/contributor-roles/supervision/">Supervision</role>
+          <xref rid="af3-make-07-00112" ref-type="aff">3</xref>
+          <xref rid="c1-make-07-00112" ref-type="corresp">*</xref>
+        </contrib>
+      </contrib-group>
+      <contrib-group>
+        <contrib contrib-type="editor">
+          <name>
+            <surname>Pitropakis</surname>
+            <given-names>Nikolaos</given-names>
+          </name>
+          <role>Academic Editor</role>
+        </contrib>
+      </contrib-group>
+      <aff id="af1-make-07-00112"><label>1</label>Institute of Computer Science, University of Silesia, Bedzinska 39, 41-200 Sosnowiec, Poland; <email>lukasz.wawrowski@us.edu.pl</email></aff>
+      <aff id="af2-make-07-00112"><label>2</label>Institute of Artificial Intelligence and Cybersecurity, Research Network &#x141;ukasiewicz, ul. Leopolda 31, 40-189 Katowice, Poland</aff>
+      <aff id="af3-make-07-00112"><label>3</label>Faculty of Automatic Control, Electronics and Computer Science, Silesian University of Technology, Akademicka 16, 44-100 Gliwice, Poland; <email>pbiczyk@gmail.com</email></aff>
+      <aff id="af4-make-07-00112"><label>4</label>Institute of Informatics, University of Warsaw, Banacha 2, 02-097 Warsaw, Poland; <email>d.slezak@mimuw.edu.pl</email></aff>
+      <author-notes>
+        <corresp id="c1-make-07-00112"><label>*</label>Correspondence: <email>marek.sikora@polsl.pl</email></corresp>
+      </author-notes>
+      <pub-date pub-type="epub">
+        <day>01</day>
+        <month>10</month>
+        <year>2025</year>
+      </pub-date>
+      <pub-date pub-type="collection">
+        <month>12</month>
+        <year>2025</year>
+      </pub-date>
+      <volume>7</volume>
+      <issue>4</issue>
+      <elocation-id>112</elocation-id>
+      <history>
+        <date date-type="received">
+          <day>10</day>
+          <month>07</month>
+          <year>2025</year>
+        </date>
+        <date date-type="rev-recd">
+          <day>22</day>
+          <month>09</month>
+          <year>2025</year>
+        </date>
+        <date date-type="accepted">
+          <day>23</day>
+          <month>09</month>
+          <year>2025</year>
+        </date>
+      </history>
+      <permissions>
+        <copyright-statement>&#xA9; 2025 by the authors.</copyright-statement>
+        <copyright-year>2025</copyright-year>
+        <license license-type="open-access">
+          <license-p>Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (<ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</ext-link>).</license-p>
+        </license>
+      </permissions>
+      <abstract>
+        <p>Adversarial attacks involve malicious actors introducing intentional perturbations to machine learning (ML) models, causing unintended behavior. This poses a significant threat to the integrity and trustworthiness of ML models, necessitating the development of robust detection techniques to protect systems from potential threats. The paper proposes a new approach for detecting adversarial attacks using a surrogate model and diagnostic attributes. The method was tested on 22 tabular datasets on which four different ML models were trained. Furthermore, various attacks were conducted, which led to obtaining perturbed data. The proposed approach is characterized by high efficiency in detecting known and unknown attacks&#x2014;balanced accuracy was above 0.94, with very low false negative rates (0.02&#x2013;0.10) for binary detection. Sensitivity analysis shows that classifiers trained based on diagnostic attributes can detect even very subtle adversarial attacks.</p>
+      </abstract>
+      <kwd-group>
+        <kwd>adversarial attacks</kwd>
+        <kwd>explainable artificial intelligence</kwd>
+        <kwd>surrogate models</kwd>
+        <kwd>diagnostic attributes</kwd>
+      </kwd-group>
+      <funding-group>
+        <funding-statement>This research received no funding.</funding-statement>
+      </funding-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec sec-type="intro" id="sec1-make-07-00112">
+      <title>1. Introduction</title>
+      <p>With the popularity and wide range of applications of machine learning techniques, specialized techniques for attacks on models trained using machine learning methods, both in theoretical considerations and in the real world, have emerged. The attacks can have various goals&#x2014;including disrupting the correct operation of the model (e.g., by increasing the number of incorrect decisions generated by the model), reducing the reliability of decisions made by the model, reproducing the training set, reproducing the model, etc. Their common feature is the use of specific properties of models and machine learning techniques. Such attacks are referred to as Adversarial Machine Learning attacks (AML) [<xref ref-type="bibr" rid="B1-make-07-00112">1</xref>,<xref ref-type="bibr" rid="B2-make-07-00112">2</xref>].</p>
+      <p>It is necessary to ensure security in systems that automate business processes and use machine learning techniques in decision making. In practice, there is a widespread gap in designing security for these systems. In particular, the vulnerability of machine learning models to adversarial attacks is not taken into account. This is especially true for attacks in which the attacking party intentionally disrupts the data passed to the ML model in such a way that the disruption is as small as possible but causes as large an effect as possible. The least possible disruption means disruption of data conducted in a way that makes it difficult to detect, often below the threshold of detection by a human not supported by additional tools. The greatest possible effect means the achievement of a specific attack goal, such as the misclassification of data. In particular, misclassification involves the indication of a specific class preferred by the attack method.</p>
+      <p>Although adversarial attacks on machine learning models have been extensively studied in the context of images and text [<xref ref-type="bibr" rid="B3-make-07-00112">3</xref>,<xref ref-type="bibr" rid="B4-make-07-00112">4</xref>], relatively fewer works address robust, model-agnostic detection of such attacks in tabular data [<xref ref-type="bibr" rid="B5-make-07-00112">5</xref>]. Existing detection methods often assume partial knowledge of the model internals (e.g., gradients or layer outputs), rely on specialized network architectures, or focus on a single class of attacks. In contrast, our work proposes a universal, black-box detection approach for tabular classifiers&#x2014;irrespective of their underlying training mechanism&#x2014;by employing a surrogate model and a suite of diagnostic attributes derived from rough-set-based approximation reducts [<xref ref-type="bibr" rid="B6-make-07-00112">6</xref>].</p>
+      <p>This approach aligns with the broader goals of interpretable machine learning, yet it introduces two key innovations:<list list-type="bullet"><list-item><p><bold>Unified Detection via Local Model Diagnostics.</bold> Rather than relying on gradient-based or distribution-shift heuristics, we construct a surrogate model that emulates the black-box classifier&#x2019;s behavior and produces explanatory features&#x2014;such as local consistency measures and uncertainty scores&#x2014;that naturally expose adversarial manipulations. By treating these features as inputs to a secondary detection classifier, our framework seamlessly couples interpretability with robust attack monitoring.</p></list-item><list-item><p><bold>Comprehensive Evaluation Across Diverse Attacks and Datasets.</bold> We systematically test the proposed detection mechanism on 22 real-world tabular datasets and seven distinct attack methods (both gradient- and sampling-based). Our experiments demonstrate consistently high detection accuracy, often exceeding 90% balanced accuracy, even in challenging scenarios where the type of attack or dataset is unseen during training (one-attack-out and one-dataset-out cross-validations).</p></list-item></list></p>
+      <p>Compared to our earlier studies [<xref ref-type="bibr" rid="B7-make-07-00112">7</xref>,<xref ref-type="bibr" rid="B8-make-07-00112">8</xref>], which examined a limited subset of models and adversarial attacks, the present work advances the methodology in several ways. First, we extend the evaluation to a wider range of attacks, including those designed for neural networks. Second, we incorporate feature selection into the detection framework, improving the interpretability of diagnostic attributes. Third, we perform sensitivity analyses, showing that the method maintains strong detection performance even at low perturbation levels, where adversaries typically operate. Finally, we tackle the more complex task of attack-type classification, thereby testing the discriminative capacity of diagnostic attributes in an eight-class setting.</p>
+      <p>The paper is organized as follows: <xref ref-type="sec" rid="sec2-make-07-00112">Section 2</xref> provides a broad context for adversarial attack methods in the literature; <xref ref-type="sec" rid="sec3-make-07-00112">Section 3</xref> focuses on the general definition of adversarial attack and describes different approaches for tabular data; <xref ref-type="sec" rid="sec4-make-07-00112">Section 4</xref> provides the background of the proposed method for detecting adversarial attacks; <xref ref-type="sec" rid="sec5-make-07-00112">Section 5</xref> presents the results of experiments, including a sensitivity analysis; and the paper ends with conclusions and limitations.</p>
+    </sec>
+    <sec id="sec2-make-07-00112">
+      <title>2. Related Works</title>
+      <p>Research on adversarial attacks on models obtained by machine learning (ML) methods began with discovering adversarial examples (interfering, misleading examples) in image classification models, in which small, carefully designed perturbations in the input data can lead to misclassification. An adversarial example contains intentionally modified input data. The changes made are usually imperceptible to a human but are enough to exploit vulnerabilities in the decision boundaries of the ML model, leading to incorrect results. Szegedy et al. [<xref ref-type="bibr" rid="B3-make-07-00112">3</xref>] were among the first to document this phenomenon, revealing that neural networks are highly susceptible to subtle modifications. This observation has generated great interest, and the widespread use of neural networks has prompted the need to understand and counteract these vulnerabilities [<xref ref-type="bibr" rid="B9-make-07-00112">9</xref>]. Vulnerability to attacks has been of particular concern in the context of practical applications of machine learning models, such as autonomous vehicle control or facial recognition, where perturbed data can lead to decision errors with serious consequences&#x2014;for example, making an autonomous car misread traffic signs or making a security system fail to recognize authorized individuals [<xref ref-type="bibr" rid="B10-make-07-00112">10</xref>].</p>
+      <p>An example of an attack method is the Fast Gradient Sign Method (FGSM) proposed by Goodfellow et al. [<xref ref-type="bibr" rid="B4-make-07-00112">4</xref>]. The method uses gradient optimization to efficiently generate adversarial examples. Attacks conducted using gradient optimization have proven effective even with minimal modifications to the input data [<xref ref-type="bibr" rid="B11-make-07-00112">11</xref>]. Methods of attacks on ML models are carried out in two main scenarios: white box (the attacker is fully aware of the architecture and parameters of the model) and black box (the attacker&#x2019;s access to the attacked model is limited, usually only queries to the model are possible). An important step in the development of research on adversarial attacks was the study of the extent of transferability (transferability&#x2014;analogy to transfer learning) of attacks. Papernot et al. [<xref ref-type="bibr" rid="B12-make-07-00112">12</xref>] showed that adversarial examples created for one model can fool other models trained on similar data. This concept enables attacks even in restricted environments, such as cloud-based machine learning services [<xref ref-type="bibr" rid="B13-make-07-00112">13</xref>].</p>
+      <p>The aforementioned studies and methods have focused on investigating attacks on models for classifying image data, ignoring the specifics of machine learning models operating on tabular data, commonly used in applications such as finance, healthcare, or security. Tabular data, unlike images or text, are characterized by specific structures and limitations, such as the variety of data types (symbolic and numeric, among others) and the frequent relationship between variables describing the data. These features make it more challenging to create hard-to-detect adversarial examples for tabular data, as the interference must remain consistent with the actual constraints and dependencies present in the data. In this type of attack, it is necessary to use strategies that include the specific characteristics of the data and its context so that the modifications made are reliable and difficult to detect [<xref ref-type="bibr" rid="B14-make-07-00112">14</xref>]. Realistic attacks on tabular data require an approach that takes into account the specific characteristics of individual variables, both numeric and categorical, and maintains consistency with expected value constraints. Attacks that take into consideration constraints on attribute values, or changes in the values of selected groups of attributes, are key to hiding the fact of an attack&#x2014;in tabular data, even small changes must be within realistic limits [<xref ref-type="bibr" rid="B15-make-07-00112">15</xref>]. For example, in the context of finance, modifications can focus on critical variables, such as transaction amounts or frequency of operations, with the statistical characteristics of these variables being preserved to fool models that detect financial fraud.</p>
+      <p>The examples cited above highlight the risks that adversarial attacks pose to computer systems using ML models. This is especially true for systems used in vital areas of life. Areas such as road safety (attacks on traffic sign recognition models [<xref ref-type="bibr" rid="B16-make-07-00112">16</xref>]), cybersecurity (deception of IDS systems [<xref ref-type="bibr" rid="B17-make-07-00112">17</xref>], malware camouflage [<xref ref-type="bibr" rid="B18-make-07-00112">18</xref>]), healthcare (modification of medical data [<xref ref-type="bibr" rid="B2-make-07-00112">2</xref>]), or finance (fraud concealment [<xref ref-type="bibr" rid="B14-make-07-00112">14</xref>,<xref ref-type="bibr" rid="B19-make-07-00112">19</xref>]) can be mentioned.</p>
+      <p>Recent advances in adversarial machine learning have increasingly focused on black-box detection methods for tabular data, addressing the unique challenges posed by structured datasets. He et al. [<xref ref-type="bibr" rid="B20-make-07-00112">20</xref>] conducted a comprehensive empirical analysis of imperceptibility characteristics in adversarial attacks on tabular data, proposing seven key properties to characterize such attacks, including proximity, sparsity, and feature interdependencies. This work highlighted the trade-off between attack imperceptibility and effectiveness, providing valuable insights for developing more robust detection mechanisms.</p>
+      <p>Vadillo et al. [<xref ref-type="bibr" rid="B21-make-07-00112">21</xref>] presented a comprehensive survey of adversarial attacks in explainable machine learning contexts, examining threats against both models and human interpretation. Their analysis extended beyond traditional attack scenarios to consider how adversarial examples can manipulate explanation systems themselves, which has direct implications for surrogate-based detection approaches like ours.</p>
+      <p>The field has also seen significant developments in generative approaches to adversarial attacks on tabular data. Dyrmishi et al. [<xref ref-type="bibr" rid="B22-make-07-00112">22</xref>] adapted deep generative models as adversarial attack strategies specifically for tabular machine learning, addressing the challenge of preserving domain constraints in adversarial examples. This work demonstrated that generative models can create more realistic adversarial examples that maintain structural validity in tabular domains.</p>
+      <p>It is worth noting the uneven distribution of research on the creation and analysis of the properties of attack methods between models that process images and models that process tabular data. For example, a search of the arXiv database yields an eleven-fold difference in the number of publications in favor of image data. For the phrase &#x201C;adversarial machine learning image data&#x201D;, 1898 items were found, while for the phrase &#x201C;adversarial machine learning tabular data&#x201D;, only 163 were found (accessed on: 9 September 2025).</p>
+    </sec>
+    <sec id="sec3-make-07-00112">
+      <title>3. Adversarial Attacks</title>
+      <p>Adversarial attacks on ML classifiers carried out at the inference stage (i.e., decision making by the trained model) can be presented as an optimization problem. Their goal is to find perturbations that lead to misclassification of input data. For typical adjacency attacks, we consider classifiers that, based on a vector of input data <inline-formula><mml:math id="mm1"><mml:semantics><mml:mrow><mml:mi mathvariant="bold">x</mml:mi><mml:mo>&#x2208;</mml:mo><mml:mi mathvariant="double-struck">A</mml:mi></mml:mrow></mml:semantics></mml:math></inline-formula> (where: <inline-formula><mml:math id="mm2"><mml:semantics><mml:mi mathvariant="double-struck">A</mml:mi></mml:semantics></mml:math></inline-formula> is the Cartesian product of conditional attributes) predict a class <italic>y</italic> using the model <inline-formula><mml:math id="mm3"><mml:semantics><mml:mrow><mml:mi>f</mml:mi><mml:mo>:</mml:mo><mml:mi mathvariant="double-struck">A</mml:mi><mml:mo>&#x2192;</mml:mo><mml:msup><mml:mi mathvariant="double-struck">R</mml:mi><mml:mi>k</mml:mi></mml:msup></mml:mrow></mml:semantics></mml:math></inline-formula>, where <italic>k</italic> is the number of classes, and where <inline-formula><mml:math id="mm4"><mml:semantics><mml:mrow><mml:mi mathvariant="script">L</mml:mi><mml:mo>(</mml:mo><mml:mi>f</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:msup><mml:mi mathvariant="bold">x</mml:mi><mml:mrow><mml:mo>&#x2033;</mml:mo></mml:mrow></mml:msup><mml:mo>)</mml:mo></mml:mrow><mml:mo>,</mml:mo><mml:mi>y</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:semantics></mml:math></inline-formula> is a loss function that measures the classification error between the predicted labels <inline-formula><mml:math id="mm5"><mml:semantics><mml:mrow><mml:mi>f</mml:mi><mml:mo>(</mml:mo><mml:msup><mml:mi mathvariant="bold">x</mml:mi><mml:mrow><mml:mo>&#x2033;</mml:mo></mml:mrow></mml:msup><mml:mo>)</mml:mo></mml:mrow></mml:semantics></mml:math></inline-formula> and the true labels <italic>y</italic>. In this context, <inline-formula><mml:math id="mm6"><mml:semantics><mml:msup><mml:mi mathvariant="bold">x</mml:mi><mml:mrow><mml:mo>&#x2033;</mml:mo></mml:mrow></mml:msup></mml:semantics></mml:math></inline-formula> is a vector of adversarial data.</p>
+      <p>The mathematical problem of generating an adversarial example can be formulated as an optimization problem:<disp-formula id="FD1-make-07-00112"><label>(1)</label><mml:math id="mm7" display="block"><mml:semantics><mml:mrow><mml:mo form="prefix">arg</mml:mo><mml:munder><mml:mo movablelimits="true" form="prefix">max</mml:mo><mml:msup><mml:mi mathvariant="bold">x</mml:mi><mml:mrow><mml:mo>&#x2033;</mml:mo></mml:mrow></mml:msup></mml:munder><mml:mspace width="0.277778em"/><mml:mi mathvariant="script">L</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>f</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:msup><mml:mi mathvariant="bold">x</mml:mi><mml:mrow><mml:mo>&#x2033;</mml:mo></mml:mrow></mml:msup><mml:mo>)</mml:mo></mml:mrow><mml:mo>,</mml:mo><mml:mi>y</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mo>.</mml:mo></mml:mrow></mml:semantics></mml:math></disp-formula></p>
+      <p>This assumes that <inline-formula><mml:math id="mm8"><mml:semantics><mml:msup><mml:mi mathvariant="bold">x</mml:mi><mml:mrow><mml:mo>&#x2033;</mml:mo></mml:mrow></mml:msup></mml:semantics></mml:math></inline-formula> remains in a certain neighborhood of <inline-formula><mml:math id="mm9"><mml:semantics><mml:mi mathvariant="bold">x</mml:mi></mml:semantics></mml:math></inline-formula>, determined by the distance function <inline-formula><mml:math id="mm10"><mml:semantics><mml:msub><mml:mi>L</mml:mi><mml:mi>p</mml:mi></mml:msub></mml:semantics></mml:math></inline-formula> used and the maximum distance of <inline-formula><mml:math id="mm11"><mml:semantics><mml:mi>&#x3F5;</mml:mi></mml:semantics></mml:math></inline-formula> [<xref ref-type="bibr" rid="B11-make-07-00112">11</xref>]. The optimization itself can be carried out by various methods&#x2014;the optimization method used is, in addition to the distance function used, the main factor distinguishing the different types of adversarial attacks.</p>
+      <p>This study focuses on the detection of attacks on the integrity of the model, made at the inference stage using a previously trained model, belonging to the type of evasion attacks. In addition, it is assumed that the attack detection method is based on the assumptions of <italic>black box</italic>. It is assumed that the method only has access to model inference, i.e., to the original set of examples on which the version of the properly functioning (i.e., unattacked) ML model was trained and validated.</p>
+      <sec>
+        <title>Attack Strategies for Tabular Data</title>
+        <p>Adversarial attacks on models that process tabular data differ from those used in image or text analysis [<xref ref-type="bibr" rid="B5-make-07-00112">5</xref>]. Tabular data is characterized by a variety of feature types, domain constraints, and complex relationships between attributes describing examples. These peculiarities require the adaptation of both attack strategies and detection methods.</p>
+        <p>When attacking models that classify tabular data, two directions are distinguished&#x2014;the use of heuristic attacks and the adaptation of general methods to the specifics of tabular data.</p>
+        <p>An example of a heuristic method is PermuteAttack [<xref ref-type="bibr" rid="B23-make-07-00112">23</xref>], which is dedicated to tabular data, including those containing categorical variables. During the implementation of the attack, known domain constraints (e.g., non-negative age, marriage date later than birth date, etc.) can be included. During the attack, a permutation of the data structure is made&#x2014;feature values or changes in their order&#x2014;to disrupt their interpretation by the model, while maintaining semantics and type compatibility.</p>
+        <p>Another category of attacks easily applied to tabular data is based on sampling the decision space. These attacks do not require access to gradients or decision space continuity and are a natural choice when attacking decision-tree-based models. An example of such an attack is HopSkipJump [<xref ref-type="bibr" rid="B24-make-07-00112">24</xref>], for which, when implemented for tabular data, it is only necessary to specify the available categories for categorical data and limit the range of perturbations to acceptable values. The number of features that can be changed at the same time can also be limited to reduce detectability.</p>
+        <p>Another strategy is to use a method that reproduces the local gradients of the loss function. The best known of such methods is the Zeroth-Order Optimization (ZOO) attack [<xref ref-type="bibr" rid="B25-make-07-00112">25</xref>], which works directly on the value of the objective function. Given an approximation of the gradient values, it selects the variables that have the greatest impact on model prediction. The method requires, for each model under attack, limiting the change in feature values to their acceptable ranges (e.g., numeric values within a range or only available categorical values).</p>
+        <p>Gradient attacks, such as FGSM (Fast Gradient Sign Method, also known as the FGM method) [<xref ref-type="bibr" rid="B4-make-07-00112">4</xref>], PGD (Projected Gradient Descent) [<xref ref-type="bibr" rid="B26-make-07-00112">26</xref>], and BIM (Basic Iterative Method) [<xref ref-type="bibr" rid="B27-make-07-00112">27</xref>], adapt to tabular data by modifying the loss function to account for the specifics of the data. For tabular categorical features, gradients can be used to identify the most susceptible features, which are then changed to other values consistent with possible categories. Gradient methods can also be used when acquiring a surrogate model for the attacked model [<xref ref-type="bibr" rid="B5-make-07-00112">5</xref>].</p>
+        <p>The last category of attacks on tabular models is generative attacks, which take advantage of the generalization ability manifested by large language models, to create adversarial examples capable of disrupting the model [<xref ref-type="bibr" rid="B28-make-07-00112">28</xref>].</p>
+      </sec>
+    </sec>
+    <sec id="sec4-make-07-00112">
+      <title>4. Adversarial Attacks Detection Method</title>
+      <p>Explainable Artificial Intelligence (XAI) methods seek to provide transparency in machine learning models by offering insights into how and why particular decisions are made. Commonly, such methods employ surrogate models&#x2014;simpler or more interpretable classifiers&#x2014;to approximate the behavior of complex <italic>black box</italic> systems [<xref ref-type="bibr" rid="B29-make-07-00112">29</xref>,<xref ref-type="bibr" rid="B30-make-07-00112">30</xref>]. By examining how a surrogate responds to inputs, one can infer patterns indicative of the original model&#x2019;s decision processes. The present work integrates seamlessly into this landscape by constructing a surrogate model that captures local behavior around each instance and computing diagnostic attributes (e.g., neighborhood consistency and uncertainty measures), which summarize the local decision context.</p>
+      <p>Unlike more widely known surrogate-based approaches, such as LIME or SHAP, designed primarily for explanatory purposes, our method leverages these local interpretability elements for security. Specifically, the surrogate model (built using rough-set-based approximation reducts) not only demystifies decision making but also serves as the foundation for detecting anomalous behavior induced by adversarial perturbations. Such dual usage of local interpretability metrics (for both explanation and defense) extends the BrightBox paradigm [<xref ref-type="bibr" rid="B6-make-07-00112">6</xref>] toward the emerging challenge of adversarial robustness in tabular data.</p>
+      <p>The basis of the proposed attack detection method is a combination of three analytical components:<list list-type="order"><list-item><p>A method for creating surrogate models based on observations of the monitored model.</p></list-item><list-item><p>Analysis of diagnostic attributes extracted from the surrogate model.</p></list-item><list-item><p>Creation of classifiers that recognize the possibility of an attack for a specific data sample, operating based on diagnostic attributes.</p></list-item></list></p>
+      <p>The proposed method is based on the assumption that during the preparation of the surrogate model, the observed model is not subject to attacks&#x2014;it learns such of its behavior as occurs during the original observation. Based on the prepared surrogate model and observation of its operation (processing the same data as the observed model), diagnostic attributes are extracted. Then, based on these attributes, classifiers are prepared to process the diagnostic attributes on the fly to detect the case of deliberate change of data values&#x2014;an adversarial attack. The attacks are distinguished not based on the characteristics of the data themselves but based on what happens to the data during classification&#x2014;for example, changes in the characteristics of the neighborhood of the classified examples are observed.</p>
+      <p>In the present study, it was decided to use a surrogate model building method based on an ensemble of approximation reducts [<xref ref-type="bibr" rid="B31-make-07-00112">31</xref>], as this approach is stable and resistant to minor changes in the input data. Ensemble methods, such as the one used here, are characterized by high stability in the sense of approximating the decisions of the underlying model, which is crucial in the context of the detection of adversarial attacks, where even small perturbations in the data can significantly affect the results.</p>
+      <p>Before the formal definition of approximation reduct, we provide an intuitive example. Consider a simplified tabular dataset used to assess loan applications (<xref ref-type="table" rid="make-07-00112-t001">Table 1</xref>). Each row represents an applicant, described by attributes such as income, age, and credit score. A black-box model predicts whether the loan is approved. To understand the decision for a specific applicant, we identify similar applicants&#x2014;those with matching values for a subset of attributes. This subset is an approximation reduct, capturing the minimal information needed to explain the decision.</p>
+      <p>In this example, the reduct {Income, Credit Score} is sufficient to explain the decision for Applicant A, as all similar applicants with the same values received the same decision. If an adversarial attack perturbs the input slightly (e.g., changes Credit Score to 680), the neighborhood consistency may break, signaling a potential attack.</p>
+      <p>One of the key features of the surrogate model is the ability to calculate and analyze the neighborhoods of data instances. For an object <inline-formula><mml:math id="mm12"><mml:semantics><mml:mrow><mml:mi>x</mml:mi><mml:mo>&#x2208;</mml:mo><mml:mi>U</mml:mi></mml:mrow></mml:semantics></mml:math></inline-formula>, a neighborhood <inline-formula><mml:math id="mm13"><mml:semantics><mml:mrow><mml:mi>N</mml:mi><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:semantics></mml:math></inline-formula> is defined as the set of similar objects in the training set <inline-formula><mml:math id="mm14"><mml:semantics><mml:msub><mml:mi>X</mml:mi><mml:mi>R</mml:mi></mml:msub></mml:semantics></mml:math></inline-formula>, defined by the indistinguishability class <inline-formula><mml:math id="mm15"><mml:semantics><mml:msub><mml:mrow><mml:mo>[</mml:mo><mml:mi>x</mml:mi><mml:mo>]</mml:mo></mml:mrow><mml:mrow><mml:mi>A</mml:mi><mml:mi>R</mml:mi></mml:mrow></mml:msub></mml:semantics></mml:math></inline-formula> for each <inline-formula><mml:math id="mm16"><mml:semantics><mml:mrow><mml:mi>A</mml:mi><mml:mi>R</mml:mi></mml:mrow></mml:semantics></mml:math></inline-formula> approximation reduct. The neighborhood consists of observations from the reference dataset that are similar to the diagnosed instance, according to the set of reducts. Similarity is defined by the number of reducts for which two instances have the same combinations of attribute values. Neighborhood plays a key role in diagnosing the performance of a black box model, as it provides local context for evaluating the model&#x2019;s decisions. By analyzing the consistency of predictions in the neighborhood&#x2014;for example, whether similar instances were classified correctly or incorrectly&#x2014;the surrogate model can provide insight into the causes of model errors.</p>
+      <p>To illustrate this concept more intuitively, <xref ref-type="table" rid="make-07-00112-t002">Table 2</xref> shows an example neighborhood construction for an instance with three attributes. Here, reducts define similarity relations, and instances with matching reduct-based values are grouped into the neighborhood of the diagnosed object.</p>
+      <p>In this example, the diagnosed instance <italic>x</italic> has the attribute values (A, B, C). Objects <inline-formula><mml:math id="mm17"><mml:semantics><mml:mrow><mml:msub><mml:mi>o</mml:mi><mml:mn>1</mml:mn></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>o</mml:mi><mml:mn>2</mml:mn></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>o</mml:mi><mml:mn>3</mml:mn></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>o</mml:mi><mml:mn>4</mml:mn></mml:msub></mml:mrow></mml:semantics></mml:math></inline-formula> belong to the neighborhood because they share reduct-defined similarities with <italic>x</italic>. Objects <inline-formula><mml:math id="mm18"><mml:semantics><mml:mrow><mml:msub><mml:mi>o</mml:mi><mml:mn>5</mml:mn></mml:msub><mml:mo>,</mml:mo><mml:msub><mml:mi>o</mml:mi><mml:mn>6</mml:mn></mml:msub></mml:mrow></mml:semantics></mml:math></inline-formula> do not, as none of the reducts consider them indistinguishable from <italic>x</italic>. This neighborhood then becomes the basis for calculating diagnostic attributes.</p>
+      <p>After calculating the neighborhoods, the surrogate model completes the diagnosis by calculating a set of diagnostic attributes. Diagnostic attributes provide a standardized set of measures to analyze the model&#x2019;s behavior through neighborhood characteristics. For each object <inline-formula><mml:math id="mm19"><mml:semantics><mml:mrow><mml:mi>x</mml:mi><mml:mo>&#x2208;</mml:mo><mml:msub><mml:mi>X</mml:mi><mml:mi>d</mml:mi></mml:msub></mml:mrow></mml:semantics></mml:math></inline-formula>, whose neighborhood <inline-formula><mml:math id="mm20"><mml:semantics><mml:mrow><mml:mi>N</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:msub><mml:mi>X</mml:mi><mml:mi>R</mml:mi></mml:msub></mml:mrow></mml:semantics></mml:math></inline-formula> was determined from indistinguishability relations determined by approximate reductions, the following diagnostic attributes are calculated:<list list-type="bullet"><list-item><p>Neighborhood size&#x2014;the number of observations that are in the neighborhood of the observation being diagnosed, normalized as <inline-formula><mml:math id="mm21"><mml:semantics><mml:mrow><mml:mrow><mml:mo>|</mml:mo><mml:mi>N</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mo>|</mml:mo><mml:mo>/</mml:mo><mml:mo>|</mml:mo></mml:mrow><mml:msub><mml:mi>X</mml:mi><mml:mi>R</mml:mi></mml:msub><mml:mrow><mml:mo>|</mml:mo></mml:mrow></mml:mrow></mml:semantics></mml:math></inline-formula>. Measures how large the neighborhood is for each instance, reflecting the number of similar instances found in the reference set.</p></list-item><list-item><p>Uncertainty&#x2014;a measure of prediction uncertainty, calculated based on normalized entropy:<disp-formula><mml:math id="mm22" display="block"><mml:semantics><mml:mrow><mml:msub><mml:mi>H</mml:mi><mml:mi>norm</mml:mi></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:mi>q</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mo>&#x2212;</mml:mo><mml:munderover><mml:mo>&#x2211;</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mi>l</mml:mi></mml:munderover><mml:msub><mml:mi>q</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mo form="prefix">log</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:msub><mml:mi>q</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>/</mml:mo><mml:mo form="prefix">log</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mi>l</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mo>,</mml:mo></mml:mrow></mml:semantics></mml:math></disp-formula>
+          where <italic>l</italic> is the number of decision classes and <inline-formula><mml:math id="mm23"><mml:semantics><mml:mrow><mml:msub><mml:mi>q</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:semantics></mml:math></inline-formula> is the probability of class <italic>i</italic> for observation <italic>x</italic>. This is a critical diagnostic attribute, measuring the surrogate model&#x2019;s confidence in its predictions. Low uncertainty can indicate overconfidence about incorrect predictions, while high uncertainty suggests the model&#x2019;s difficulty in making correct predictions.</p></list-item><list-item><p>Target consistency with approximations in the neighborhood&#x2014;a measure of the correspondence between the target value of the diagnosed observation <inline-formula><mml:math id="mm24"><mml:semantics><mml:msub><mml:mi>d</mml:mi><mml:mi>x</mml:mi></mml:msub></mml:semantics></mml:math></inline-formula> and the approximate prediction values <inline-formula><mml:math id="mm25"><mml:semantics><mml:mrow><mml:mover accent="true"><mml:mi>M</mml:mi><mml:mo>&#xAF;</mml:mo></mml:mover><mml:mrow><mml:mo>(</mml:mo><mml:mi>N</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:semantics></mml:math></inline-formula> obtained for observations in its neighborhood <inline-formula><mml:math id="mm26"><mml:semantics><mml:mrow><mml:mi>N</mml:mi><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:semantics></mml:math></inline-formula>, calculated as:<disp-formula><mml:math id="mm27" display="block"><mml:semantics><mml:mrow><mml:mi>TC</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mspace width="0.277778em"/><mml:mo>=</mml:mo><mml:mspace width="0.277778em"/><mml:mstyle scriptlevel="0" displaystyle="true"><mml:mfrac><mml:mn>1</mml:mn><mml:mrow><mml:mo>|</mml:mo><mml:mi>N</mml:mi><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo><mml:mo>|</mml:mo></mml:mrow></mml:mfrac></mml:mstyle><mml:munder><mml:mo>&#x2211;</mml:mo><mml:mrow><mml:mi>z</mml:mi><mml:mo>&#x2208;</mml:mo><mml:mi>N</mml:mi><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:munder><mml:mn mathvariant="bold">1</mml:mn><mml:mfenced separators="" open="(" close=")"><mml:mo form="prefix">arg</mml:mo><mml:munder><mml:mo movablelimits="true" form="prefix">max</mml:mo><mml:mi>c</mml:mi></mml:munder><mml:mspace width="0.166667em"/><mml:msub><mml:mi>P</mml:mi><mml:mover><mml:mi>M</mml:mi><mml:mo>&#xAF;</mml:mo></mml:mover></mml:msub><mml:mfenced separators="" open="(" close=")"><mml:mi>c</mml:mi><mml:mo>&#x2223;</mml:mo><mml:mi>z</mml:mi></mml:mfenced><mml:mspace width="0.277778em"/><mml:mo>=</mml:mo><mml:mspace width="0.277778em"/><mml:mi>d</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:mfenced><mml:mo>,</mml:mo></mml:mrow></mml:semantics></mml:math></disp-formula>
+          where <inline-formula><mml:math id="mm28"><mml:semantics><mml:mrow><mml:msub><mml:mi>P</mml:mi><mml:mover><mml:mi>M</mml:mi><mml:mo>&#xAF;</mml:mo></mml:mover></mml:msub><mml:mfenced separators="" open="(" close=")"><mml:mi>c</mml:mi><mml:mo>&#x2223;</mml:mo><mml:mi>z</mml:mi></mml:mfenced></mml:mrow></mml:semantics></mml:math></inline-formula> is the probability (according to the <inline-formula><mml:math id="mm29"><mml:semantics><mml:mover><mml:mi>M</mml:mi><mml:mo>&#xAF;</mml:mo></mml:mover></mml:semantics></mml:math></inline-formula> model) of assigning a class <italic>c</italic> for a point <italic>z</italic> and <inline-formula><mml:math id="mm30"><mml:semantics><mml:mrow><mml:mn mathvariant="bold">1</mml:mn><mml:mo>(</mml:mo><mml:mo>&#xB7;</mml:mo><mml:mo>)</mml:mo></mml:mrow></mml:semantics></mml:math></inline-formula> is an indicator function, taking the value 1 if the condition in parentheses is met and 0 otherwise.</p></list-item><list-item><p>Prediction consistency with targets in neighborhood&#x2014;a measure that determines the consistency of the prediction <inline-formula><mml:math id="mm31"><mml:semantics><mml:mrow><mml:mi>M</mml:mi><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:semantics></mml:math></inline-formula> for the diagnosed observation <italic>x</italic> with the target values <inline-formula><mml:math id="mm32"><mml:semantics><mml:msub><mml:mi>d</mml:mi><mml:mrow><mml:mi>N</mml:mi><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:msub></mml:semantics></mml:math></inline-formula> of the observations belonging to its neighborhood <inline-formula><mml:math id="mm33"><mml:semantics><mml:mrow><mml:mi>N</mml:mi><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:semantics></mml:math></inline-formula>, calculated as:<disp-formula><mml:math id="mm34" display="block"><mml:semantics><mml:mrow><mml:mi>PC</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mspace width="0.277778em"/><mml:mo>=</mml:mo><mml:mspace width="0.277778em"/><mml:mstyle scriptlevel="0" displaystyle="true"><mml:mfrac><mml:mn>1</mml:mn><mml:mrow><mml:mo>|</mml:mo><mml:mi>N</mml:mi><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo><mml:mo>|</mml:mo></mml:mrow></mml:mfrac></mml:mstyle><mml:munder><mml:mo>&#x2211;</mml:mo><mml:mrow><mml:mi>z</mml:mi><mml:mo>&#x2208;</mml:mo><mml:mi>N</mml:mi><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:munder><mml:mn mathvariant="bold">1</mml:mn><mml:mfenced separators="" open="(" close=")"><mml:mi>M</mml:mi><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo><mml:mo>=</mml:mo><mml:mi>d</mml:mi><mml:mo>(</mml:mo><mml:mi>z</mml:mi><mml:mo>)</mml:mo></mml:mfenced><mml:mo>,</mml:mo></mml:mrow></mml:semantics></mml:math></disp-formula>
+          where <inline-formula><mml:math id="mm35"><mml:semantics><mml:mrow><mml:mi>d</mml:mi><mml:mo>(</mml:mo><mml:mi>z</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:semantics></mml:math></inline-formula> is the actual value of the target (label) of the observation <italic>z</italic> and <inline-formula><mml:math id="mm36"><mml:semantics><mml:mrow><mml:mn mathvariant="bold">1</mml:mn><mml:mo>(</mml:mo><mml:mover accent="true"><mml:mo>)</mml:mo><mml:mo>&#x2D9;</mml:mo></mml:mover></mml:mrow></mml:semantics></mml:math></inline-formula> is an indicator function, taking the value of 1 when the condition is met and 0 otherwise.</p></list-item><list-item><p>Target consistency with targets in neighborhood&#x2014;a measure describing the correspondence between the target values of a diagnosed observation <inline-formula><mml:math id="mm37"><mml:semantics><mml:msub><mml:mi>d</mml:mi><mml:mi>x</mml:mi></mml:msub></mml:semantics></mml:math></inline-formula> and the target values <inline-formula><mml:math id="mm38"><mml:semantics><mml:msub><mml:mi>d</mml:mi><mml:mrow><mml:mi>N</mml:mi><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:msub></mml:semantics></mml:math></inline-formula> of observations in its neighborhood <inline-formula><mml:math id="mm39"><mml:semantics><mml:mrow><mml:mi>N</mml:mi><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:semantics></mml:math></inline-formula>, calculated as:<disp-formula><mml:math id="mm40" display="block"><mml:semantics><mml:mrow><mml:msub><mml:mi>TC</mml:mi><mml:mi>targets</mml:mi></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mspace width="0.277778em"/><mml:mo>=</mml:mo><mml:mspace width="0.277778em"/><mml:mstyle scriptlevel="0" displaystyle="true"><mml:mfrac><mml:mn>1</mml:mn><mml:mrow><mml:mo>|</mml:mo><mml:mi>N</mml:mi><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo><mml:mo>|</mml:mo></mml:mrow></mml:mfrac></mml:mstyle><mml:munder><mml:mo>&#x2211;</mml:mo><mml:mrow><mml:mi>z</mml:mi><mml:mo>&#x2208;</mml:mo><mml:mi>N</mml:mi><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:munder><mml:mn mathvariant="bold">1</mml:mn><mml:mfenced separators="" open="(" close=")"><mml:mi>d</mml:mi><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo><mml:mspace width="0.277778em"/><mml:mo>=</mml:mo><mml:mspace width="0.277778em"/><mml:mi>d</mml:mi><mml:mo>(</mml:mo><mml:mi>z</mml:mi><mml:mo>)</mml:mo></mml:mfenced><mml:mo>,</mml:mo></mml:mrow></mml:semantics></mml:math></disp-formula></p></list-item><list-item><p>Targets and approximations inconsistency in neighborhood&#x2014;a measure of the degree of inconsistency between the values of the target <inline-formula><mml:math id="mm41"><mml:semantics><mml:msub><mml:mi>d</mml:mi><mml:mrow><mml:mi>N</mml:mi><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:msub></mml:semantics></mml:math></inline-formula> and the approximations <inline-formula><mml:math id="mm42"><mml:semantics><mml:mrow><mml:msub><mml:mi>q</mml:mi><mml:msub><mml:mi>d</mml:mi><mml:msup><mml:mi>x</mml:mi><mml:mo>&#x2032;</mml:mo></mml:msup></mml:msub></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:msup><mml:mi>x</mml:mi><mml:mo>&#x2032;</mml:mo></mml:msup><mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:semantics></mml:math></inline-formula> obtained for observations <inline-formula><mml:math id="mm43"><mml:semantics><mml:mrow><mml:msup><mml:mi>x</mml:mi><mml:mo>&#x2032;</mml:mo></mml:msup><mml:mo>&#x2208;</mml:mo><mml:mi>N</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:semantics></mml:math></inline-formula>. It is calculated as:<disp-formula><mml:math id="mm44" display="block"><mml:semantics><mml:mrow><mml:mstyle scriptlevel="0" displaystyle="true"><mml:mfrac><mml:mn>1</mml:mn><mml:mrow><mml:mo>|</mml:mo><mml:mi>N</mml:mi><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo><mml:mo>|</mml:mo></mml:mrow></mml:mfrac></mml:mstyle><mml:munder><mml:mo>&#x2211;</mml:mo><mml:mrow><mml:msup><mml:mi>x</mml:mi><mml:mo>&#x2032;</mml:mo></mml:msup><mml:mo>&#x2208;</mml:mo><mml:mi>N</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:munder><mml:mfenced separators="" open="[" close="]"><mml:mn>1</mml:mn><mml:mo>&#x2212;</mml:mo><mml:msub><mml:mi>q</mml:mi><mml:msub><mml:mi>d</mml:mi><mml:msup><mml:mi>x</mml:mi><mml:mo>&#x2032;</mml:mo></mml:msup></mml:msub></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:msup><mml:mi>x</mml:mi><mml:mo>&#x2032;</mml:mo></mml:msup><mml:mo>)</mml:mo></mml:mrow></mml:mfenced><mml:mo>,</mml:mo></mml:mrow></mml:semantics></mml:math></disp-formula>
+          where <inline-formula><mml:math id="mm45"><mml:semantics><mml:mrow><mml:msub><mml:mi>q</mml:mi><mml:msub><mml:mi>d</mml:mi><mml:msup><mml:mi>x</mml:mi><mml:mo>&#x2032;</mml:mo></mml:msup></mml:msub></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:msup><mml:mi>x</mml:mi><mml:mo>&#x2032;</mml:mo></mml:msup><mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:semantics></mml:math></inline-formula> is the approximate probability of the decision class <inline-formula><mml:math id="mm46"><mml:semantics><mml:msub><mml:mi>d</mml:mi><mml:msup><mml:mi>x</mml:mi><mml:mo>&#x2032;</mml:mo></mml:msup></mml:msub></mml:semantics></mml:math></inline-formula> for the observation <inline-formula><mml:math id="mm47"><mml:semantics><mml:msup><mml:mi>x</mml:mi><mml:mo>&#x2032;</mml:mo></mml:msup></mml:semantics></mml:math></inline-formula>.</p></list-item><list-item><p>Targets diversity in neighborhood&#x2014;a measure describing the diversity of target values in the neighborhood of the diagnosed observation compared to the diversity of target values calculated for the entire set of diagnosed data. It is calculated as:<disp-formula><mml:math id="mm48" display="block"><mml:semantics><mml:mrow><mml:mi>h</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>p</mml:mi><mml:mo>,</mml:mo><mml:mi>p</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>N</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mstyle scriptlevel="0" displaystyle="true"><mml:mfrac><mml:mrow><mml:mi>H</mml:mi><mml:mo>(</mml:mo><mml:mi>p</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mrow><mml:mi>H</mml:mi><mml:mo>(</mml:mo><mml:mi>p</mml:mi><mml:mo>,</mml:mo><mml:mi>p</mml:mi><mml:mo>(</mml:mo><mml:mi>N</mml:mi><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo><mml:mo>)</mml:mo><mml:mo>)</mml:mo></mml:mrow></mml:mfrac></mml:mstyle><mml:mo>,</mml:mo></mml:mrow></mml:semantics></mml:math></disp-formula>
+          where <italic>p</italic> is the a priori distribution and <inline-formula><mml:math id="mm49"><mml:semantics><mml:mrow><mml:mi>p</mml:mi><mml:mo>(</mml:mo><mml:mi>N</mml:mi><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo><mml:mo>)</mml:mo></mml:mrow></mml:semantics></mml:math></inline-formula> is the distribution of decision classes in the neighborhood of <inline-formula><mml:math id="mm50"><mml:semantics><mml:mrow><mml:mi>N</mml:mi><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:semantics></mml:math></inline-formula>.</p></list-item><list-item><p>Approximations diversity in neighborhood&#x2014;a measure describing the variation of prediction approximations in the neighborhood of the diagnosed observation concerning the variation of approximations calculated for the entire set of diagnosed data. It is defined as:<disp-formula><mml:math id="mm51" display="block"><mml:semantics><mml:mrow><mml:mi>h</mml:mi><mml:mo>(</mml:mo><mml:mi>p</mml:mi><mml:mo>,</mml:mo><mml:mi>q</mml:mi><mml:mo>(</mml:mo><mml:mi>N</mml:mi><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo><mml:mo>)</mml:mo><mml:mo>)</mml:mo><mml:mo>,</mml:mo></mml:mrow></mml:semantics></mml:math></disp-formula>
+          where <inline-formula><mml:math id="mm52"><mml:semantics><mml:mrow><mml:mi>q</mml:mi><mml:mo>(</mml:mo><mml:mi>N</mml:mi><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo><mml:mo>)</mml:mo></mml:mrow></mml:semantics></mml:math></inline-formula> is the distribution of approximate predictions in the neighborhood of <inline-formula><mml:math id="mm53"><mml:semantics><mml:mrow><mml:mi>N</mml:mi><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:semantics></mml:math></inline-formula>.</p></list-item></list></p>
+      <p>For objects with empty neighborhoods, attribute values are implicitly determined from metrics based on <italic>p</italic> a priori distributions. The normalized entropy used in uncertainty calculations is defined as:<disp-formula><mml:math id="mm54" display="block"><mml:semantics><mml:mrow><mml:msub><mml:mi>H</mml:mi><mml:mi>norm</mml:mi></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:mi>q</mml:mi><mml:mrow><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>=</mml:mo><mml:mo>&#x2212;</mml:mo><mml:munderover><mml:mo>&#x2211;</mml:mo><mml:mrow><mml:mi>i</mml:mi><mml:mo>=</mml:mo><mml:mn>1</mml:mn></mml:mrow><mml:mi>l</mml:mi></mml:munderover><mml:msub><mml:mi>q</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mo form="prefix">log</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:msub><mml:mi>q</mml:mi><mml:mi>i</mml:mi></mml:msub><mml:mrow><mml:mo>(</mml:mo><mml:mi>x</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mo>)</mml:mo></mml:mrow><mml:mo>/</mml:mo><mml:mo form="prefix">log</mml:mo><mml:mrow><mml:mo>(</mml:mo><mml:mi>l</mml:mi><mml:mo>)</mml:mo></mml:mrow><mml:mo>,</mml:mo></mml:mrow></mml:semantics></mml:math></disp-formula>
+      where <italic>l</italic> is the number of decision classes.</p>
+      <p>Diagnostic attributes provide a comprehensive view of the model&#x2019;s performance, helping to identify potential problems such as over-fitting, under-fitting, or errors due to heterogeneity in the training data. These attributes are then used to assess the model&#x2019;s predictive consistency. For example, if neighbors with the same true labels surround an instance, and the model incorrectly predicts its label with high confidence, this could indicate an overfitting problem. On the other hand, if the model shows high uncertainty in predicting the label for an instance with a large, consistent neighborhood, this may suggest a mismatch in the model (underfitting).</p>
+      <p>A key advantage of diagnostic attributes is that they provide a standardized representation, always yielding the same number of attributes regardless of dataset size or model complexity. This property makes them directly comparable across heterogeneous settings, which is particularly valuable in large-scale experimental studies. Building on prior work where they were applied for model-level diagnostics and instance-level data assessment. In this study, we extend their use to the detection of adversarial attacks by verifying the hypothesis that the analysis of diagnostic attributes can indicate a significant probability of input modification bearing the hallmarks of intentional modification. In this way, diagnostic attributes emerge as a universal diagnostic framework spanning different stages of the machine learning pipeline.</p>
+    </sec>
+    <sec sec-type="results" id="sec5-make-07-00112">
+      <title>5. Results</title>
+      <p>The purpose of the work carried out was to create a method, the concretization of which is a classifier that makes it possible to detect attacks on ML models dedicated to solving classification problems and trained on tabular data.</p>
+      <p>The experiments were conducted on a set of 22 tabular datasets (presented in <xref ref-type="table" rid="make-07-00112-t003">Table 3</xref>), provided on the OpenML service, and prepared for classification tasks. Datasets were selected for which it was known that it was possible to build correctly working classifiers&#x2014;for example, in connection with their use in data science competitions on the Kaggle platform and similar.</p>
+      <p>The datasets used in this study include collections comparable in size to those employed in industrial applications. In our earlier work [<xref ref-type="bibr" rid="B6-make-07-00112">6</xref>], we also validated the method on a dataset containing 59,427 instances and 455 attributes originating from a real enterprise environment, confirming its feasibility at production scale. Moreover, the framework can be extended to streaming data scenarios by adopting a batch-based evaluation strategy, where incoming data are processed incrementally in manageable segments. This ensures that the approach remains computationally practical for large-scale and continuously evolving industrial use cases.</p>
+      <p>The selection of machine learning methods to target attacks was conducted to diversify the types of models so that the proposed methods&#x2019; effectiveness for detecting and isolating attacks under different conditions could be evaluated. Several classifiers representing different machine learning paradigms, including linear methods and ensemble methods, were selected. Each of these models introduces different decision boundaries, learning strategies, and vulnerabilities to attacks. They also provide examples of models often found in practical implementations of decision automation systems based on machine learning.</p>
+      <p>Logistic regression (LR) acts as a simple base model, particularly vulnerable to attacks. Support Vector Machine (SVM) adds non-linear decision boundaries, increasing resistance to some attacks. XGBoost (XGB), as an ensemble model, is widely used in practice and is also the model that, on average, gives the best solutions. Moreover, the simple neural network (NN) was also considered as it can capture complex patterns in data through its layers and non-linear activations, potentially enhancing robustness against adversarial attacks.</p>
+      <p>The implementation of attacks on machine learning models was done using the ART (Adversarial Robustness Toolkit) software package available for free on the github.com platform (<uri>https://github.com/Trusted-AI/adversarial-robustness-toolbox</uri>, accessed on 2 June 2025). For attacks not supported by ART, the implementations provided by the authors of each method were used.</p>
+      <p>Overall, experiments were conducted on four models (LR, NN, SVM, and XGB) and seven attacks (BIM, FGM, HopSkiJump, Permute Attack, PGD, Random Noise, and ZOO).</p>
+      <p><xref ref-type="fig" rid="make-07-00112-f001">Figure 1</xref> presents values of balanced accuracy difference between original datasets and those after adversarial attack. It can be seen that the median value of deterioration is about 0.7 in absolute value. There are also some single datasets for which conducting an attack results in no effect (the difference is equal to 0).</p>
+      <sec id="sec5dot1-make-07-00112">
+        <title>5.1. Adversarial Attacks Detection</title>
+        <p>With the models to be diagnosed prepared and the adversarial examples prepared, it was possible to calculate the values of the diagnostic attributes. For this purpose, a surrogate model was prepared for each of the models to be diagnosed, based on 2500 approximation reducts, for which <inline-formula><mml:math id="mm55"><mml:semantics><mml:mrow><mml:mi>&#x3B5;</mml:mi><mml:mo>=</mml:mo><mml:mn>0.05</mml:mn></mml:mrow></mml:semantics></mml:math></inline-formula>. Verification of the appropriate degree of similarity of the surrogate model to the diagnosed model was carried out using Cohen&#x2019;s kappa measure, which is used to measure the similarity of the decisions made by the diagnosed model and the surrogate model. The accepted threshold for similarity was an accepted value of Cohen&#x2019;s kappa greater than 0.9. Diagnostic attribute values were calculated for each dataset analyzed and each attack method considered, and for the case where the data was unaffected by the attack.</p>
+        <p>The issue of computational cost and scalability of approximation reduct ensembles was previously analyzed in detail in our earlier study [<xref ref-type="bibr" rid="B6-make-07-00112">6</xref>]. Those experiments demonstrated that runtime depends primarily on the number of instances and attributes: for small- and medium-sized datasets, the surrogate model can be trained within a few seconds, whereas for high-dimensional or very large datasets, the process may extend to several minutes. Across all benchmarks, the average runtime was approximately 29 s, with a relatively large standard deviation (56 s), reflecting the variability in dataset size and dimensionality. The current experiments, performed on a machine with 8 CPUs and 32 GB RAM, confirm these observations and show consistent behavior with the previously reported results. The selection of 2500 reducts with <inline-formula><mml:math id="mm56"><mml:semantics><mml:mrow><mml:mi>&#x3F5;</mml:mi><mml:mo>=</mml:mo><mml:mn>0.05</mml:mn></mml:mrow></mml:semantics></mml:math></inline-formula> was guided by stability tests carried out in the same paper, where this configuration consistently produced stable neighborhoods and robust diagnostic attributes.</p>
+        <p>We performed a comparative experiment using Random Forest proximities to construct neighborhoods. While this approach is widely applied in machine learning diagnostics, in our experiments, the resulting neighborhoods were very large, often encompassing a majority of the dataset. Such neighborhoods do not highlight only the most similar instances, which limits their utility for detecting subtle adversarial perturbations. In contrast, reduct-based surrogates explicitly restrict neighborhoods to the most relevant comparisons, leading to more discriminative diagnostic attributes (<xref ref-type="table" rid="make-07-00112-t004">Table 4</xref>).</p>
+        <p>Importantly, the feasibility of the reduct-based approach is supported by our custom implementation of reduct generation in C++, which significantly accelerates computations. This ensures that ensembles of thousands of reducts can be generated and applied efficiently, making the method practical even for larger tabular datasets.</p>
+        <p>On this basis, we proceeded to construct a classifier that takes as input the aggregate values of all diagnostic attributes within the dataset, and as output returns a binary decision (attack/no attack detected) for a given data sample. In addition, the possibility of creating a classifier that can distinguish types of attacks among known attacks was tested. At this stage, aggregated data are enriched with several dataset characteristics, such as the number of classes and instances as well as the balanced accuracy of the model. A total of 59 features were analyzed, representing a vector of inputs to the classifiers.</p>
+        <p>Random Forest (RF) and XGBoost (XGB) were selected as final detectors because they represent two of the most widely adopted classification algorithms for tabular data, balancing interpretability, robustness, and computational efficiency. The obtained results were verified using cross-validation in the following variants: 10-fold cross-validation, one-attack-out, one-dataset-out, and one-model-out. <xref ref-type="table" rid="make-07-00112-t005">Table 5</xref> and <xref ref-type="table" rid="make-07-00112-t006">Table 6</xref> present the classification metrics for these scenarios.</p>
+        <p>The results summarized in <xref ref-type="table" rid="make-07-00112-t005">Table 5</xref> and <xref ref-type="table" rid="make-07-00112-t006">Table 6</xref> confirm a strong performance in the binary detection task. Both XGBoost and Random Forest classifiers consistently achieved balanced accuracy above 0.94, with precision, recall, and F1 close to 0.97&#x2013;0.99, and very low false negative rates (0.02&#x2013;0.10). These values demonstrate the robustness of the framework in distinguishing adversarially perturbed data from clean samples.</p>
+        <p>In contrast, the attack-type classification task remains substantially more challenging. Balanced accuracy across different validation scenarios lies in the 0.50&#x2013;0.65 range, with lower precision, recall, and F1 scores. This modest performance is due to the fact that the task involves eight imbalanced attack classes, which increases complexity relative to binary detection. Detailed confusion matrix analyses revealed that the most frequent misclassifications occur between the attacks BIM&#x2013;PGD, HSJ&#x2013;ZOO, and PER&#x2013;ZOO.</p>
+        <p>For each scenario and classifier, the importance of the features was determined and their ranking was created&#x2014;a higher rank means higher importance. <xref ref-type="fig" rid="make-07-00112-f002">Figure 2</xref> shows the 20 most significant variables for each binary classifier.</p>
+        <p>In the analysis conducted on the importance of diagnostic attributes for both types of classifiers, the balanced accuracy set plays a key role. For the random forest classifier, the next positions are occupied by features related to the diagnostic attribute <italic>target consistency with approximations</italic>, while for XGBoost, the positions are occupied by features related to <italic>target consistency with approximations</italic> and <italic>neighborhood size</italic>.</p>
+        <p>For each of the trained classifiers detecting attacks and their type, the most significant diagnostic attribute affecting the performance of the classifier was the balanced accuracy value obtained by the model undergoing diagnostics. In real-world applications, the ratio of adversarial examples to normal data is usually very low. Balanced accuracy, by equally weighting sensitivity and specificity, can give an overly optimistic picture of classifier performance in scenarios where the attacker selectively influences the results, without a significant decrease in the balanced accuracy parameter. In addition, balanced accuracy treats all classification errors equally, while in a security context, error costs are not necessarily symmetric. An undetected attack is usually more costly than a false alarm. Taking the above into account, classifiers have been trained to detect attacks without including balanced accuracy as a diagnostic attribute. Such a procedure will also make it possible to assess to what extent the loss of balanced accuracy value information will affect the ability to detect the fact and distinguish the attack type. The results of training the classifiers are presented in <xref ref-type="table" rid="make-07-00112-t007">Table 7</xref> and <xref ref-type="table" rid="make-07-00112-t008">Table 8</xref>.</p>
+        <p>The attack detection classifiers obtained at this stage were considered good enough for practical use. Under the most favorable scenario of classifier training, removing one attack did not significantly affect the prediction quality of the classifiers. However, for attack-type classifiers, there is a noticeable deterioration in the results obtained.</p>
+        <p>Based on the most important features selected by the model, it is possible to show what the distributions of diagnostic attributes look like in the event of an adversarial attack&#x2014;<xref ref-type="fig" rid="make-07-00112-f003">Figure 3</xref>.</p>
+        <p>The values of the selected attribute indicate that for normal model behavior (without attack), decision consistency in the neighborhood is very high, in contrast to a situation where an adversarial attack has occurred. This shows that diagnostic attribute values are human-readable measures, indicating the presence of a problem with the dataset.</p>
+        <p>Beyond aggregated plots, diagnostic attributes can also be used to derive explicit decision rules that directly expose adversarial triggers. For instance, from the experimental results, we obtained the following rule:<disp-formula id="FD2-make-07-00112"><label>(2)</label><mml:math id="mm57" display="block"><mml:semantics><mml:mtable displaystyle="true"><mml:mtr><mml:mtd columnalign="right"><mml:mspace width="1.em"/></mml:mtd><mml:mtd columnalign="left"><mml:mrow><mml:mi>I</mml:mi><mml:mi>F</mml:mi><mml:mspace width="1.em"/><mml:mi>uncertainty</mml:mi><mml:mo>&lt;</mml:mo><mml:mn>0.23</mml:mn><mml:mspace width="1.em"/><mml:mi>A</mml:mi><mml:mi>N</mml:mi><mml:mi>D</mml:mi></mml:mrow></mml:mtd></mml:mtr><mml:mtr><mml:mtd columnalign="right"><mml:mspace width="1.em"/></mml:mtd><mml:mtd columnalign="left"><mml:mrow><mml:mspace width="1.em"/><mml:mi>prediction</mml:mi><mml:mspace width="4.pt"/><mml:mi>consistency</mml:mi><mml:mspace width="4.pt"/><mml:mi>with</mml:mi><mml:mspace width="4.pt"/><mml:mi>targets</mml:mi><mml:mspace width="4.pt"/><mml:mi>in</mml:mi><mml:mspace width="4.pt"/><mml:mi>neighborhood</mml:mi><mml:mo>&lt;</mml:mo><mml:mn>0.35</mml:mn><mml:mspace width="1.em"/><mml:mi>T</mml:mi><mml:mi>H</mml:mi><mml:mi>E</mml:mi><mml:mi>N</mml:mi><mml:mspace width="1.em"/><mml:mi>attack</mml:mi></mml:mrow></mml:mtd></mml:mtr></mml:mtable></mml:semantics></mml:math></disp-formula></p>
+        <p>This type of rule demonstrates that adversarial perturbations lead to distinctive local patterns: the attacked instance becomes inconsistent with its neighborhood, while the model&#x2019;s uncertainty simultaneously decreases. Such joint conditions are rarely observed in natural errors and can therefore be interpreted as a strong signal of adversarial manipulation. The ability to extract simple and human-readable rules makes the framework not only effective in detection but also transparent and actionable for practitioners.</p>
+      </sec>
+      <sec id="sec5dot2-make-07-00112">
+        <title>5.2. Sensitivity Analysis</title>
+        <p>The attack cases tested so far have assumed a standard <inline-formula><mml:math id="mm58"><mml:semantics><mml:mrow><mml:mi>e</mml:mi><mml:mi>p</mml:mi><mml:mi>s</mml:mi><mml:mi>i</mml:mi><mml:mi>l</mml:mi><mml:mi>o</mml:mi><mml:mi>n</mml:mi></mml:mrow></mml:semantics></mml:math></inline-formula> perturbation scale factor. The practical significance of this coefficient is important from the point of view of both the attacking party and the party trying to detect the attack. Lowering it will result in smaller perturbations that are more difficult to detect while having less impact on the correctness of the attacked system. This is a special case of the general problem, in which each attack assumes some level of conscious balance between its effectiveness and difficulty of detection [<xref ref-type="bibr" rid="B20-make-07-00112">20</xref>].</p>
+        <p>To test the dependence of the attack&#x2019;s effectiveness on its magnitude, a sensitivity analysis was conducted to check how the balanced accuracy measure changes depending on the <inline-formula><mml:math id="mm59"><mml:semantics><mml:mi>&#x3F5;</mml:mi></mml:semantics></mml:math></inline-formula> value of the FGM attack. Twenty <inline-formula><mml:math id="mm60"><mml:semantics><mml:mi>&#x3F5;</mml:mi></mml:semantics></mml:math></inline-formula> values ranging from 0 to 0.2 with a step equal to 0.01 were verified. The results, showing how effectively the attack can reduce the effectiveness of the attacked model for two sample datasets, are shown in <xref ref-type="fig" rid="make-07-00112-f004">Figure 4</xref>.</p>
+        <p>In the next step, the attack detection performance of the previously prepared classifiers was checked, both with and without balanced accuracy. The results are presented in <xref ref-type="table" rid="make-07-00112-t009">Table 9</xref>.</p>
+        <p>The high quality of the obtained classification results indicates that at the low intensity of the attack, when its overall performance quality has not yet been visibly highlighted by a decrease in the balanced accuracy value of the attacked model, the other diagnostic attributes already allow effective detection of the attack.</p>
+      </sec>
+    </sec>
+    <sec sec-type="conclusions" id="sec6-make-07-00112">
+      <title>6. Conclusions and Discussion</title>
+      <p>The main objective of the paper was to develop, verify, and implement a method for detecting adversarial attacks on machine learning models trained on tabular data. The method was to operate in a black-box regime, without access to the architecture and parameters of the model being attacked.</p>
+      <p>The proposed method is dedicated to classification models that process tabular data. It makes it possible to detect adversarial attacks intended to induce misclassification of data&#x2014;at the inference stage (<italic>evasion</italic> type attacks). It requires access to input data and the corresponding decisions made by the diagnosed model (the ML model can be treated as a black box) and the ability to run a data processing stream parallel to the diagnosed model&#x2014;used to calculate diagnostic attributes and detect attacks.</p>
+      <p>The method is based on two key elements: a surrogate model approximating the performance of the diagnosed model and a set of diagnostic attributes extracted from the surrogate model reflecting the model&#x2019;s behavior in the context of the local environments of the analyzed examples. Based on these attributes, a trained classifier detects attack cases for a given data. The proposed approach, with high efficiency measured by balanced accuracy, enables the detection of intentional data changes used to disrupt machine learning models.</p>
+      <p>The present study focused on validating the application of approximation reduct ensembles as surrogates for adversarial attack detection. An interesting future research direction is the exploration of alternative surrogates, in particular random-forest-based approaches, which may offer a complementary way of constructing neighborhoods and diagnostic attributes.</p>
+      <sec id="sec6dot1-make-07-00112">
+        <title>6.1. Dual-Use Considerations and Safe Deployment</title>
+        <p>While the proposed detection method demonstrates significant promise for enhancing ML security, the adversarial robustness research has an inherent dual-use nature. The detailed exposition of diagnostic attributes and their thresholds could potentially enable adversaries to develop adaptive attacks specifically designed to evade detection mechanisms. For instance, attackers aware of our reliance on neighborhood consistency measures might craft perturbations that maintain local coherence while still achieving misclassification objectives. The same applies to the sensitivity analysis, where revealing detection capabilities at low perturbation scales could guide adversaries toward identifying optimal attack magnitudes that balance effectiveness with detectability.</p>
+        <p>To mitigate these risks, we recommend several safe deployment strategies:<list list-type="order"><list-item><p>Implementing ensemble-based detection systems that combine multiple orthogonal detection approaches to increase adaptation costs for adversaries;</p></list-item><list-item><p>Employing dynamic threshold adjustment and periodic retraining of detection classifiers to maintain robustness against evolving attack strategies;</p></list-item><list-item><p>Restricting detailed technical specifications in production deployments while maintaining transparency about general detection capabilities;</p></list-item><list-item><p>Establishing continuous monitoring frameworks that can identify when detection performance degrades due to adaptive adversarial behavior.</p></list-item></list></p>
+        <p>These considerations highlight that adversarial detection represents an ongoing evolutionary process rather than a static solution, requiring continuous adaptation to maintain effectiveness against sophisticated adversaries who may leverage publicly available detection methodologies to refine their attack strategies.</p>
+      </sec>
+      <sec id="sec6dot2-make-07-00112">
+        <title>6.2. Limitations</title>
+        <p>The experimental setup presents several constraints that must be acknowledged. Experiments were conducted on 22 tabular datasets from OpenML, using 7 attack methods and 4 machine learning models. While these datasets cover diverse application domains, the controlled laboratory setting does not reflect the complexity encountered in real-world deployments where data characteristics, model architectures, and attack patterns exhibit greater variability.</p>
+        <p>The method relies on a fundamental assumption that surrogate models are constructed using clean, unattacked data during the initial training phase. This assumption differs significantly from actual deployment scenarios where business data distributions drift continuously, necessitating regular model updates and maintenance. The current approach does not address surrogate model update strategies or the incremental computational costs required to maintain detection capabilities as underlying ML models evolve through retraining cycles. It also does not tackle the problem of poisoning attacks.</p>
+        <p>The evaluation framework did not incorporate adaptive adversaries who specifically target the detection mechanism. Real-world attackers may develop strategies to circumvent detection by exploiting knowledge of diagnostic attribute calculations or engineering perturbations that preserve local neighborhood consistency while achieving misclassification goals. The absence of such adaptive attack scenarios in the experimental design represents a gap that could impact the practical robustness of the detection approach.</p>
+        <p>In its current form, the method is designed to detect evasion attacks at the inference stage and does not address poisoning attacks that compromise model training. The approach is also limited to tabular data, with effectiveness on other data modalities remaining unexplored.</p>
+        <p>In its current form, the classifiers are not suitable for distinguishing between types of attacks. The method is used to detect attacks on models at the inference stage&#x2014;it is not dedicated to detecting <italic>poisoning</italic> attacks aimed at modifying the model&#x2019;s decision boundaries at a later stage. Moreover, the proposed method was verified using static tabular data only without temporal dependencies.</p>
+      </sec>
+      <sec id="sec6dot3-make-07-00112">
+        <title>6.3. Future Works</title>
+        <p>In conducting this research, we have followed the pattern of verifying the core principle of the method in laboratory environments, with a plan laid out for future experiments verifying the boundaries of its usefulness in gradually more real-world-like scenarios. Future research will split into three distinctive streams of work. The most important from the practical point of view is to address adaptive detection mechanisms for evolving data distributions, evaluate robustness against adversaries targeting the detection system itself, and extend the approach to non-tabular data modalities. Another stream of work will approach investigation of poisoning attack detection and improved attack type classification accuracy represent additional priorities. Finally, large-scale validation using real-world deployment scenarios will be essential for assessing practical effectiveness of the presented method.</p>
+        <p>While the proposed framework focuses on detecting evasion attacks at inference, future research may address poisoning attacks that target the training process. Investigating how the surrogate model and diagnostic attributes behave under incremental retraining or adaptive scenarios, where adversaries refine their strategies based on detection feedback, would provide broader coverage of adversarial threats. Introducing adversarial training elements for the detection classifier itself could further improve its resilience. Another direction of future research will be investigation of attack detection in time-series data, which allow to increase the usability of proposed framework for other sectors such as healthcare or industry.</p>
+        <p>Future work will include extending the evaluation to other black-box detection baselines such as Kernel Density Estimation, nearest neighbor distance, and autoencoder-based reconstruction error, as well as comparisons with transfer learning and meta-learning schemes. These additions will require substantial methodological adaptation and large-scale experiments, but they are essential for a more comprehensive assessment of the proposed framework.</p>
+      </sec>
+    </sec>
+  </body>
+  <back>
+    <notes>
+      <title>Author Contributions</title>
+      <p>Conceptualization, P.B. and M.S.; methodology, P.B., M.S., D.&#x15A;. and &#x141;.W.; software, &#x141;.W.; validation, P.B. and M.S.; formal analysis, P.B.; investigation, P.B. and &#x141;.W.; resources, P.B.; data curation, &#x141;.W.; writing&#x2014;original draft preparation, P.B. and &#x141;.W.; writing&#x2014;review and editing, M.S. and D.&#x15A;.; visualization, &#x141;.W.; supervision, M.S. and D.&#x15A;. All authors have read and agreed to the published version of the manuscript.</p>
+    </notes>
+    <notes>
+      <title>Data Availability Statement</title>
+      <p>The data presented in this study were derived from the following resources available in the public domain: <uri>https://www.openml.org/</uri> (accessed on 10 April 2025). The code is available in the GitHub repository <uri>https://github.com/lwawrowski/adversarial_attacks_detection</uri> (accessed on 22 September 2025).</p>
+    </notes>
+    <notes notes-type="COI-statement">
+      <title>Conflicts of Interest</title>
+      <p>The authors declare no conflicts of interest.</p>
+    </notes>
+    <ref-list>
+      <title>References</title>
+      <ref id="B1-make-07-00112">
+        <label>1.</label>
+        <element-citation publication-type="confproc">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Lowd</surname>
+              <given-names>D.</given-names>
+            </name>
+            <name>
+              <surname>Meek</surname>
+              <given-names>C.</given-names>
+            </name>
+          </person-group>
+          <article-title>Adversarial learning</article-title>
+          <source>Proceedings of the Eleventh ACM SIGKDD International Conference on Knowledge Discovery in Data Mining</source>
+          <conf-loc>Chicago, IL, USA</conf-loc>
+          <conf-date>21&#x2013;24 August 2005</conf-date>
+          <fpage>641</fpage>
+          <lpage>647</lpage>
+        </element-citation>
+      </ref>
+      <ref id="B2-make-07-00112">
+        <label>2.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Finlayson</surname>
+              <given-names>S.G.</given-names>
+            </name>
+            <name>
+              <surname>Bowers</surname>
+              <given-names>J.D.</given-names>
+            </name>
+            <name>
+              <surname>Ito</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Zittrain</surname>
+              <given-names>J.L.</given-names>
+            </name>
+            <name>
+              <surname>Beam</surname>
+              <given-names>A.L.</given-names>
+            </name>
+            <name>
+              <surname>Kohane</surname>
+              <given-names>I.S.</given-names>
+            </name>
+          </person-group>
+          <article-title>Adversarial attacks on medical machine learning</article-title>
+          <source>Science</source>
+          <year>2019</year>
+          <volume>363</volume>
+          <fpage>1287</fpage>
+          <lpage>1289</lpage>
+          <pub-id pub-id-type="doi">10.1126/science.aaw4399</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="B3-make-07-00112">
+        <label>3.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Szegedy</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Zaremba</surname>
+              <given-names>W.</given-names>
+            </name>
+            <name>
+              <surname>Sutskever</surname>
+              <given-names>I.</given-names>
+            </name>
+            <name>
+              <surname>Bruna</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Erhan</surname>
+              <given-names>D.</given-names>
+            </name>
+            <name>
+              <surname>Goodfellow</surname>
+              <given-names>I.</given-names>
+            </name>
+            <name>
+              <surname>Fergus</surname>
+              <given-names>R.</given-names>
+            </name>
+          </person-group>
+          <article-title>Intriguing properties of neural networks</article-title>
+          <source>arXiv</source>
+          <year>2014</year>
+          <pub-id pub-id-type="arxiv">1312.6199</pub-id>
+          <pub-id pub-id-type="doi">10.48550/arXiv.1312.6199</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="B4-make-07-00112">
+        <label>4.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Goodfellow</surname>
+              <given-names>I.J.</given-names>
+            </name>
+            <name>
+              <surname>Shlens</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Szegedy</surname>
+              <given-names>C.</given-names>
+            </name>
+          </person-group>
+          <article-title>Explaining and Harnessing Adversarial Examples</article-title>
+          <source>arXiv</source>
+          <year>2015</year>
+          <pub-id pub-id-type="arxiv">1412.6572</pub-id>
+          <pub-id pub-id-type="doi">10.48550/arXiv.1412.6572</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="B5-make-07-00112">
+        <label>5.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kireev</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Kulynych</surname>
+              <given-names>B.</given-names>
+            </name>
+            <name>
+              <surname>Troncoso</surname>
+              <given-names>C.</given-names>
+            </name>
+          </person-group>
+          <article-title>Adversarial Robustness for Tabular Data through Cost and Utility Awareness</article-title>
+          <source>arXiv</source>
+          <year>2023</year>
+          <pub-id pub-id-type="arxiv">2208.13058</pub-id>
+          <pub-id pub-id-type="doi">10.48550/arXiv.2208.13058</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="B6-make-07-00112">
+        <label>6.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Janusz</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Zalewska</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Wawrowski</surname>
+              <given-names>&#x141;.</given-names>
+            </name>
+            <name>
+              <surname>Biczyk</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Ludziejewski</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Sikora</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>&#x15A;l&#x119;zak</surname>
+              <given-names>D.</given-names>
+            </name>
+          </person-group>
+          <article-title>BrightBox&#x2014;A rough set based technology for diagnosing mistakes of machine learning models</article-title>
+          <source>Appl. Soft Comput.</source>
+          <year>2023</year>
+          <volume>141</volume>
+          <fpage>110285</fpage>
+          <pub-id pub-id-type="doi">10.1016/j.asoc.2023.110285</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="B7-make-07-00112">
+        <label>7.</label>
+        <element-citation publication-type="confproc">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Biczyk</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Wawrowski</surname>
+              <given-names>&#x141;.</given-names>
+            </name>
+          </person-group>
+          <article-title>Towards automated detection of adversarial attacks on tabular data</article-title>
+          <source>Proceedings of the 2023 18th Conference on Computer Science and Intelligence Systems (FedCSIS)</source>
+          <conf-loc>Warsaw, Poland</conf-loc>
+          <conf-date>17&#x2013;20 September 2023</conf-date>
+          <publisher-name>IEEE</publisher-name>
+          <publisher-loc>New York, NY, USA</publisher-loc>
+          <year>2023</year>
+          <fpage>247</fpage>
+          <lpage>251</lpage>
+        </element-citation>
+      </ref>
+      <ref id="B8-make-07-00112">
+        <label>8.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Biczyk</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Wawrowski</surname>
+              <given-names>&#x141;.</given-names>
+            </name>
+          </person-group>
+          <article-title>Detecting and Isolating Adversarial Attacks Using Characteristics of the Surrogate Model Framework</article-title>
+          <source>Appl. Sci.</source>
+          <year>2023</year>
+          <volume>13</volume>
+          <elocation-id>9698</elocation-id>
+          <pub-id pub-id-type="doi">10.3390/app13179698</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="B9-make-07-00112">
+        <label>9.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Amodei</surname>
+              <given-names>D.</given-names>
+            </name>
+            <name>
+              <surname>Olah</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Steinhardt</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Christiano</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Schulman</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Man&#xE9;</surname>
+              <given-names>D.</given-names>
+            </name>
+          </person-group>
+          <article-title>Concrete Problems in AI Safety</article-title>
+          <source>arXiv</source>
+          <year>2016</year>
+          <pub-id pub-id-type="arxiv">1606.06565</pub-id>
+          <pub-id pub-id-type="doi">10.48550/arXiv.1606.06565</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="B10-make-07-00112">
+        <label>10.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Biggio</surname>
+              <given-names>B.</given-names>
+            </name>
+            <name>
+              <surname>Roli</surname>
+              <given-names>F.</given-names>
+            </name>
+          </person-group>
+          <article-title>Wild patterns: Ten years after the rise of adversarial machine learning</article-title>
+          <source>Pattern Recognit.</source>
+          <year>2018</year>
+          <volume>84</volume>
+          <fpage>317</fpage>
+          <lpage>331</lpage>
+          <pub-id pub-id-type="doi">10.1016/j.patcog.2018.07.023</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="B11-make-07-00112">
+        <label>11.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kaufmann</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Kang</surname>
+              <given-names>D.</given-names>
+            </name>
+            <name>
+              <surname>Sun</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>Basart</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Yin</surname>
+              <given-names>X.</given-names>
+            </name>
+            <name>
+              <surname>Mazeika</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Arora</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Dziedzic</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Boenisch</surname>
+              <given-names>F.</given-names>
+            </name>
+            <name>
+              <surname>Brown</surname>
+              <given-names>T.</given-names>
+            </name>
+            <etal/>
+          </person-group>
+          <article-title>Testing Robustness Against Unforeseen Adversaries</article-title>
+          <source>arXiv</source>
+          <year>2023</year>
+          <pub-id pub-id-type="arxiv">1908.08016</pub-id>
+          <pub-id pub-id-type="doi">10.48550/arXiv.1908.08016</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="B12-make-07-00112">
+        <label>12.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Papernot</surname>
+              <given-names>N.</given-names>
+            </name>
+            <name>
+              <surname>McDaniel</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Goodfellow</surname>
+              <given-names>I.</given-names>
+            </name>
+          </person-group>
+          <article-title>Transferability in Machine Learning: From Phenomena to Black-Box Attacks using Adversarial Samples</article-title>
+          <source>arXiv</source>
+          <year>2016</year>
+          <pub-id pub-id-type="arxiv">1605.07277</pub-id>
+          <pub-id pub-id-type="doi">10.48550/arXiv.1605.07277</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="B13-make-07-00112">
+        <label>13.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Huang</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Papernot</surname>
+              <given-names>N.</given-names>
+            </name>
+            <name>
+              <surname>Goodfellow</surname>
+              <given-names>I.</given-names>
+            </name>
+            <name>
+              <surname>Duan</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>Abbeel</surname>
+              <given-names>P.</given-names>
+            </name>
+          </person-group>
+          <article-title>Adversarial Attacks on Neural Network Policies</article-title>
+          <source>arXiv</source>
+          <year>2017</year>
+          <pub-id pub-id-type="arxiv">1702.02284</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="B14-make-07-00112">
+        <label>14.</label>
+        <element-citation publication-type="confproc">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kantchelian</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Tygar</surname>
+              <given-names>J.D.</given-names>
+            </name>
+            <name>
+              <surname>Joseph</surname>
+              <given-names>A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Evasion and hardening of tree ensemble classifiers</article-title>
+          <source>Proceedings of the International Conference on Machine Learning, PMLR</source>
+          <conf-loc>New York, NY, USA</conf-loc>
+          <conf-date>20&#x2013;22 June 2016</conf-date>
+          <fpage>2387</fpage>
+          <lpage>2396</lpage>
+        </element-citation>
+      </ref>
+      <ref id="B15-make-07-00112">
+        <label>15.</label>
+        <element-citation publication-type="confproc">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pierazzi</surname>
+              <given-names>F.</given-names>
+            </name>
+            <name>
+              <surname>Pendlebury</surname>
+              <given-names>F.</given-names>
+            </name>
+            <name>
+              <surname>Cortellazzi</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Cavallaro</surname>
+              <given-names>L.</given-names>
+            </name>
+          </person-group>
+          <article-title>Intriguing Properties of Adversarial ML Attacks in the Problem Space</article-title>
+          <source>Proceedings of the 2020 IEEE Symposium on Security and Privacy (SP)</source>
+          <conf-loc>San Francisco, CA, USA</conf-loc>
+          <conf-date>18&#x2013;20 May 2020</conf-date>
+          <fpage>1332</fpage>
+          <lpage>1349</lpage>
+          <pub-id pub-id-type="doi">10.1109/SP40000.2020.00073</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="B16-make-07-00112">
+        <label>16.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Eykholt</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Evtimov</surname>
+              <given-names>I.</given-names>
+            </name>
+            <name>
+              <surname>Fernandes</surname>
+              <given-names>E.</given-names>
+            </name>
+            <name>
+              <surname>Li</surname>
+              <given-names>B.</given-names>
+            </name>
+            <name>
+              <surname>Rahmati</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Xiao</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Prakash</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Kohno</surname>
+              <given-names>T.</given-names>
+            </name>
+            <name>
+              <surname>Song</surname>
+              <given-names>D.</given-names>
+            </name>
+          </person-group>
+          <article-title>Robust Physical-World Attacks on Deep Learning Models</article-title>
+          <source>arXiv</source>
+          <year>2018</year>
+          <pub-id pub-id-type="arxiv">1707.08945</pub-id>
+          <pub-id pub-id-type="doi">10.48550/arXiv.1707.08945</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="B17-make-07-00112">
+        <label>17.</label>
+        <element-citation publication-type="confproc">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Rosenberg</surname>
+              <given-names>I.</given-names>
+            </name>
+            <name>
+              <surname>Shabtai</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Rokach</surname>
+              <given-names>L.</given-names>
+            </name>
+            <name>
+              <surname>Elovici</surname>
+              <given-names>Y.</given-names>
+            </name>
+          </person-group>
+          <article-title>Generic Black-Box End-to-End Attack Against State of the Art API Call Based Malware Classifiers</article-title>
+          <source>Proceedings of the Research in Attacks, Intrusions, and Defenses</source>
+          <conf-loc>Crete, Greece</conf-loc>
+          <conf-date>10&#x2013;12 September 2018</conf-date>
+          <person-group person-group-type="editor">
+            <name>
+              <surname>Bailey</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Holz</surname>
+              <given-names>T.</given-names>
+            </name>
+            <name>
+              <surname>Stamatogiannakis</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Ioannidis</surname>
+              <given-names>S.</given-names>
+            </name>
+          </person-group>
+          <publisher-name>Springer</publisher-name>
+          <publisher-loc>Cham, Switzerland</publisher-loc>
+          <year>2018</year>
+          <fpage>490</fpage>
+          <lpage>510</lpage>
+        </element-citation>
+      </ref>
+      <ref id="B18-make-07-00112">
+        <label>18.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Demontis</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Melis</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Biggio</surname>
+              <given-names>B.</given-names>
+            </name>
+            <name>
+              <surname>Maiorca</surname>
+              <given-names>D.</given-names>
+            </name>
+            <name>
+              <surname>Arp</surname>
+              <given-names>D.</given-names>
+            </name>
+            <name>
+              <surname>Rieck</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Corona</surname>
+              <given-names>I.</given-names>
+            </name>
+            <name>
+              <surname>Giacinto</surname>
+              <given-names>G.</given-names>
+            </name>
+            <name>
+              <surname>Roli</surname>
+              <given-names>F.</given-names>
+            </name>
+          </person-group>
+          <article-title>Yes, Machine Learning Can Be More Secure! A Case Study on Android Malware Detection</article-title>
+          <source>IEEE Trans. Dependable Secur. Comput.</source>
+          <year>2019</year>
+          <volume>16</volume>
+          <fpage>711</fpage>
+          <lpage>724</lpage>
+          <pub-id pub-id-type="doi">10.1109/TDSC.2017.2700270</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="B19-make-07-00112">
+        <label>19.</label>
+        <element-citation publication-type="confproc">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Jagielski</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Oprea</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Biggio</surname>
+              <given-names>B.</given-names>
+            </name>
+            <name>
+              <surname>Liu</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Nita-Rotaru</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Li</surname>
+              <given-names>B.</given-names>
+            </name>
+          </person-group>
+          <article-title>Manipulating Machine Learning: Poisoning Attacks and Countermeasures for Regression Learning</article-title>
+          <source>Proceedings of the 2018 IEEE Symposium on Security and Privacy (SP)</source>
+          <conf-loc>San Francisco, CA, USA</conf-loc>
+          <conf-date>21&#x2013;23 May 2018</conf-date>
+          <fpage>19</fpage>
+          <lpage>35</lpage>
+          <pub-id pub-id-type="doi">10.1109/SP.2018.00057</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="B20-make-07-00112">
+        <label>20.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>He</surname>
+              <given-names>Z.</given-names>
+            </name>
+            <name>
+              <surname>Ouyang</surname>
+              <given-names>C.</given-names>
+            </name>
+            <name>
+              <surname>Alzubaidi</surname>
+              <given-names>L.</given-names>
+            </name>
+            <name>
+              <surname>Barros</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Moreira</surname>
+              <given-names>C.</given-names>
+            </name>
+          </person-group>
+          <article-title>Investigating imperceptibility of adversarial attacks on tabular data: An empirical analysis</article-title>
+          <source>Intell. Syst. Appl.</source>
+          <year>2025</year>
+          <volume>25</volume>
+          <fpage>200461</fpage>
+          <pub-id pub-id-type="doi">10.1016/j.iswa.2024.200461</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="B21-make-07-00112">
+        <label>21.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Vadillo</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Santana</surname>
+              <given-names>R.</given-names>
+            </name>
+            <name>
+              <surname>Lozano</surname>
+              <given-names>J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Adversarial Attacks in Explainable Machine Learning: A Survey of Threats Against Models and Humans</article-title>
+          <source>Wiley Interdiscip. Rev. Data Min. Knowl. Discov.</source>
+          <year>2024</year>
+          <volume>15</volume>
+          <fpage>e1567</fpage>
+          <pub-id pub-id-type="doi">10.1002/widm.1567</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="B22-make-07-00112">
+        <label>22.</label>
+        <element-citation publication-type="confproc">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Dyrmishi</surname>
+              <given-names>S.</given-names>
+            </name>
+            <name>
+              <surname>Stoian</surname>
+              <given-names>M.C.</given-names>
+            </name>
+            <name>
+              <surname>Giunchiglia</surname>
+              <given-names>E.</given-names>
+            </name>
+            <name>
+              <surname>Cordy</surname>
+              <given-names>M.</given-names>
+            </name>
+          </person-group>
+          <article-title>Deep Generative Models as an Adversarial Attack Strategy for Tabular Machine Learning</article-title>
+          <source>Proceedings of the 2024 International Conference on Machine Learning and Cybernetics (ICMLC)</source>
+          <conf-loc>Miyazaki, Japan</conf-loc>
+          <conf-date>20&#x2013;23 September 2024</conf-date>
+          <fpage>579</fpage>
+          <lpage>584</lpage>
+          <pub-id pub-id-type="doi">10.1109/ICMLC63072.2024.10935037</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="B23-make-07-00112">
+        <label>23.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Hashemi</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>Fathi</surname>
+              <given-names>A.</given-names>
+            </name>
+          </person-group>
+          <article-title>PermuteAttack: Counterfactual Explanation of Machine Learning Credit Scorecards</article-title>
+          <source>arXiv</source>
+          <year>2020</year>
+          <pub-id pub-id-type="arxiv">2008.10138</pub-id>
+          <pub-id pub-id-type="doi">10.48550/arXiv.2008.10138</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="B24-make-07-00112">
+        <label>24.</label>
+        <element-citation publication-type="confproc">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chen</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Jordan</surname>
+              <given-names>M.I.</given-names>
+            </name>
+            <name>
+              <surname>Wainwright</surname>
+              <given-names>M.J.</given-names>
+            </name>
+          </person-group>
+          <article-title>Hopskipjumpattack: A query-efficient decision-based attack</article-title>
+          <source>Proceedings of the 2020 IEEE Symposium on Security and Privacy (sp)</source>
+          <conf-loc>San Francisco, CA, USA</conf-loc>
+          <conf-date>18&#x2013;20 May 2020</conf-date>
+          <publisher-name>IEEE</publisher-name>
+          <publisher-loc>New York, NY, USA</publisher-loc>
+          <year>2020</year>
+          <fpage>1277</fpage>
+          <lpage>1294</lpage>
+        </element-citation>
+      </ref>
+      <ref id="B25-make-07-00112">
+        <label>25.</label>
+        <element-citation publication-type="confproc">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Chen</surname>
+              <given-names>P.Y.</given-names>
+            </name>
+            <name>
+              <surname>Zhang</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Sharma</surname>
+              <given-names>Y.</given-names>
+            </name>
+            <name>
+              <surname>Yi</surname>
+              <given-names>J.</given-names>
+            </name>
+            <name>
+              <surname>Hsieh</surname>
+              <given-names>C.J.</given-names>
+            </name>
+          </person-group>
+          <article-title>ZOO: Zeroth Order Optimization Based Black-box Attacks to Deep Neural Networks without Training Substitute Models</article-title>
+          <source>Proceedings of the 10th ACM Workshop on Artificial Intelligence and Security</source>
+          <conf-loc>New York, NY, USA</conf-loc>
+          <conf-date>3 November 2017</conf-date>
+          <comment>AISec &#x2019;17</comment>
+          <fpage>15</fpage>
+          <lpage>26</lpage>
+          <pub-id pub-id-type="doi">10.1145/3128572.3140448</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="B26-make-07-00112">
+        <label>26.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Madry</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Makelov</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Schmidt</surname>
+              <given-names>L.</given-names>
+            </name>
+            <name>
+              <surname>Tsipras</surname>
+              <given-names>D.</given-names>
+            </name>
+            <name>
+              <surname>Vladu</surname>
+              <given-names>A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Towards Deep Learning Models Resistant to Adversarial Attacks</article-title>
+          <source>arXiv</source>
+          <year>2019</year>
+          <pub-id pub-id-type="arxiv">1706.06083</pub-id>
+          <pub-id pub-id-type="doi">10.48550/arXiv.1706.06083</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="B27-make-07-00112">
+        <label>27.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Kurakin</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Goodfellow</surname>
+              <given-names>I.</given-names>
+            </name>
+            <name>
+              <surname>Bengio</surname>
+              <given-names>S.</given-names>
+            </name>
+          </person-group>
+          <article-title>Adversarial examples in the physical world</article-title>
+          <source>arXiv</source>
+          <year>2017</year>
+          <pub-id pub-id-type="arxiv">1607.02533</pub-id>
+          <pub-id pub-id-type="doi">10.48550/arXiv.1607.02533</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="B28-make-07-00112">
+        <label>28.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Wang</surname>
+              <given-names>Z.</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>W.</given-names>
+            </name>
+            <name>
+              <surname>Chen</surname>
+              <given-names>Q.</given-names>
+            </name>
+            <name>
+              <surname>Wang</surname>
+              <given-names>Q.</given-names>
+            </name>
+            <name>
+              <surname>Nguyen</surname>
+              <given-names>A.</given-names>
+            </name>
+          </person-group>
+          <article-title>Generating Valid and Natural Adversarial Examples with Large Language Models</article-title>
+          <source>arXiv</source>
+          <year>2023</year>
+          <pub-id pub-id-type="arxiv">2311.11861</pub-id>
+          <pub-id pub-id-type="doi">10.48550/arXiv.2311.11861</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="B29-make-07-00112">
+        <label>29.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Grosse</surname>
+              <given-names>K.</given-names>
+            </name>
+            <name>
+              <surname>Manoharan</surname>
+              <given-names>P.</given-names>
+            </name>
+            <name>
+              <surname>Papernot</surname>
+              <given-names>N.</given-names>
+            </name>
+            <name>
+              <surname>Backes</surname>
+              <given-names>M.</given-names>
+            </name>
+            <name>
+              <surname>McDaniel</surname>
+              <given-names>P.</given-names>
+            </name>
+          </person-group>
+          <article-title>On the (Statistical) Detection of Adversarial Examples</article-title>
+          <source>arXiv</source>
+          <year>2017</year>
+          <pub-id pub-id-type="arxiv">1702.06280</pub-id>
+          <pub-id pub-id-type="doi">10.48550/arXiv.1702.06280</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="B30-make-07-00112">
+        <label>30.</label>
+        <element-citation publication-type="journal">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Pedraza</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>Deniz</surname>
+              <given-names>O.</given-names>
+            </name>
+            <name>
+              <surname>Singh</surname>
+              <given-names>H.</given-names>
+            </name>
+            <name>
+              <surname>Bueno</surname>
+              <given-names>G.</given-names>
+            </name>
+          </person-group>
+          <article-title>Leveraging AutoEncoders and chaos theory to improve adversarial example detection</article-title>
+          <source>Neural Comput. Appl.</source>
+          <year>2024</year>
+          <volume>36</volume>
+          <fpage>18265</fpage>
+          <lpage>18275</lpage>
+          <pub-id pub-id-type="doi">10.1007/s00521-024-10141-1</pub-id>
+        </element-citation>
+      </ref>
+      <ref id="B31-make-07-00112">
+        <label>31.</label>
+        <element-citation publication-type="confproc">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Janusz</surname>
+              <given-names>A.</given-names>
+            </name>
+            <name>
+              <surname>&#x15A;l&#x119;zak</surname>
+              <given-names>D.</given-names>
+            </name>
+          </person-group>
+          <article-title>Random probes in computation and assessment of approximate reducts</article-title>
+          <source>Proceedings of the Rough Sets and Intelligent Systems Paradigms: Second International Conference, RSEISP 2014, Held as Part of JRS 2014</source>
+          <conf-loc>Granada and Madrid, Spain</conf-loc>
+          <conf-date>9&#x2013;13 July 2014</conf-date>
+          <comment>Proceedings</comment>
+          <publisher-name>Springer</publisher-name>
+          <publisher-loc>Berlin/Heidelberg, Germany</publisher-loc>
+          <year>2014</year>
+          <fpage>53</fpage>
+          <lpage>64</lpage>
+        </element-citation>
+      </ref>
+    </ref-list>
+    <sec sec-type="display-objects">
+      <title>Figures and Tables</title>
+      <fig id="make-07-00112-f001" position="float">
+        <label>Figure 1</label>
+        <caption>
+          <p>Distribution of difference between balanced accuracy before and after an attack (boxplot) for each model and the raw values of differences (red points).</p>
+        </caption>
+        <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="make-07-00112-g001.tif"/>
+      </fig>
+      <fig id="make-07-00112-f002" position="float">
+        <label>Figure 2</label>
+        <caption>
+          <p>Top 20 feature importance ranks&#x2014;binary classifier with all diagnostic attributes.</p>
+        </caption>
+        <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="make-07-00112-g002.tif"/>
+      </fig>
+      <fig id="make-07-00112-f003" position="float">
+        <label>Figure 3</label>
+        <caption>
+          <p>Distribution density of selected diagnostic attribute across datasets.</p>
+        </caption>
+        <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="make-07-00112-g003.tif"/>
+      </fig>
+      <fig id="make-07-00112-f004" position="float">
+        <label>Figure 4</label>
+        <caption>
+          <p>Attack efficiency measured by balanced accuracy value as a function of the scaling parameter.</p>
+        </caption>
+        <graphic xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="make-07-00112-g004.tif"/>
+      </fig>
+      <table-wrap id="make-07-00112-t001" position="float">
+        <object-id pub-id-type="pii">make-07-00112-t001_Table 1</object-id>
+        <label>Table 1</label>
+        <caption>
+          <p>Illustrative example of an approximation reduct.</p>
+        </caption>
+        <table>
+          <thead>
+            <tr>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">Applicant</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">Income</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">Age</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">Credit Score</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">Loan Decision</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="center" valign="middle">A</td>
+              <td align="center" valign="middle">50k</td>
+              <td align="center" valign="middle">30</td>
+              <td align="center" valign="middle">700</td>
+              <td align="center" valign="middle">Yes</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">B</td>
+              <td align="center" valign="middle">50k</td>
+              <td align="center" valign="middle">32</td>
+              <td align="center" valign="middle">700</td>
+              <td align="center" valign="middle">Yes</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle" style="border-bottom:solid thin">C</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">50k</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">19</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">700</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">Yes</td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+      <table-wrap id="make-07-00112-t002" position="float">
+        <object-id pub-id-type="pii">make-07-00112-t002_Table 2</object-id>
+        <label>Table 2</label>
+        <caption>
+          <p>Illustrative example of neighborhood creation for an instance <italic>x</italic> with three attributes.</p>
+        </caption>
+        <table>
+          <thead>
+            <tr>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">Instance ID</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">Attr1</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">Attr2</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">Attr3</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">Belongs to <inline-formula><mml:math id="mm61"><mml:semantics><mml:mstyle mathvariant="bold"><mml:mrow><mml:mi mathvariant="bold-italic">N</mml:mi><mml:mo>(</mml:mo><mml:mi mathvariant="bold-italic">x</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:mstyle></mml:semantics></mml:math></inline-formula>?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="center" valign="middle"><italic>x</italic> (diagnosed)</td>
+              <td align="center" valign="middle">A</td>
+              <td align="center" valign="middle">B</td>
+              <td align="center" valign="middle">C</td>
+              <td align="center" valign="middle">reference</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">
+                <inline-formula>
+                  <mml:math id="mm62">
+                    <mml:semantics>
+                      <mml:msub>
+                        <mml:mi>o</mml:mi>
+                        <mml:mn>1</mml:mn>
+                      </mml:msub>
+                    </mml:semantics>
+                  </mml:math>
+                </inline-formula>
+              </td>
+              <td align="center" valign="middle">A</td>
+              <td align="center" valign="middle">B</td>
+              <td align="center" valign="middle">C</td>
+              <td align="center" valign="middle">yes (all attributes identical)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">
+                <inline-formula>
+                  <mml:math id="mm63">
+                    <mml:semantics>
+                      <mml:msub>
+                        <mml:mi>o</mml:mi>
+                        <mml:mn>2</mml:mn>
+                      </mml:msub>
+                    </mml:semantics>
+                  </mml:math>
+                </inline-formula>
+              </td>
+              <td align="center" valign="middle">A</td>
+              <td align="center" valign="middle">B</td>
+              <td align="center" valign="middle">D</td>
+              <td align="center" valign="middle">yes (similar by reduct <inline-formula><mml:math id="mm64"><mml:semantics><mml:mrow><mml:mi>A</mml:mi><mml:mi>t</mml:mi><mml:mi>t</mml:mi><mml:mi>r</mml:mi><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mi>A</mml:mi><mml:mi>t</mml:mi><mml:mi>t</mml:mi><mml:mi>r</mml:mi><mml:mn>2</mml:mn></mml:mrow></mml:semantics></mml:math></inline-formula>)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">
+                <inline-formula>
+                  <mml:math id="mm65">
+                    <mml:semantics>
+                      <mml:msub>
+                        <mml:mi>o</mml:mi>
+                        <mml:mn>3</mml:mn>
+                      </mml:msub>
+                    </mml:semantics>
+                  </mml:math>
+                </inline-formula>
+              </td>
+              <td align="center" valign="middle">A</td>
+              <td align="center" valign="middle">D</td>
+              <td align="center" valign="middle">C</td>
+              <td align="center" valign="middle">yes (similar by reduct <inline-formula><mml:math id="mm66"><mml:semantics><mml:mrow><mml:mi>A</mml:mi><mml:mi>t</mml:mi><mml:mi>t</mml:mi><mml:mi>r</mml:mi><mml:mn>1</mml:mn><mml:mo>,</mml:mo><mml:mi>A</mml:mi><mml:mi>t</mml:mi><mml:mi>t</mml:mi><mml:mi>r</mml:mi><mml:mn>3</mml:mn></mml:mrow></mml:semantics></mml:math></inline-formula>)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">
+                <inline-formula>
+                  <mml:math id="mm67">
+                    <mml:semantics>
+                      <mml:msub>
+                        <mml:mi>o</mml:mi>
+                        <mml:mn>4</mml:mn>
+                      </mml:msub>
+                    </mml:semantics>
+                  </mml:math>
+                </inline-formula>
+              </td>
+              <td align="center" valign="middle">D</td>
+              <td align="center" valign="middle">B</td>
+              <td align="center" valign="middle">C</td>
+              <td align="center" valign="middle">yes (similar by reduct <inline-formula><mml:math id="mm68"><mml:semantics><mml:mrow><mml:mi>A</mml:mi><mml:mi>t</mml:mi><mml:mi>t</mml:mi><mml:mi>r</mml:mi><mml:mn>2</mml:mn><mml:mo>,</mml:mo><mml:mi>A</mml:mi><mml:mi>t</mml:mi><mml:mi>t</mml:mi><mml:mi>r</mml:mi><mml:mn>3</mml:mn></mml:mrow></mml:semantics></mml:math></inline-formula>)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">
+                <inline-formula>
+                  <mml:math id="mm69">
+                    <mml:semantics>
+                      <mml:msub>
+                        <mml:mi>o</mml:mi>
+                        <mml:mn>5</mml:mn>
+                      </mml:msub>
+                    </mml:semantics>
+                  </mml:math>
+                </inline-formula>
+              </td>
+              <td align="center" valign="middle">D</td>
+              <td align="center" valign="middle">D</td>
+              <td align="center" valign="middle">C</td>
+              <td align="center" valign="middle">no (no reduct-based similarity)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle" style="border-bottom:solid thin">
+                <inline-formula>
+                  <mml:math id="mm70">
+                    <mml:semantics>
+                      <mml:msub>
+                        <mml:mi>o</mml:mi>
+                        <mml:mn>6</mml:mn>
+                      </mml:msub>
+                    </mml:semantics>
+                  </mml:math>
+                </inline-formula>
+              </td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">A</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">D</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">D</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">no (no reduct-based similarity)</td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+      <table-wrap id="make-07-00112-t003" position="float">
+        <object-id pub-id-type="pii">make-07-00112-t003_Table 3</object-id>
+        <label>Table 3</label>
+        <caption>
+          <p>The datasets used in the experiments. The columns <italic>N</italic>, <inline-formula><mml:math id="mm71"><mml:semantics><mml:mrow><mml:mo>|</mml:mo><mml:mi>A</mml:mi><mml:mo>|</mml:mo></mml:mrow></mml:semantics></mml:math></inline-formula>, and <inline-formula><mml:math id="mm72"><mml:semantics><mml:mrow><mml:mo>|</mml:mo><mml:mi>L</mml:mi><mml:mo>|</mml:mo></mml:mrow></mml:semantics></mml:math></inline-formula> contain information about the number of examples, attributes, and classes.</p>
+        </caption>
+        <table>
+          <thead>
+            <tr>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">Name</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">
+                <italic>N</italic>
+              </th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">
+                <inline-formula>
+                  <mml:math id="mm73">
+                    <mml:semantics>
+                      <mml:mstyle mathvariant="bold">
+                        <mml:mrow>
+                          <mml:mo>|</mml:mo>
+                          <mml:mi mathvariant="bold-italic">A</mml:mi>
+                          <mml:mo>|</mml:mo>
+                        </mml:mrow>
+                      </mml:mstyle>
+                    </mml:semantics>
+                  </mml:math>
+                </inline-formula>
+              </th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">
+                <inline-formula>
+                  <mml:math id="mm74">
+                    <mml:semantics>
+                      <mml:mstyle mathvariant="bold">
+                        <mml:mrow>
+                          <mml:mo>|</mml:mo>
+                          <mml:mi mathvariant="bold-italic">L</mml:mi>
+                          <mml:mo>|</mml:mo>
+                        </mml:mrow>
+                      </mml:mstyle>
+                    </mml:semantics>
+                  </mml:math>
+                </inline-formula>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="center" valign="middle">Bioresponse</td>
+              <td align="center" valign="middle">3751</td>
+              <td align="center" valign="middle">1776</td>
+              <td align="center" valign="middle">2</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">churn</td>
+              <td align="center" valign="middle">5000</td>
+              <td align="center" valign="middle">20</td>
+              <td align="center" valign="middle">2</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">cmc</td>
+              <td align="center" valign="middle">2000</td>
+              <td align="center" valign="middle">47</td>
+              <td align="center" valign="middle">10</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">cnae-9</td>
+              <td align="center" valign="middle">1080</td>
+              <td align="center" valign="middle">856</td>
+              <td align="center" valign="middle">9</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">dna</td>
+              <td align="center" valign="middle">3186</td>
+              <td align="center" valign="middle">180</td>
+              <td align="center" valign="middle">3</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">har</td>
+              <td align="center" valign="middle">10,299</td>
+              <td align="center" valign="middle">561</td>
+              <td align="center" valign="middle">6</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">madelon</td>
+              <td align="center" valign="middle">2600</td>
+              <td align="center" valign="middle">500</td>
+              <td align="center" valign="middle">2</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">mfeat-factors</td>
+              <td align="center" valign="middle">2000</td>
+              <td align="center" valign="middle">47</td>
+              <td align="center" valign="middle">10</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">mfeat-fourier</td>
+              <td align="center" valign="middle">2000</td>
+              <td align="center" valign="middle">76</td>
+              <td align="center" valign="middle">10</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">mfeat-karhunen</td>
+              <td align="center" valign="middle">2000</td>
+              <td align="center" valign="middle">47</td>
+              <td align="center" valign="middle">10</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">mfeat-zernike</td>
+              <td align="center" valign="middle">2000</td>
+              <td align="center" valign="middle">47</td>
+              <td align="center" valign="middle">10</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">nomao</td>
+              <td align="center" valign="middle">34,465</td>
+              <td align="center" valign="middle">118</td>
+              <td align="center" valign="middle">2</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">optdigits</td>
+              <td align="center" valign="middle">2000</td>
+              <td align="center" valign="middle">47</td>
+              <td align="center" valign="middle">10</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">pendigits</td>
+              <td align="center" valign="middle">10,992</td>
+              <td align="center" valign="middle">16</td>
+              <td align="center" valign="middle">10</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">phoneme</td>
+              <td align="center" valign="middle">5404</td>
+              <td align="center" valign="middle">5</td>
+              <td align="center" valign="middle">2</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">qsar-biodeg</td>
+              <td align="center" valign="middle">1055</td>
+              <td align="center" valign="middle">41</td>
+              <td align="center" valign="middle">2</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">satimage</td>
+              <td align="center" valign="middle">6430</td>
+              <td align="center" valign="middle">36</td>
+              <td align="center" valign="middle">6</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">semeion</td>
+              <td align="center" valign="middle">1593</td>
+              <td align="center" valign="middle">256</td>
+              <td align="center" valign="middle">10</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">spambase</td>
+              <td align="center" valign="middle">2000</td>
+              <td align="center" valign="middle">47</td>
+              <td align="center" valign="middle">10</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">wall-robot-navigation</td>
+              <td align="center" valign="middle">5456</td>
+              <td align="center" valign="middle">24</td>
+              <td align="center" valign="middle">4</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">wdbc</td>
+              <td align="center" valign="middle">569</td>
+              <td align="center" valign="middle">30</td>
+              <td align="center" valign="middle">2</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle" style="border-bottom:solid thin">wilt</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">4839</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">5</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">2</td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+      <table-wrap id="make-07-00112-t004" position="float">
+        <object-id pub-id-type="pii">make-07-00112-t004_Table 4</object-id>
+        <label>Table 4</label>
+        <caption>
+          <p>Neighborhood size as a percent of datasets for reducts and random forest surrogates.</p>
+        </caption>
+        <table>
+          <thead>
+            <tr>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">Method</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">Min</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">
+                <inline-formula>
+                  <mml:math id="mm75">
+                    <mml:semantics>
+                      <mml:mstyle mathvariant="bold">
+                        <mml:msub>
+                          <mml:mi mathvariant="bold-italic">Q</mml:mi>
+                          <mml:mn>1</mml:mn>
+                        </mml:msub>
+                      </mml:mstyle>
+                    </mml:semantics>
+                  </mml:math>
+                </inline-formula>
+              </th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">Median</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">Mean</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">
+                <inline-formula>
+                  <mml:math id="mm76">
+                    <mml:semantics>
+                      <mml:mstyle mathvariant="bold">
+                        <mml:msub>
+                          <mml:mi mathvariant="bold-italic">Q</mml:mi>
+                          <mml:mn>3</mml:mn>
+                        </mml:msub>
+                      </mml:mstyle>
+                    </mml:semantics>
+                  </mml:math>
+                </inline-formula>
+              </th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">Max</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="center" valign="middle">Reducts</td>
+              <td align="center" valign="middle">0.00</td>
+              <td align="center" valign="middle">1.22</td>
+              <td align="center" valign="middle">3.38</td>
+              <td align="center" valign="middle">7.78</td>
+              <td align="center" valign="middle">8.85</td>
+              <td align="center" valign="middle">100.00</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle" style="border-bottom:solid thin">RF</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">3.99</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">39.62</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">71.64</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">64.60</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">86.59</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">100.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+      <table-wrap id="make-07-00112-t005" position="float">
+        <object-id pub-id-type="pii">make-07-00112-t005_Table 5</object-id>
+        <label>Table 5</label>
+        <caption>
+          <p>Classification metrics with the standard deviation (in brackets) of obtained classifiers&#x2014;all diagnostic attributes for the XGBoost model.</p>
+        </caption>
+        <table>
+          <thead>
+            <tr>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">XGB</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">BAcc</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">Precision</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">Recall</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">F1</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">FNR</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="6" align="center" valign="middle" style="border-bottom:solid thin">Binary classifier (attack/no attack)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">10-fold cross-validation</td>
+              <td align="center" valign="middle">0.94 (0.06)</td>
+              <td align="center" valign="middle">0.98 (0.03)</td>
+              <td align="center" valign="middle">0.96 (0.06)</td>
+              <td align="center" valign="middle">0.97 (0.04)</td>
+              <td align="center" valign="middle">0.04 (0.06)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">one-dataset-out</td>
+              <td align="center" valign="middle">0.96 (0.11)</td>
+              <td align="center" valign="middle">0.99 (0.06)</td>
+              <td align="center" valign="middle">0.98 (0.05)</td>
+              <td align="center" valign="middle">0.98 (0.04)</td>
+              <td align="center" valign="middle">0.02 (0.05)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">one-model-out</td>
+              <td align="center" valign="middle">0.96 (0.03)</td>
+              <td align="center" valign="middle">0.99 (0.01)</td>
+              <td align="center" valign="middle">0.96 (0.03)</td>
+              <td align="center" valign="middle">0.98 (0.02)</td>
+              <td align="center" valign="middle">0.04 (0.03)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle" style="border-bottom:solid thin">one-attack-out</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.97 (0.05)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">1.00 (0.00)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.97 (0.05)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.98 (0.03)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.08 (0.05)</td>
+            </tr>
+            <tr>
+              <td colspan="6" align="center" valign="middle" style="border-bottom:solid thin">Attack type classifier</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">10-fold cross-validation</td>
+              <td align="center" valign="middle">0.59 (0.17)</td>
+              <td align="center" valign="middle">0.65 (0.17)</td>
+              <td align="center" valign="middle">0.62 (0.16)</td>
+              <td align="center" valign="middle">0.61 (0.17)</td>
+              <td align="center" valign="middle">0.41 (0.17)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">one-dataset-out</td>
+              <td align="center" valign="middle">0.65 (0.25)</td>
+              <td align="center" valign="middle">0.64 (0.25)</td>
+              <td align="center" valign="middle">0.67 (0.24)</td>
+              <td align="center" valign="middle">0.63 (0.25)</td>
+              <td align="center" valign="middle">0.35 (0.25)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle" style="border-bottom:solid thin">one-model-out</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.51 (0.24)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.55 (0.28)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.51 (0.24)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.49 (0.25)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.49 (0.24)</td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+      <table-wrap id="make-07-00112-t006" position="float">
+        <object-id pub-id-type="pii">make-07-00112-t006_Table 6</object-id>
+        <label>Table 6</label>
+        <caption>
+          <p>Classification metrics with the standard deviation (in brackets) of obtained classifiers&#x2014;all diagnostic attributes for the Random Forest model.</p>
+        </caption>
+        <table>
+          <thead>
+            <tr>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">RF</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">BAcc</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">Precision</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">Recall</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">F1</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">FNR</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="6" align="center" valign="middle" style="border-bottom:solid thin">Binary classifier (attack/no attack)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">10-fold cross-validation</td>
+              <td align="center" valign="middle">0.94 (0.06)</td>
+              <td align="center" valign="middle">0.97 (0.03)</td>
+              <td align="center" valign="middle">0.97 (0.04)</td>
+              <td align="center" valign="middle">0.97 (0.02)</td>
+              <td align="center" valign="middle">0.03 (0.04)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">one-dataset-out</td>
+              <td align="center" valign="middle">0.95 (0.12)</td>
+              <td align="center" valign="middle">0.98 (0.06)</td>
+              <td align="center" valign="middle">0.98 (0.06)</td>
+              <td align="center" valign="middle">0.98 (0.04)</td>
+              <td align="center" valign="middle">0.02 (0.06)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">one-model-out</td>
+              <td align="center" valign="middle">0.94 (0.04)</td>
+              <td align="center" valign="middle">0.98 (0.03)</td>
+              <td align="center" valign="middle">0.96 (0.03)</td>
+              <td align="center" valign="middle">0.97 (0.01)</td>
+              <td align="center" valign="middle">0.04 (0.03)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle" style="border-bottom:solid thin">one-attack-out</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.96 (0.07)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">1.00 (0.00)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.96 (0.07)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.98 (0.04)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.10 (0.07)</td>
+            </tr>
+            <tr>
+              <td colspan="6" align="center" valign="middle" style="border-bottom:solid thin">Attack type classifier</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">10-fold cross-validation</td>
+              <td align="center" valign="middle">0.59 (0.18)</td>
+              <td align="center" valign="middle">0.64 (0.19)</td>
+              <td align="center" valign="middle">0.62 (0.18)</td>
+              <td align="center" valign="middle">0.60 (0.19)</td>
+              <td align="center" valign="middle">0.41 (0.18)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">one-dataset-out</td>
+              <td align="center" valign="middle">0.64 (0.27)</td>
+              <td align="center" valign="middle">0.59 (0.32)</td>
+              <td align="center" valign="middle">0.64 (0.28)</td>
+              <td align="center" valign="middle">0.59 (0.31)</td>
+              <td align="center" valign="middle">0.36 (0.27)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle" style="border-bottom:solid thin">one-model-out</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.50 (0.23)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.50 (0.24)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.50 (0.23)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.47 (0.24)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.50 (0.23)</td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+      <table-wrap id="make-07-00112-t007" position="float">
+        <object-id pub-id-type="pii">make-07-00112-t007_Table 7</object-id>
+        <label>Table 7</label>
+        <caption>
+          <p>Classification metrics with the standard deviation (in brackets) of obtained classifiers&#x2014;without a balanced accuracy attribute for the XGBoost model.</p>
+        </caption>
+        <table>
+          <thead>
+            <tr>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">XGB</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">BAcc</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">Precision</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">Recall</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">F1</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">FNR</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="6" align="center" valign="middle" style="border-bottom:solid thin">Binary classifier (attack/no attack)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">10-fold cross-validation</td>
+              <td align="center" valign="middle">0.94 (0.08)</td>
+              <td align="center" valign="middle">0.98 (0.04)</td>
+              <td align="center" valign="middle">0.95 (0.06)</td>
+              <td align="center" valign="middle">0.96 (0.04)</td>
+              <td align="center" valign="middle">0.05 (0.06)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">one-dataset-out</td>
+              <td align="center" valign="middle">0.92 (0.14)</td>
+              <td align="center" valign="middle">0.97 (0.07)</td>
+              <td align="center" valign="middle">0.97 (0.05)</td>
+              <td align="center" valign="middle">0.97 (0.04)</td>
+              <td align="center" valign="middle">0.03 (0.05)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">one-model-out</td>
+              <td align="center" valign="middle">0.89 (0.08)</td>
+              <td align="center" valign="middle">0.96 (0.04)</td>
+              <td align="center" valign="middle">0.92 (0.04)</td>
+              <td align="center" valign="middle">0.94 (0.03)</td>
+              <td align="center" valign="middle">0.08 (0.04)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle" style="border-bottom:solid thin">one-attack-out</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.97 (0.05)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">1.00 (0.00)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.97 (0.05)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.98 (0.03)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.08 (0.04)</td>
+            </tr>
+            <tr>
+              <td colspan="6" align="center" valign="middle" style="border-bottom:solid thin">Attack type classifier</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">10-fold cross-validation</td>
+              <td align="center" valign="middle">0.59 (0.17)</td>
+              <td align="center" valign="middle">0.65 (0.17)</td>
+              <td align="center" valign="middle">0.62 (0.16)</td>
+              <td align="center" valign="middle">0.61 (0.17)</td>
+              <td align="center" valign="middle">0.41 (0.17)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">one-dataset-out</td>
+              <td align="center" valign="middle">0.65 (0.25)</td>
+              <td align="center" valign="middle">0.64 (0.25)</td>
+              <td align="center" valign="middle">0.67 (0.24)</td>
+              <td align="center" valign="middle">0.63 (0.25)</td>
+              <td align="center" valign="middle">0.35 (0.25)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle" style="border-bottom:solid thin">one-model-out</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.51 (0.24)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.55 (0.28)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.51 (0.24)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.49 (0.25)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.49 (0.24)</td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+      <table-wrap id="make-07-00112-t008" position="float">
+        <object-id pub-id-type="pii">make-07-00112-t008_Table 8</object-id>
+        <label>Table 8</label>
+        <caption>
+          <p>Classification metrics with the standard deviation (in brackets) of obtained classifiers&#x2014;without a balanced accuracy attribute for the Random Forest model.</p>
+        </caption>
+        <table>
+          <thead>
+            <tr>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">RF</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">BAcc</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">Precision</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">Recall</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">F1</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">FNR</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="6" align="center" valign="middle" style="border-bottom:solid thin">Binary classifier (attack/no attack)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">10-fold cross-validation</td>
+              <td align="center" valign="middle">0.95 (0.07)</td>
+              <td align="center" valign="middle">0.99 (0.03)</td>
+              <td align="center" valign="middle">0.94 (0.07)</td>
+              <td align="center" valign="middle">0.96 (0.05)</td>
+              <td align="center" valign="middle">0.06 (0.07)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">one-dataset-out</td>
+              <td align="center" valign="middle">0.86 (0.19)</td>
+              <td align="center" valign="middle">0.94 (0.09)</td>
+              <td align="center" valign="middle">0.97 (0.07)</td>
+              <td align="center" valign="middle">0.95 (0.06)</td>
+              <td align="center" valign="middle">0.03 (0.07)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">one-model-out</td>
+              <td align="center" valign="middle">0.93 (0.03)</td>
+              <td align="center" valign="middle">0.98 (0.01)</td>
+              <td align="center" valign="middle">0.94 (0.08)</td>
+              <td align="center" valign="middle">0.96 (0.04)</td>
+              <td align="center" valign="middle">0.06 (0.08)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle" style="border-bottom:solid thin">one-attack-out</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.96 (0.06)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">1.00 (0.00)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.96 (0.06)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.98 (0.03)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.10 (0.06)</td>
+            </tr>
+            <tr>
+              <td colspan="6" align="center" valign="middle" style="border-bottom:solid thin">Attack type classifier</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">10-fold cross-validation</td>
+              <td align="center" valign="middle">0.59 (0.18)</td>
+              <td align="center" valign="middle">0.64 (0.19)</td>
+              <td align="center" valign="middle">0.62 (0.18)</td>
+              <td align="center" valign="middle">0.60 (0.19)</td>
+              <td align="center" valign="middle">0.41 (0.18)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle">one-dataset-out</td>
+              <td align="center" valign="middle">0.64 (0.27)</td>
+              <td align="center" valign="middle">0.59 (0.32)</td>
+              <td align="center" valign="middle">0.64 (0.28)</td>
+              <td align="center" valign="middle">0.59 (0.31)</td>
+              <td align="center" valign="middle">0.36 (0.27)</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle" style="border-bottom:solid thin">one-model-out</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.50 (0.23)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.50 (0.24)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.50 (0.23)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.47 (0.24)</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.50 (0.23)</td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+      <table-wrap id="make-07-00112-t009" position="float">
+        <object-id pub-id-type="pii">make-07-00112-t009_Table 9</object-id>
+        <label>Table 9</label>
+        <caption>
+          <p>Balanced accuracy of detecting attacks with various perturbation scales.</p>
+        </caption>
+        <table>
+          <thead>
+            <tr>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin"> </th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">RF</th>
+              <th align="center" valign="middle" style="border-bottom:solid thin;border-top:solid thin">XGB</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td align="center" valign="middle">with balanced accuracy</td>
+              <td align="center" valign="middle">0.95</td>
+              <td align="center" valign="middle">0.98</td>
+            </tr>
+            <tr>
+              <td align="center" valign="middle" style="border-bottom:solid thin">without balanced accuracy</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.95</td>
+              <td align="center" valign="middle" style="border-bottom:solid thin">0.90</td>
+            </tr>
+          </tbody>
+        </table>
+      </table-wrap>
+    </sec>
+    <fn-group>
+      <fn>
+        <p><bold>Disclaimer/Publisher&#x2019;s Note:</bold> The statements, opinions and data contained in all publications are solely those of the individual author(s) and contributor(s) and not of MDPI and/or the editor(s). MDPI and/or the editor(s) disclaim responsibility for any injury to people or property resulting from any ideas, methods, instructions or products referred to in the content.</p>
+      </fn>
+    </fn-group>
+  </back>
+</article>

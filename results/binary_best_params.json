@@ -1,0 +1,12 @@
+{
+  "xgb": {
+    "max_depth": 6,
+    "learning_rate": 0.3,
+    "n_estimators": 100
+  },
+  "rf": {
+    "max_depth": 50,
+    "min_samples_split": 2,
+    "n_estimators": 200
+  }
+}

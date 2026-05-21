@@ -1,0 +1,289 @@
+dataset,model,attack,attack_binary,true,pred,scenario,split,model_class
+banknote,lin,hsj,1,1,1,one-data-set-out,banknote,XGB
+banknote,lin,org,0,0,0,one-data-set-out,banknote,XGB
+banknote,lin,zoo,1,1,1,one-data-set-out,banknote,XGB
+banknote,svm,hsj,1,1,1,one-data-set-out,banknote,XGB
+banknote,svm,org,0,0,0,one-data-set-out,banknote,XGB
+banknote,svm,zoo,1,1,1,one-data-set-out,banknote,XGB
+banknote,xgb,hsj,1,1,1,one-data-set-out,banknote,XGB
+banknote,xgb,org,0,0,0,one-data-set-out,banknote,XGB
+banknote,xgb,zoo,1,1,1,one-data-set-out,banknote,XGB
+banknote,nn,bim,1,1,1,one-data-set-out,banknote,XGB
+banknote,nn,fgm,1,1,1,one-data-set-out,banknote,XGB
+banknote,nn,org,0,0,0,one-data-set-out,banknote,XGB
+banknote,nn,pgd,1,1,1,one-data-set-out,banknote,XGB
+diabetes,lin,hsj,1,1,1,one-data-set-out,diabetes,XGB
+diabetes,lin,org,0,0,1,one-data-set-out,diabetes,XGB
+diabetes,lin,zoo,1,1,1,one-data-set-out,diabetes,XGB
+diabetes,svm,hsj,1,1,1,one-data-set-out,diabetes,XGB
+diabetes,svm,org,0,0,1,one-data-set-out,diabetes,XGB
+diabetes,svm,zoo,1,1,1,one-data-set-out,diabetes,XGB
+diabetes,xgb,hsj,1,1,1,one-data-set-out,diabetes,XGB
+diabetes,xgb,org,0,0,1,one-data-set-out,diabetes,XGB
+diabetes,xgb,zoo,1,1,1,one-data-set-out,diabetes,XGB
+diabetes,nn,bim,1,1,1,one-data-set-out,diabetes,XGB
+diabetes,nn,fgm,1,1,1,one-data-set-out,diabetes,XGB
+diabetes,nn,org,0,0,1,one-data-set-out,diabetes,XGB
+diabetes,nn,pgd,1,1,1,one-data-set-out,diabetes,XGB
+wilt,lin,hsj,1,1,1,one-data-set-out,wilt,XGB
+wilt,lin,org,0,0,1,one-data-set-out,wilt,XGB
+wilt,lin,zoo,1,1,1,one-data-set-out,wilt,XGB
+wilt,svm,hsj,1,1,1,one-data-set-out,wilt,XGB
+wilt,svm,org,0,0,0,one-data-set-out,wilt,XGB
+wilt,svm,zoo,1,1,1,one-data-set-out,wilt,XGB
+wilt,xgb,hsj,1,1,1,one-data-set-out,wilt,XGB
+wilt,xgb,org,0,0,0,one-data-set-out,wilt,XGB
+wilt,xgb,zoo,1,1,1,one-data-set-out,wilt,XGB
+wilt,nn,bim,1,1,1,one-data-set-out,wilt,XGB
+wilt,nn,fgm,1,1,1,one-data-set-out,wilt,XGB
+wilt,nn,org,0,0,0,one-data-set-out,wilt,XGB
+wilt,nn,pgd,1,1,1,one-data-set-out,wilt,XGB
+banknote,lin,hsj,1,1,1,one-model-out,lin,XGB
+banknote,lin,org,0,0,0,one-model-out,lin,XGB
+banknote,lin,zoo,1,1,1,one-model-out,lin,XGB
+diabetes,lin,hsj,1,1,1,one-model-out,lin,XGB
+diabetes,lin,org,0,0,0,one-model-out,lin,XGB
+diabetes,lin,zoo,1,1,1,one-model-out,lin,XGB
+wilt,lin,hsj,1,1,1,one-model-out,lin,XGB
+wilt,lin,org,0,0,1,one-model-out,lin,XGB
+wilt,lin,zoo,1,1,1,one-model-out,lin,XGB
+banknote,nn,bim,1,1,0,one-model-out,nn,XGB
+banknote,nn,fgm,1,1,0,one-model-out,nn,XGB
+banknote,nn,org,0,0,0,one-model-out,nn,XGB
+banknote,nn,pgd,1,1,0,one-model-out,nn,XGB
+diabetes,nn,bim,1,1,1,one-model-out,nn,XGB
+diabetes,nn,fgm,1,1,1,one-model-out,nn,XGB
+diabetes,nn,org,0,0,0,one-model-out,nn,XGB
+diabetes,nn,pgd,1,1,1,one-model-out,nn,XGB
+wilt,nn,bim,1,1,1,one-model-out,nn,XGB
+wilt,nn,fgm,1,1,1,one-model-out,nn,XGB
+wilt,nn,org,0,0,0,one-model-out,nn,XGB
+wilt,nn,pgd,1,1,1,one-model-out,nn,XGB
+banknote,svm,hsj,1,1,1,one-model-out,svm,XGB
+banknote,svm,org,0,0,0,one-model-out,svm,XGB
+banknote,svm,zoo,1,1,1,one-model-out,svm,XGB
+diabetes,svm,hsj,1,1,1,one-model-out,svm,XGB
+diabetes,svm,org,0,0,0,one-model-out,svm,XGB
+diabetes,svm,zoo,1,1,1,one-model-out,svm,XGB
+wilt,svm,hsj,1,1,1,one-model-out,svm,XGB
+wilt,svm,org,0,0,0,one-model-out,svm,XGB
+wilt,svm,zoo,1,1,1,one-model-out,svm,XGB
+banknote,xgb,hsj,1,1,1,one-model-out,xgb,XGB
+banknote,xgb,org,0,0,0,one-model-out,xgb,XGB
+banknote,xgb,zoo,1,1,1,one-model-out,xgb,XGB
+diabetes,xgb,hsj,1,1,1,one-model-out,xgb,XGB
+diabetes,xgb,org,0,0,0,one-model-out,xgb,XGB
+diabetes,xgb,zoo,1,1,1,one-model-out,xgb,XGB
+wilt,xgb,hsj,1,1,1,one-model-out,xgb,XGB
+wilt,xgb,org,0,0,0,one-model-out,xgb,XGB
+wilt,xgb,zoo,1,1,1,one-model-out,xgb,XGB
+banknote,nn,bim,1,1,1,10-fold cross-validation,0,XGB
+banknote,nn,fgm,1,1,1,10-fold cross-validation,0,XGB
+diabetes,nn,org,0,0,0,10-fold cross-validation,0,XGB
+wilt,nn,fgm,1,1,1,10-fold cross-validation,0,XGB
+banknote,lin,zoo,1,1,1,10-fold cross-validation,1,XGB
+diabetes,svm,org,0,0,0,10-fold cross-validation,1,XGB
+diabetes,xgb,hsj,1,1,1,10-fold cross-validation,1,XGB
+diabetes,xgb,zoo,1,1,1,10-fold cross-validation,1,XGB
+banknote,svm,hsj,1,1,1,10-fold cross-validation,2,XGB
+banknote,svm,zoo,1,1,1,10-fold cross-validation,2,XGB
+banknote,xgb,org,0,0,0,10-fold cross-validation,2,XGB
+diabetes,nn,pgd,1,1,1,10-fold cross-validation,2,XGB
+banknote,xgb,zoo,1,1,1,10-fold cross-validation,3,XGB
+wilt,svm,zoo,1,1,1,10-fold cross-validation,3,XGB
+wilt,xgb,org,0,0,0,10-fold cross-validation,3,XGB
+banknote,nn,pgd,1,1,1,10-fold cross-validation,3,XGB
+diabetes,svm,hsj,1,1,1,10-fold cross-validation,4,XGB
+wilt,lin,zoo,1,1,1,10-fold cross-validation,4,XGB
+wilt,svm,org,0,0,0,10-fold cross-validation,4,XGB
+wilt,nn,pgd,1,1,1,10-fold cross-validation,4,XGB
+diabetes,lin,org,0,0,0,10-fold cross-validation,5,XGB
+wilt,lin,hsj,1,1,0,10-fold cross-validation,5,XGB
+wilt,xgb,hsj,1,1,1,10-fold cross-validation,5,XGB
+diabetes,nn,fgm,1,1,1,10-fold cross-validation,5,XGB
+diabetes,lin,zoo,1,1,1,10-fold cross-validation,6,XGB
+diabetes,xgb,org,0,0,0,10-fold cross-validation,6,XGB
+wilt,svm,hsj,1,1,1,10-fold cross-validation,6,XGB
+diabetes,nn,bim,1,1,1,10-fold cross-validation,6,XGB
+diabetes,lin,hsj,1,1,1,10-fold cross-validation,7,XGB
+wilt,xgb,zoo,1,1,1,10-fold cross-validation,7,XGB
+banknote,nn,org,0,0,0,10-fold cross-validation,7,XGB
+wilt,nn,org,0,0,0,10-fold cross-validation,7,XGB
+banknote,lin,hsj,1,1,1,10-fold cross-validation,8,XGB
+banknote,svm,org,0,0,0,10-fold cross-validation,8,XGB
+banknote,xgb,hsj,1,1,1,10-fold cross-validation,8,XGB
+wilt,lin,org,0,0,1,10-fold cross-validation,8,XGB
+banknote,lin,org,0,0,0,10-fold cross-validation,9,XGB
+diabetes,svm,zoo,1,1,1,10-fold cross-validation,9,XGB
+wilt,nn,bim,1,1,1,10-fold cross-validation,9,XGB
+banknote,nn,bim,1,1,1,one-attack-out,bim,XGB
+diabetes,nn,bim,1,1,1,one-attack-out,bim,XGB
+wilt,nn,bim,1,1,1,one-attack-out,bim,XGB
+banknote,nn,fgm,1,1,1,one-attack-out,fgm,XGB
+diabetes,nn,fgm,1,1,1,one-attack-out,fgm,XGB
+wilt,nn,fgm,1,1,1,one-attack-out,fgm,XGB
+banknote,lin,hsj,1,1,1,one-attack-out,hsj,XGB
+banknote,svm,hsj,1,1,0,one-attack-out,hsj,XGB
+banknote,xgb,hsj,1,1,0,one-attack-out,hsj,XGB
+diabetes,lin,hsj,1,1,0,one-attack-out,hsj,XGB
+diabetes,svm,hsj,1,1,0,one-attack-out,hsj,XGB
+diabetes,xgb,hsj,1,1,1,one-attack-out,hsj,XGB
+wilt,lin,hsj,1,1,0,one-attack-out,hsj,XGB
+wilt,svm,hsj,1,1,1,one-attack-out,hsj,XGB
+wilt,xgb,hsj,1,1,0,one-attack-out,hsj,XGB
+banknote,nn,pgd,1,1,1,one-attack-out,pgd,XGB
+diabetes,nn,pgd,1,1,1,one-attack-out,pgd,XGB
+wilt,nn,pgd,1,1,1,one-attack-out,pgd,XGB
+banknote,lin,zoo,1,1,1,one-attack-out,zoo,XGB
+banknote,svm,zoo,1,1,1,one-attack-out,zoo,XGB
+banknote,xgb,zoo,1,1,1,one-attack-out,zoo,XGB
+diabetes,lin,zoo,1,1,1,one-attack-out,zoo,XGB
+diabetes,svm,zoo,1,1,1,one-attack-out,zoo,XGB
+diabetes,xgb,zoo,1,1,1,one-attack-out,zoo,XGB
+wilt,lin,zoo,1,1,1,one-attack-out,zoo,XGB
+wilt,svm,zoo,1,1,1,one-attack-out,zoo,XGB
+wilt,xgb,zoo,1,1,1,one-attack-out,zoo,XGB
+banknote,lin,hsj,1,1,1,one-data-set-out,banknote,RF
+banknote,lin,org,0,0,0,one-data-set-out,banknote,RF
+banknote,lin,zoo,1,1,1,one-data-set-out,banknote,RF
+banknote,svm,hsj,1,1,1,one-data-set-out,banknote,RF
+banknote,svm,org,0,0,0,one-data-set-out,banknote,RF
+banknote,svm,zoo,1,1,1,one-data-set-out,banknote,RF
+banknote,xgb,hsj,1,1,1,one-data-set-out,banknote,RF
+banknote,xgb,org,0,0,0,one-data-set-out,banknote,RF
+banknote,xgb,zoo,1,1,1,one-data-set-out,banknote,RF
+banknote,nn,bim,1,1,1,one-data-set-out,banknote,RF
+banknote,nn,fgm,1,1,1,one-data-set-out,banknote,RF
+banknote,nn,org,0,0,0,one-data-set-out,banknote,RF
+banknote,nn,pgd,1,1,1,one-data-set-out,banknote,RF
+diabetes,lin,hsj,1,1,1,one-data-set-out,diabetes,RF
+diabetes,lin,org,0,0,1,one-data-set-out,diabetes,RF
+diabetes,lin,zoo,1,1,1,one-data-set-out,diabetes,RF
+diabetes,svm,hsj,1,1,1,one-data-set-out,diabetes,RF
+diabetes,svm,org,0,0,0,one-data-set-out,diabetes,RF
+diabetes,svm,zoo,1,1,1,one-data-set-out,diabetes,RF
+diabetes,xgb,hsj,1,1,1,one-data-set-out,diabetes,RF
+diabetes,xgb,org,0,0,0,one-data-set-out,diabetes,RF
+diabetes,xgb,zoo,1,1,1,one-data-set-out,diabetes,RF
+diabetes,nn,bim,1,1,1,one-data-set-out,diabetes,RF
+diabetes,nn,fgm,1,1,1,one-data-set-out,diabetes,RF
+diabetes,nn,org,0,0,1,one-data-set-out,diabetes,RF
+diabetes,nn,pgd,1,1,1,one-data-set-out,diabetes,RF
+wilt,lin,hsj,1,1,0,one-data-set-out,wilt,RF
+wilt,lin,org,0,0,0,one-data-set-out,wilt,RF
+wilt,lin,zoo,1,1,1,one-data-set-out,wilt,RF
+wilt,svm,hsj,1,1,1,one-data-set-out,wilt,RF
+wilt,svm,org,0,0,0,one-data-set-out,wilt,RF
+wilt,svm,zoo,1,1,1,one-data-set-out,wilt,RF
+wilt,xgb,hsj,1,1,1,one-data-set-out,wilt,RF
+wilt,xgb,org,0,0,0,one-data-set-out,wilt,RF
+wilt,xgb,zoo,1,1,1,one-data-set-out,wilt,RF
+wilt,nn,bim,1,1,1,one-data-set-out,wilt,RF
+wilt,nn,fgm,1,1,1,one-data-set-out,wilt,RF
+wilt,nn,org,0,0,0,one-data-set-out,wilt,RF
+wilt,nn,pgd,1,1,1,one-data-set-out,wilt,RF
+banknote,lin,hsj,1,1,1,one-model-out,lin,RF
+banknote,lin,org,0,0,0,one-model-out,lin,RF
+banknote,lin,zoo,1,1,1,one-model-out,lin,RF
+diabetes,lin,hsj,1,1,1,one-model-out,lin,RF
+diabetes,lin,org,0,0,0,one-model-out,lin,RF
+diabetes,lin,zoo,1,1,1,one-model-out,lin,RF
+wilt,lin,hsj,1,1,0,one-model-out,lin,RF
+wilt,lin,org,0,0,0,one-model-out,lin,RF
+wilt,lin,zoo,1,1,1,one-model-out,lin,RF
+banknote,nn,bim,1,1,1,one-model-out,nn,RF
+banknote,nn,fgm,1,1,1,one-model-out,nn,RF
+banknote,nn,org,0,0,0,one-model-out,nn,RF
+banknote,nn,pgd,1,1,1,one-model-out,nn,RF
+diabetes,nn,bim,1,1,1,one-model-out,nn,RF
+diabetes,nn,fgm,1,1,1,one-model-out,nn,RF
+diabetes,nn,org,0,0,0,one-model-out,nn,RF
+diabetes,nn,pgd,1,1,1,one-model-out,nn,RF
+wilt,nn,bim,1,1,1,one-model-out,nn,RF
+wilt,nn,fgm,1,1,1,one-model-out,nn,RF
+wilt,nn,org,0,0,0,one-model-out,nn,RF
+wilt,nn,pgd,1,1,1,one-model-out,nn,RF
+banknote,svm,hsj,1,1,1,one-model-out,svm,RF
+banknote,svm,org,0,0,0,one-model-out,svm,RF
+banknote,svm,zoo,1,1,1,one-model-out,svm,RF
+diabetes,svm,hsj,1,1,1,one-model-out,svm,RF
+diabetes,svm,org,0,0,0,one-model-out,svm,RF
+diabetes,svm,zoo,1,1,1,one-model-out,svm,RF
+wilt,svm,hsj,1,1,1,one-model-out,svm,RF
+wilt,svm,org,0,0,0,one-model-out,svm,RF
+wilt,svm,zoo,1,1,1,one-model-out,svm,RF
+banknote,xgb,hsj,1,1,1,one-model-out,xgb,RF
+banknote,xgb,org,0,0,0,one-model-out,xgb,RF
+banknote,xgb,zoo,1,1,1,one-model-out,xgb,RF
+diabetes,xgb,hsj,1,1,1,one-model-out,xgb,RF
+diabetes,xgb,org,0,0,0,one-model-out,xgb,RF
+diabetes,xgb,zoo,1,1,1,one-model-out,xgb,RF
+wilt,xgb,hsj,1,1,1,one-model-out,xgb,RF
+wilt,xgb,org,0,0,0,one-model-out,xgb,RF
+wilt,xgb,zoo,1,1,1,one-model-out,xgb,RF
+banknote,nn,bim,1,1,1,10-fold cross-validation,0,RF
+banknote,nn,fgm,1,1,1,10-fold cross-validation,0,RF
+diabetes,nn,org,0,0,0,10-fold cross-validation,0,RF
+wilt,nn,fgm,1,1,1,10-fold cross-validation,0,RF
+banknote,lin,zoo,1,1,1,10-fold cross-validation,1,RF
+diabetes,svm,org,0,0,0,10-fold cross-validation,1,RF
+diabetes,xgb,hsj,1,1,1,10-fold cross-validation,1,RF
+diabetes,xgb,zoo,1,1,1,10-fold cross-validation,1,RF
+banknote,svm,hsj,1,1,1,10-fold cross-validation,2,RF
+banknote,svm,zoo,1,1,1,10-fold cross-validation,2,RF
+banknote,xgb,org,0,0,0,10-fold cross-validation,2,RF
+diabetes,nn,pgd,1,1,1,10-fold cross-validation,2,RF
+banknote,xgb,zoo,1,1,1,10-fold cross-validation,3,RF
+wilt,svm,zoo,1,1,1,10-fold cross-validation,3,RF
+wilt,xgb,org,0,0,0,10-fold cross-validation,3,RF
+banknote,nn,pgd,1,1,1,10-fold cross-validation,3,RF
+diabetes,svm,hsj,1,1,1,10-fold cross-validation,4,RF
+wilt,lin,zoo,1,1,1,10-fold cross-validation,4,RF
+wilt,svm,org,0,0,0,10-fold cross-validation,4,RF
+wilt,nn,pgd,1,1,1,10-fold cross-validation,4,RF
+diabetes,lin,org,0,0,0,10-fold cross-validation,5,RF
+wilt,lin,hsj,1,1,0,10-fold cross-validation,5,RF
+wilt,xgb,hsj,1,1,1,10-fold cross-validation,5,RF
+diabetes,nn,fgm,1,1,1,10-fold cross-validation,5,RF
+diabetes,lin,zoo,1,1,1,10-fold cross-validation,6,RF
+diabetes,xgb,org,0,0,0,10-fold cross-validation,6,RF
+wilt,svm,hsj,1,1,1,10-fold cross-validation,6,RF
+diabetes,nn,bim,1,1,1,10-fold cross-validation,6,RF
+diabetes,lin,hsj,1,1,1,10-fold cross-validation,7,RF
+wilt,xgb,zoo,1,1,1,10-fold cross-validation,7,RF
+banknote,nn,org,0,0,0,10-fold cross-validation,7,RF
+wilt,nn,org,0,0,0,10-fold cross-validation,7,RF
+banknote,lin,hsj,1,1,1,10-fold cross-validation,8,RF
+banknote,svm,org,0,0,0,10-fold cross-validation,8,RF
+banknote,xgb,hsj,1,1,1,10-fold cross-validation,8,RF
+wilt,lin,org,0,0,1,10-fold cross-validation,8,RF
+banknote,lin,org,0,0,0,10-fold cross-validation,9,RF
+diabetes,svm,zoo,1,1,1,10-fold cross-validation,9,RF
+wilt,nn,bim,1,1,1,10-fold cross-validation,9,RF
+banknote,nn,bim,1,1,1,one-attack-out,bim,RF
+diabetes,nn,bim,1,1,1,one-attack-out,bim,RF
+wilt,nn,bim,1,1,1,one-attack-out,bim,RF
+banknote,nn,fgm,1,1,1,one-attack-out,fgm,RF
+diabetes,nn,fgm,1,1,1,one-attack-out,fgm,RF
+wilt,nn,fgm,1,1,1,one-attack-out,fgm,RF
+banknote,lin,hsj,1,1,1,one-attack-out,hsj,RF
+banknote,svm,hsj,1,1,1,one-attack-out,hsj,RF
+banknote,xgb,hsj,1,1,1,one-attack-out,hsj,RF
+diabetes,lin,hsj,1,1,1,one-attack-out,hsj,RF
+diabetes,svm,hsj,1,1,1,one-attack-out,hsj,RF
+diabetes,xgb,hsj,1,1,1,one-attack-out,hsj,RF
+wilt,lin,hsj,1,1,0,one-attack-out,hsj,RF
+wilt,svm,hsj,1,1,1,one-attack-out,hsj,RF
+wilt,xgb,hsj,1,1,1,one-attack-out,hsj,RF
+banknote,nn,pgd,1,1,1,one-attack-out,pgd,RF
+diabetes,nn,pgd,1,1,1,one-attack-out,pgd,RF
+wilt,nn,pgd,1,1,1,one-attack-out,pgd,RF
+banknote,lin,zoo,1,1,1,one-attack-out,zoo,RF
+banknote,svm,zoo,1,1,1,one-attack-out,zoo,RF
+banknote,xgb,zoo,1,1,1,one-attack-out,zoo,RF
+diabetes,lin,zoo,1,1,1,one-attack-out,zoo,RF
+diabetes,svm,zoo,1,1,1,one-attack-out,zoo,RF
+diabetes,xgb,zoo,1,1,1,one-attack-out,zoo,RF
+wilt,lin,zoo,1,1,1,one-attack-out,zoo,RF
+wilt,svm,zoo,1,1,1,one-attack-out,zoo,RF
+wilt,xgb,zoo,1,1,1,one-attack-out,zoo,RF
