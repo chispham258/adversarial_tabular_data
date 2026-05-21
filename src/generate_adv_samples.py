@@ -42,7 +42,7 @@ def build_adv_dataframe(
 def save_adv_csv(df: pd.DataFrame, path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(path, index=False)
-    print(f"[generate] Saved → {path}")
+    print(f"[generate] Saved -> {path}")
 
 
 def _append_attack_result(row: dict) -> None:
