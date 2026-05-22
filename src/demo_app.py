@@ -282,6 +282,29 @@ def clean_detector_batch(dataset: str, model_name: str, indices: Sequence[int], 
     return clean_df.iloc[valid_indices].reset_index(drop=True)
 
 
+def manual_detector_batch(
+    dataset: str,
+    model_name: str,
+    manual_df: pd.DataFrame,
+    seed: int,
+    root: Path,
+) -> pd.DataFrame:
+    split, _clean_df, _context = clean_context(dataset, model_name, str(root))
+    manual_values = manual_df.reindex(columns=split.feature_names)
+    manual_values = manual_values.apply(pd.to_numeric, errors="coerce").fillna(0.0)
+    if manual_values.empty:
+        raise ValueError("Manual input table is empty.")
+
+    row_count = len(manual_values)
+    base_count = min(row_count, len(split.y_test))
+    indices = sample_indices(len(split.y_test), base_count, seed)
+    if row_count > base_count:
+        indices = np.resize(indices, row_count)
+
+    X_manual = manual_values.to_numpy(dtype=np.float32)
+    return build_detector_dataframe(X_manual, dataset, model_name, indices, root)
+
+
 def detector_batch_from_attack_generator(payload: Dict[str, Any], root: Path) -> pd.DataFrame:
     if payload.get("adv_df") is not None:
         return payload["adv_df"]
@@ -431,11 +454,11 @@ def attack_profile(attack: str) -> None:
     )
 
 
-def verdict_text(label: Any) -> Tuple[str, str]:
+def verdict_text(label: Any) -> str:
     label_str = str(label)
     if label_str in {"1", "attack", "True"}:
-        return "Phát hiện tấn công", "🔴"
-    return "Bình thường", "🟢"
+        return "Phát hiện tấn công"
+    return "Bình thường"
 
 
 def display_probability(proba: Optional[Dict[str, float]]) -> None:
@@ -461,7 +484,7 @@ def main() -> None:
         detector_family = st.selectbox("Detector model", ["rf", "xgb"], index=0, format_func=str.upper)
         st.warning("Demo dùng 3 datasets: banknote, diabetes, wilt. Các attack per/noise không có trong dữ liệu hiện tại.")
 
-    tab_attack, tab_detector = st.tabs(["🔴 Mũi giáo: Attack Generator", "🔵 Tấm khiên: Test Detector"])
+    tab_attack, tab_detector = st.tabs(["Mũi giáo: Attack Generator", "Tấm khiên: Test Detector"])
 
     with tab_attack:
         st.subheader("Tạo batch tấn công")
@@ -570,7 +593,7 @@ def main() -> None:
 
     with tab_detector:
         st.subheader("Kiểm thử mô hình phòng thủ")
-        source_options = ["Random clean OOS batch"]
+        source_options = ["Random clean OOS batch", "Manual input"]
         if "detector_payload" in st.session_state:
             source_options.insert(0, "Batch from Attack Generator")
         source_choice = st.radio("Nguồn batch", source_options, horizontal=True)
@@ -582,6 +605,38 @@ def main() -> None:
             det_attack = payload["attack"]
             det_indices = payload["indices"]
             batch_df = detector_batch_from_attack_generator(payload, root)
+        elif source_choice == "Manual input":
+            d1, d2, d3 = st.columns(3)
+            with d1:
+                det_dataset = st.selectbox("Dataset kiểm thử", DATASETS, key="manual_det_dataset")
+            with d2:
+                det_model = st.selectbox("Mô hình giám sát", MODELS, key="manual_det_model")
+            with d3:
+                det_batch_size = st.selectbox("Số dòng nhập", [1, 5, 10, 20], index=2, key="manual_det_bs")
+            det_seed = st.number_input(
+                "Seed tạo bảng mẫu",
+                min_value=0,
+                max_value=999_999,
+                value=11,
+                step=1,
+                key="manual_det_seed",
+            )
+
+            split, clean_detector_full, _context = clean_context(det_dataset, det_model, str(root))
+            template_indices = sample_indices(len(clean_detector_full), int(det_batch_size), int(det_seed))
+            template = clean_detector_full.iloc[template_indices][split.feature_names].reset_index(drop=True)
+            st.caption(
+                "Nhập hoặc sửa trực tiếp các giá trị feature bên dưới. "
+                "Các giá trị này được hiểu là feature space của mô hình giám sát/attack."
+            )
+            manual_values = st.data_editor(
+                template,
+                num_rows="dynamic",
+                use_container_width=True,
+                key=f"manual_values_{det_dataset}_{det_model}_{det_batch_size}_{det_seed}",
+            )
+            det_attack = "org"
+            batch_df = manual_detector_batch(det_dataset, det_model, manual_values, int(det_seed), root)
         else:
             d1, d2, d3 = st.columns(3)
             with d1:
@@ -611,8 +666,8 @@ def main() -> None:
                 try:
                     result = predict_batch_detector(batch_df, det_dataset, det_model, det_attack, detector_family, root)
                     label = result["binary"]["label"]
-                    text, icon = verdict_text(label)
-                    st.metric("Binary detector verdict", f"{icon} {text}")
+                    text = verdict_text(label)
+                    st.metric("Binary detector verdict", text)
                     display_probability(result["binary"]["proba"])
 
                     if result["attack_type"] is not None:
