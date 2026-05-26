@@ -1,0 +1,113 @@
+{
+  "task": "attack_type",
+  "selected_family": "extratrees",
+  "params": {
+    "n_estimators": 850,
+    "max_depth": 12,
+    "min_samples_split": 6,
+    "min_samples_leaf": 4,
+    "max_features": null
+  },
+  "feature_columns": [
+    "bacc_test",
+    "neighborhood_size_mean",
+    "uncertainty_q50",
+    "uncertainty_q75",
+    "uncertainty_q25",
+    "pred_targets_consistency_in_neighborhood_q50",
+    "target_targets_consistency_in_neighborhood_q25",
+    "uncertainty_mean",
+    "pred_targets_consistency_in_neighborhood_mean",
+    "target_diversity_in_neighborhood_mean",
+    "neighborhood_size_q25",
+    "target_targets_consistency_in_neighborhood_mean",
+    "pred_targets_consistency_in_neighborhood_q25",
+    "neighborhood_size_q50",
+    "target_approx_consistency_in_neighborhood_q25",
+    "uncertainty_q0",
+    "target_diversity_in_neighborhood_q75",
+    "approx_diversity_in_neighborhood_mean",
+    "pred_targets_consistency_in_neighborhood_q75",
+    "neighborhood_size_q75",
+    "target_targets_consistency_in_neighborhood_q0",
+    "target_targets_consistency_in_neighborhood_q50",
+    "uncertainty_q1",
+    "target_approx_consistency_in_neighborhood_mean",
+    "target_targets_consistency_in_neighborhood_minmax",
+    "uncertainty_minmax",
+    "target_approx_consistency_in_neighborhood_q75",
+    "target_approx_consistency_in_neighborhood_q50",
+    "approx_diversity_in_neighborhood_q75",
+    "target_targets_consistency_in_neighborhood_q75",
+    "approx_diversity_in_neighborhood_q50",
+    "target_diversity_in_neighborhood_q50",
+    "target_diversity_in_neighborhood_q25",
+    "pred_targets_consistency_in_neighborhood_minmax",
+    "targets_and_approxs_consistency_in_neighborhood_q25"
+  ],
+  "preprocessing": {
+    "variance_threshold": 0.0001,
+    "corr_threshold": 1.0,
+    "top_k": 35
+  },
+  "resampling_strategy_requested": "smoteenn",
+  "resampling_strategy_final": "smoteenn",
+  "classes": [
+    "bim",
+    "fgm",
+    "hsj",
+    "org",
+    "pgd",
+    "zoo"
+  ],
+  "attack_groups": {
+    "gradient_attack": [
+      "bim",
+      "fgm",
+      "pgd"
+    ],
+    "blackbox_attack": [
+      "hsj",
+      "zoo"
+    ],
+    "org": [
+      "org"
+    ]
+  },
+  "prediction_constraints_enabled": true,
+  "allowed_attacks_by_monitored_model": {
+    "nn": [
+      "org",
+      "bim",
+      "fgm",
+      "pgd"
+    ],
+    "lin": [
+      "org",
+      "hsj",
+      "zoo"
+    ],
+    "svm": [
+      "org",
+      "hsj",
+      "zoo"
+    ],
+    "xgb": [
+      "org",
+      "hsj",
+      "zoo"
+    ]
+  },
+  "selection_mode": "combined",
+  "dataset_score_weight": 0.65,
+  "model_score_weight": 0.35,
+  "selection_bacc": 0.6021219135802469,
+  "selection_kappa": 0.5545615534303747,
+  "dataset_bacc": 0.558641975308642,
+  "dataset_kappa": 0.5540263215168159,
+  "model_bacc": 0.6828703703703703,
+  "model_kappa": 0.5555555555555556,
+  "training_table_source": "windowed_raw_diagnostics",
+  "windowed_aggregation_enabled": true,
+  "notes": "Experimental optimized attack-type classifier. Current table is very small; validate on new diagnostic rows before relying on it."
+}

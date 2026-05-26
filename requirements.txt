@@ -13,3 +13,6 @@ pytest
 requests
 streamlit
 plotly
+optuna
+catboost
+imbalanced-learn

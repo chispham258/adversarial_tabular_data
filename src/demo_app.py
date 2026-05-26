@@ -126,14 +126,36 @@ def load_detector_artifacts(root_str: str, detector_kind: str, model_family: str
     if detector_kind == "binary":
         artifact_dir = root / "models" / "binary_attack"
         prefix = f"binary_{model_family}"
+        model_path = artifact_dir / f"{prefix}.joblib"
+        encoder_path = artifact_dir / f"{prefix}_label_encoder.joblib"
+        features_path = artifact_dir / f"{prefix}_features.json"
+        config_path = artifact_dir / f"{prefix}_config.json"
+    elif detector_kind == "type_optimized":
+        artifact_dir = root / "models" / "attack_type_optimized"
+        prefix = "attack_type_optimized"
+        model_path = artifact_dir / f"{prefix}_best.joblib"
+        encoder_path = artifact_dir / f"{prefix}_label_encoder.joblib"
+        features_path = artifact_dir / f"{prefix}_features.json"
+        config_path = artifact_dir / f"{prefix}_config.json"
+    elif detector_kind == "family_optimized":
+        artifact_dir = root / "models" / "attack_type_optimized"
+        prefix = "attack_family_optimized"
+        model_path = artifact_dir / f"{prefix}_best.joblib"
+        encoder_path = artifact_dir / f"{prefix}_label_encoder.joblib"
+        features_path = artifact_dir / f"{prefix}_features.json"
+        config_path = artifact_dir / f"{prefix}_config.json"
     else:
         artifact_dir = root / "models" / "attack_type"
         prefix = f"attack_type_{model_family}"
+        model_path = artifact_dir / f"{prefix}.joblib"
+        encoder_path = artifact_dir / f"{prefix}_label_encoder.joblib"
+        features_path = artifact_dir / f"{prefix}_features.json"
+        config_path = artifact_dir / f"{prefix}_config.json"
 
-    model = joblib.load(artifact_dir / f"{prefix}.joblib")
-    encoder = joblib.load(artifact_dir / f"{prefix}_label_encoder.joblib")
-    features = json.loads((artifact_dir / f"{prefix}_features.json").read_text(encoding="utf-8"))
-    config = json.loads((artifact_dir / f"{prefix}_config.json").read_text(encoding="utf-8"))
+    model = joblib.load(model_path)
+    encoder = joblib.load(encoder_path)
+    features = json.loads(features_path.read_text(encoding="utf-8"))
+    config = json.loads(config_path.read_text(encoding="utf-8"))
     return model, encoder, features, config
 
 
@@ -366,6 +388,14 @@ def predict_with_artifact(
     return {"label": pred_label, "proba": proba}
 
 
+def optimized_artifact_available(root: Path, prefix: str) -> bool:
+    artifact_dir = root / "models" / "attack_type_optimized"
+    return all(
+        (artifact_dir / f"{prefix}{suffix}").exists()
+        for suffix in ["_best.joblib", "_label_encoder.joblib", "_features.json", "_config.json"]
+    )
+
+
 def predict_batch_detector(
     batch_df: pd.DataFrame,
     dataset: str,
@@ -378,11 +408,30 @@ def predict_batch_detector(
     binary_result = predict_with_artifact(binary_row, "binary", detector_family, root)
 
     type_result = None
+    family_result = None
+    type_source = None
+    family_source = None
     if attack in SUPPORTED_TYPE_LABELS:
         type_row = aggregate_for_detector(batch_df, dataset, model_name, attack, root, task="type")
-        type_result = predict_with_artifact(type_row, "type", detector_family, root)
+        if optimized_artifact_available(root, "attack_type_optimized"):
+            type_result = predict_with_artifact(type_row, "type_optimized", detector_family, root)
+            type_source = "optimized"
+        else:
+            type_result = predict_with_artifact(type_row, "type", detector_family, root)
+            type_source = detector_family.upper()
 
-    return {"binary": binary_result, "attack_type": type_result, "binary_features": binary_row}
+        if optimized_artifact_available(root, "attack_family_optimized"):
+            family_result = predict_with_artifact(type_row, "family_optimized", detector_family, root)
+            family_source = "optimized"
+
+    return {
+        "binary": binary_result,
+        "attack_type": type_result,
+        "attack_type_source": type_source,
+        "attack_family": family_result,
+        "attack_family_source": family_source,
+        "binary_features": binary_row,
+    }
 
 
 def compute_delta_table(clean: pd.DataFrame, attacked: pd.DataFrame) -> pd.DataFrame:
@@ -671,13 +720,29 @@ def main() -> None:
                     display_probability(result["binary"]["proba"])
 
                     if result["attack_type"] is not None:
-                        st.metric("Attack-type classifier", str(result["attack_type"]["label"]))
+                        type_label = "Attack-type classifier"
+                        if result.get("attack_type_source"):
+                            type_label += f" ({result['attack_type_source']})"
+                        st.metric(type_label, str(result["attack_type"]["label"]))
                         display_probability(result["attack_type"]["proba"])
                     else:
                         st.info("Attack-type detector không hỗ trợ nhãn này.")
 
+                    if result.get("attack_family") is not None:
+                        family_label = "Attack-family classifier"
+                        if result.get("attack_family_source"):
+                            family_label += f" ({result['attack_family_source']})"
+                        st.metric(family_label, str(result["attack_family"]["label"]))
+                        display_probability(result["attack_family"]["proba"])
+                    else:
+                        st.info("Attack-family detector chưa có artifact tối ưu.")
+
                     rows_view = batch_df.copy()
                     rows_view["batch_verdict"] = text
+                    if result.get("attack_type") is not None:
+                        rows_view["batch_attack_type"] = str(result["attack_type"]["label"])
+                    if result.get("attack_family") is not None:
+                        rows_view["batch_attack_family"] = str(result["attack_family"]["label"])
                     rows_view["row_note"] = "Member of inspected batch"
                     st.markdown("### Các dòng thuộc batch được kiểm thử")
                     st.dataframe(rows_view, use_container_width=True)

@@ -1,0 +1,78 @@
+{
+  "task": "attack_family",
+  "selected_family": "extratrees",
+  "params": {
+    "n_estimators": 850,
+    "max_depth": 12,
+    "min_samples_split": 6,
+    "min_samples_leaf": 4,
+    "max_features": null
+  },
+  "feature_columns": [
+    "bacc_test",
+    "neighborhood_size_mean",
+    "pred_targets_consistency_in_neighborhood_q50",
+    "target_targets_consistency_in_neighborhood_q25",
+    "uncertainty_q75",
+    "target_diversity_in_neighborhood_mean",
+    "target_targets_consistency_in_neighborhood_mean",
+    "uncertainty_q50",
+    "uncertainty_q25",
+    "neighborhood_size_q25",
+    "pred_targets_consistency_in_neighborhood_q25",
+    "pred_targets_consistency_in_neighborhood_mean",
+    "target_diversity_in_neighborhood_q75",
+    "pred_targets_consistency_in_neighborhood_q75",
+    "target_approx_consistency_in_neighborhood_q25",
+    "neighborhood_size_q50",
+    "uncertainty_mean",
+    "target_targets_consistency_in_neighborhood_q0",
+    "uncertainty_q1",
+    "approx_diversity_in_neighborhood_mean",
+    "target_targets_consistency_in_neighborhood_q50",
+    "neighborhood_size_q75",
+    "target_targets_consistency_in_neighborhood_minmax",
+    "target_approx_consistency_in_neighborhood_mean",
+    "uncertainty_q0",
+    "target_approx_consistency_in_neighborhood_q75",
+    "target_targets_consistency_in_neighborhood_q75",
+    "target_approx_consistency_in_neighborhood_q50",
+    "approx_diversity_in_neighborhood_q75",
+    "target_diversity_in_neighborhood_q50",
+    "approx_diversity_in_neighborhood_q50",
+    "target_diversity_in_neighborhood_minmax",
+    "approx_diversity_in_neighborhood_q25",
+    "target_diversity_in_neighborhood_q25",
+    "target_approx_consistency_in_neighborhood_minmax"
+  ],
+  "preprocessing": {
+    "variance_threshold": 0.0001,
+    "corr_threshold": 1.0,
+    "top_k": 35
+  },
+  "resampling_strategy_requested": "smoteenn",
+  "resampling_strategy_final": "smoteenn",
+  "classes": [
+    "blackbox_attack",
+    "gradient_attack",
+    "org"
+  ],
+  "attack_groups": {
+    "gradient_attack": [
+      "bim",
+      "fgm",
+      "pgd"
+    ],
+    "blackbox_attack": [
+      "hsj",
+      "zoo"
+    ],
+    "org": [
+      "org"
+    ]
+  },
+  "selection_source": "same candidate family/params selected by exact attack-type combined score",
+  "training_table_source": "windowed_raw_diagnostics",
+  "windowed_aggregation_enabled": true,
+  "notes": "Direct grouped attack-family classifier. Intended for demo/report use when exact bim/fgm/pgd separation is unstable."
+}
