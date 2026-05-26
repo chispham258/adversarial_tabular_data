@@ -36,38 +36,32 @@ ATTACK_PROFILES: Dict[str, Dict[str, str]] = {
     "fgm": {
         "name": "Fast Gradient Method (FGM)",
         "type": "White-box / gradient-based",
-        "signature": "Thường thay đổi nhiều cột một lượng nhỏ, tạo nhiễu mịn và khó thấy bằng mắt.",
-        "note": "Nhanh, phù hợp để demo live với mô hình NN.",
+        "signature": "Small changes across many features.",
     },
     "bim": {
         "name": "Basic Iterative Method (BIM)",
         "type": "White-box / iterative gradient",
-        "signature": "Tương tự FGM nhưng cập nhật nhiều bước, nhiễu có xu hướng rõ hơn.",
-        "note": "Ổn cho demo live với batch nhỏ.",
+        "signature": "Iterative feature changes with a stronger perturbation pattern.",
     },
     "pgd": {
         "name": "Projected Gradient Descent (PGD)",
         "type": "White-box / iterative projected gradient",
-        "signature": "Tấn công mạnh hơn FGM/BIM, bóp dữ liệu theo nhiều bước trong một biên epsilon.",
-        "note": "Nên dùng batch nhỏ khi chạy live.",
+        "signature": "Multi-step perturbation constrained by an epsilon bound.",
     },
     "zoo": {
         "name": "Zeroth Order Optimization (ZOO)",
         "type": "Black-box / query-based",
-        "signature": "Ước lượng hướng tấn công bằng cách hỏi mô hình nhiều lần; thường chậm.",
-        "note": "Demo nên dùng replay để tránh treo giao diện.",
+        "signature": "Query-based changes estimated from model responses.",
     },
     "hsj": {
         "name": "HopSkipJump (HSJ)",
         "type": "Black-box / decision-boundary search",
-        "signature": "Có thể thay đổi rất ít cột nhưng vẫn đẩy mẫu qua biên quyết định.",
-        "note": "Rất hay để trình diễn delta highlight; live mode có thể chậm.",
+        "signature": "Often changes a small number of features near a decision boundary.",
     },
     "lpf": {
         "name": "LowProFool (LPF)",
         "type": "Black-box / tabular-oriented",
-        "signature": "Tập trung thay đổi các feature có độ ưu tiên cao.",
-        "note": "Có file replay nhưng không thuộc các nhãn attack-type cuối cùng.",
+        "signature": "Prioritizes changes to selected high-impact features.",
     },
 }
 
@@ -491,13 +485,12 @@ def attack_options(dataset: str, model_name: str, root: Path, live_mode: bool) -
 
 def attack_profile(attack: str) -> None:
     profile = ATTACK_PROFILES.get(attack, {})
-    st.info(
+    st.markdown(
         "\n".join(
             [
-                f"**Tấn công:** {profile.get('name', attack)}",
-                f"**Loại hình:** {profile.get('type', 'N/A')}",
-                f"**Chữ ký:** {profile.get('signature', 'N/A')}",
-                f"**Ghi chú:** {profile.get('note', 'N/A')}",
+                f"**Method:** {profile.get('name', attack)}",
+                f"**Category:** {profile.get('type', 'N/A')}",
+                f"**Typical pattern:** {profile.get('signature', 'N/A')}",
             ]
         )
     )
@@ -506,8 +499,8 @@ def attack_profile(attack: str) -> None:
 def verdict_text(label: Any) -> str:
     label_str = str(label)
     if label_str in {"1", "attack", "True"}:
-        return "Phát hiện tấn công"
-    return "Bình thường"
+        return "Attack detected"
+    return "Clean"
 
 
 def display_probability(proba: Optional[Dict[str, float]]) -> None:
@@ -521,41 +514,37 @@ def main() -> None:
     st.set_page_config(page_title="Adversarial Tabular Demo", layout="wide")
     root = repo_root()
 
-    st.title("Demo: Nhận diện tấn công trên dữ liệu dạng bảng")
-    st.caption(
-        "Mô hình detector trả kết luận ở mức batch/window. Bảng từng dòng bên dưới là phần giải thích trực quan, "
-        "không phải dự đoán độc lập cho từng dòng."
-    )
+    st.title("Adversarial Attack Detection")
+    st.caption("Batch-level diagnostics for tabular adversarial detection.")
 
     with st.sidebar:
-        st.header("Cấu hình")
-        st.write(f"Repo: `{root}`")
+        st.header("Settings")
         detector_family = st.selectbox("Detector model", ["rf", "xgb"], index=0, format_func=str.upper)
-        st.warning("Demo dùng 3 datasets: banknote, diabetes, wilt. Các attack per/noise không có trong dữ liệu hiện tại.")
+        st.caption("Available datasets: banknote, diabetes, wilt.")
 
-    tab_attack, tab_detector = st.tabs(["Mũi giáo: Attack Generator", "Tấm khiên: Test Detector"])
+    tab_attack, tab_detector = st.tabs(["Attack generation", "Detection"])
 
     with tab_attack:
-        st.subheader("Tạo batch tấn công")
+        st.subheader("Generate adversarial batch")
         mode = st.radio(
-            "Chế độ tạo dữ liệu",
-            ["Fast demo replay (Recommended)", "Live ART generation"],
+            "Generation mode",
+            ["Replay precomputed samples", "Generate with ART"],
             horizontal=True,
         )
-        live_mode = mode == "Live ART generation"
+        live_mode = mode == "Generate with ART"
         if live_mode:
             st.warning(
-                f"Live ART chỉ hỗ trợ ổn định cho nn + fgm/bim/pgd và sẽ giới hạn batch tối đa {LIVE_ART_MAX_BATCH} dòng."
+                f"ART generation is limited to nn + fgm/bim/pgd and at most {LIVE_ART_MAX_BATCH} rows."
             )
 
         c1, c2, c3, c4 = st.columns(4)
         with c1:
             dataset = st.selectbox("Dataset", DATASETS)
         with c2:
-            model_name = st.selectbox("Mô hình bị tấn công", MODELS)
+            model_name = st.selectbox("Monitored model", MODELS)
         opts = attack_options(dataset, model_name, root, live_mode)
         if not opts:
-            st.error("Không có attack phù hợp cho lựa chọn này.")
+            st.error("No compatible attack is available for this selection.")
             st.stop()
         with c3:
             attack = st.selectbox("Attack", opts)
@@ -565,7 +554,7 @@ def main() -> None:
         seed = st.number_input("Random seed", min_value=0, max_value=999_999, value=42, step=1)
         effective_batch = min(int(batch_size), LIVE_ART_MAX_BATCH) if live_mode else int(batch_size)
         if live_mode and effective_batch < batch_size:
-            st.caption(f"Live mode đang dùng {effective_batch} dòng để tránh chạy quá lâu.")
+            st.caption(f"Using {effective_batch} rows for live generation.")
 
         attack_profile(attack)
 
@@ -578,11 +567,11 @@ def main() -> None:
         if st.button("Generate attack batch", type="primary"):
             if live_mode:
                 try:
-                    with st.spinner("Đang chạy ART attack live..."):
+                    with st.spinner("Generating adversarial samples..."):
                         adv_df = generate_live_art_attack(dataset, model_name, attack, indices, root)
                         source = "live_art"
                 except Exception as exc:
-                    st.warning(f"Live attack failed; using precomputed attack sample for demo stability. ({exc})")
+                    st.warning(f"Live generation failed. Using a precomputed sample instead. ({exc})")
                     adv_df = load_precomputed_attack(dataset, model_name, attack, indices, root)
                     source = "replay_fallback"
             else:
@@ -602,13 +591,13 @@ def main() -> None:
             adv_df = detector_batch_from_attack_generator(payload, root)
             source = payload.get("source", "replay")
 
-        st.markdown("### Dữ liệu sạch từ `data/processed`")
+        st.markdown("### Clean sample")
         display_clean = clean_processed.copy()
         display_clean["target"] = y_processed
         st.dataframe(display_clean, use_container_width=True)
 
         if adv_df is not None:
-            st.success(f"Attack batch ready. Source: `{source}`")
+            st.success("Attack batch generated.")
             feature_cols = split.feature_names
             clean_compare = clean_detector[feature_cols].reset_index(drop=True)
             adv_compare = adv_df[feature_cols].reset_index(drop=True)
@@ -616,16 +605,16 @@ def main() -> None:
 
             left, right = st.columns(2)
             with left:
-                st.markdown("### Clean batch trong attack/detector space")
+                st.markdown("### Clean feature space")
                 st.dataframe(clean_compare, use_container_width=True)
             with right:
-                st.markdown("### Adversarial batch")
+                st.markdown("### Adversarial feature space")
                 st.dataframe(adv_compare, use_container_width=True)
 
-            st.markdown("### Delta highlight: adversarial - clean")
+            st.markdown("### Feature delta")
             st.dataframe(delta_styler(delta), use_container_width=True)
 
-            row_choice = st.slider("Chọn dòng để xem radar chart", 0, len(clean_compare) - 1, 0)
+            row_choice = st.slider("Row for radar chart", 0, len(clean_compare) - 1, 0)
             fig = make_radar_chart(
                 clean_compare.iloc[row_choice],
                 adv_compare.iloc[row_choice],
@@ -634,36 +623,36 @@ def main() -> None:
             if fig is not None:
                 st.plotly_chart(fig, use_container_width=True)
             else:
-                st.warning("Plotly chưa được cài, không thể hiển thị radar chart.")
+                st.warning("Plotly is not installed, so the radar chart cannot be displayed.")
 
-            if st.button("Send this batch to Detector"):
+            if st.button("Use this batch for detection"):
                 st.session_state["detector_payload"] = st.session_state["attack_payload"]
-                st.success("Đã gửi batch sang tab Detector.")
+                st.success("Batch added to the Detection tab.")
 
     with tab_detector:
-        st.subheader("Kiểm thử mô hình phòng thủ")
-        source_options = ["Random clean OOS batch", "Manual input"]
+        st.subheader("Run detection")
+        source_options = ["Random clean batch", "Manual feature input"]
         if "detector_payload" in st.session_state:
-            source_options.insert(0, "Batch from Attack Generator")
-        source_choice = st.radio("Nguồn batch", source_options, horizontal=True)
+            source_options.insert(0, "Generated attack batch")
+        source_choice = st.radio("Batch source", source_options, horizontal=True)
 
-        if source_choice == "Batch from Attack Generator":
+        if source_choice == "Generated attack batch":
             payload = st.session_state["detector_payload"]
             det_dataset = payload["dataset"]
             det_model = payload["model"]
             det_attack = payload["attack"]
             det_indices = payload["indices"]
             batch_df = detector_batch_from_attack_generator(payload, root)
-        elif source_choice == "Manual input":
+        elif source_choice == "Manual feature input":
             d1, d2, d3 = st.columns(3)
             with d1:
-                det_dataset = st.selectbox("Dataset kiểm thử", DATASETS, key="manual_det_dataset")
+                det_dataset = st.selectbox("Dataset", DATASETS, key="manual_det_dataset")
             with d2:
-                det_model = st.selectbox("Mô hình giám sát", MODELS, key="manual_det_model")
+                det_model = st.selectbox("Monitored model", MODELS, key="manual_det_model")
             with d3:
-                det_batch_size = st.selectbox("Số dòng nhập", [1, 5, 10, 20], index=2, key="manual_det_bs")
+                det_batch_size = st.selectbox("Rows", [1, 5, 10, 20], index=2, key="manual_det_bs")
             det_seed = st.number_input(
-                "Seed tạo bảng mẫu",
+                "Template seed",
                 min_value=0,
                 max_value=999_999,
                 value=11,
@@ -675,8 +664,7 @@ def main() -> None:
             template_indices = sample_indices(len(clean_detector_full), int(det_batch_size), int(det_seed))
             template = clean_detector_full.iloc[template_indices][split.feature_names].reset_index(drop=True)
             st.caption(
-                "Nhập hoặc sửa trực tiếp các giá trị feature bên dưới. "
-                "Các giá trị này được hiểu là feature space của mô hình giám sát/attack."
+                "Edit the feature values below. Values are interpreted in the selected model's processed feature space."
             )
             manual_values = st.data_editor(
                 template,
@@ -689,53 +677,52 @@ def main() -> None:
         else:
             d1, d2, d3 = st.columns(3)
             with d1:
-                det_dataset = st.selectbox("Dataset kiểm thử", DATASETS, key="det_dataset")
+                det_dataset = st.selectbox("Dataset", DATASETS, key="det_dataset")
             with d2:
-                det_model = st.selectbox("Mô hình giám sát", MODELS, key="det_model")
+                det_model = st.selectbox("Monitored model", MODELS, key="det_model")
             with d3:
-                det_batch_size = st.selectbox("Batch size kiểm thử", [10, 20, 50, 100], index=1, key="det_bs")
-            det_seed = st.number_input("Seed kiểm thử", min_value=0, max_value=999_999, value=7, step=1)
+                det_batch_size = st.selectbox("Batch size", [10, 20, 50, 100], index=1, key="det_bs")
+            det_seed = st.number_input("Random seed", min_value=0, max_value=999_999, value=7, step=1)
             _X_display, _y_display, det_indices = load_processed_oos_batch(det_dataset, int(det_batch_size), int(det_seed), root)
             det_attack = "org"
             batch_df = clean_detector_batch(det_dataset, det_model, det_indices, root)
 
         st.caption(
-            f"Batch đang kiểm thử: dataset=`{det_dataset}`, model=`{det_model}`, "
-            f"attack/source=`{det_attack}`, rows={len(batch_df)}"
+            f"Current batch: dataset=`{det_dataset}`, model=`{det_model}`, source=`{det_attack}`, rows={len(batch_df)}"
         )
 
         if det_attack == "lpf":
-            st.warning("LPF có thể hiển thị trực quan, nhưng không thuộc nhãn attack-type cuối cùng.")
+            st.warning("LPF is available for visualization, but it is not part of the exact attack-type label set.")
 
         if len(batch_df) < 30:
-            st.warning("Batch nhỏ hơn 30 dòng: kết quả phù hợp cho demo/cảnh báo nhanh, không nên xem là quyết định chắc chắn.")
+            st.caption("Small batch: interpret the result as indicative.")
 
         if st.button("Run detector", type="primary"):
-            with st.spinner("Đang tạo diagnostic vector và chạy detector..."):
+            with st.spinner("Computing diagnostic features..."):
                 try:
                     result = predict_batch_detector(batch_df, det_dataset, det_model, det_attack, detector_family, root)
                     label = result["binary"]["label"]
                     text = verdict_text(label)
-                    st.metric("Binary detector verdict", text)
+                    st.metric("Binary result", text)
                     display_probability(result["binary"]["proba"])
 
                     if result["attack_type"] is not None:
-                        type_label = "Attack-type classifier"
+                        type_label = "Attack type"
                         if result.get("attack_type_source"):
                             type_label += f" ({result['attack_type_source']})"
                         st.metric(type_label, str(result["attack_type"]["label"]))
                         display_probability(result["attack_type"]["proba"])
                     else:
-                        st.info("Attack-type detector không hỗ trợ nhãn này.")
+                        st.info("Exact attack classification is unavailable for this label.")
 
                     if result.get("attack_family") is not None:
-                        family_label = "Attack-family classifier"
+                        family_label = "Attack family"
                         if result.get("attack_family_source"):
                             family_label += f" ({result['attack_family_source']})"
                         st.metric(family_label, str(result["attack_family"]["label"]))
                         display_probability(result["attack_family"]["proba"])
                     else:
-                        st.info("Attack-family detector chưa có artifact tối ưu.")
+                        st.info("Attack family classification is unavailable.")
 
                     rows_view = batch_df.copy()
                     rows_view["batch_verdict"] = text
@@ -743,14 +730,14 @@ def main() -> None:
                         rows_view["batch_attack_type"] = str(result["attack_type"]["label"])
                     if result.get("attack_family") is not None:
                         rows_view["batch_attack_family"] = str(result["attack_family"]["label"])
-                    rows_view["row_note"] = "Member of inspected batch"
-                    st.markdown("### Các dòng thuộc batch được kiểm thử")
+                    rows_view["row_note"] = "Inspected batch member"
+                    st.markdown("### Inspected rows")
                     st.dataframe(rows_view, use_container_width=True)
 
                     with st.expander("Diagnostic vector fed to detector"):
                         st.dataframe(result["binary_features"], use_container_width=True)
                 except Exception as exc:
-                    st.error(f"Detector failed: {exc}")
+                    st.error(f"Detection failed: {exc}")
 
 
 if __name__ == "__main__":
