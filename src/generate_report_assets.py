@@ -100,7 +100,12 @@ def aggregate_metric(df: pd.DataFrame, group_cols: list[str], metric_cols: list[
 def save_current_fig(name: str) -> str:
     path = FIG_DIR / f"{name}.png"
     plt.tight_layout()
-    plt.savefig(path, dpi=220, bbox_inches="tight")
+    try:
+        plt.savefig(path, dpi=220, bbox_inches="tight")
+    except PermissionError:
+        if not path.exists():
+            raise
+        print(f"Figure is locked; keeping existing file: {path}")
     plt.close()
     return f"figures/{path.name}"
 
@@ -371,11 +376,23 @@ def params_block(title: str, params: dict) -> str:
     return f"**{title}:**\n\n```json\n{json.dumps(params, indent=2)}\n```"
 
 
+def feature_list_block(title: str, features: list[str]) -> str:
+    if not features:
+        return f"**{title}:** not available."
+    rows = []
+    for idx, feature in enumerate(features, start=1):
+        rows.append({"#": idx, "feature": feature})
+    return f"**{title} ({len(features)} features)**\n\n{simple_markdown_table(pd.DataFrame(rows))}"
+
+
 def build_report(figures: dict[str, str], tables: dict[str, pd.DataFrame], configs: dict[str, dict]) -> str:
     binary_params = configs.get("binary_params", {})
     type_params = configs.get("type_params", {})
     exact_config = configs.get("exact_config", {})
     family_config = configs.get("family_config", {})
+    binary_features = configs.get("binary_features", [])
+    exact_features = configs.get("exact_features", exact_config.get("feature_columns", []))
+    family_features = configs.get("family_features", family_config.get("feature_columns", []))
 
     exact_model = exact_config.get("selected_family", "selected classifier")
     family_model = family_config.get("selected_family", "selected classifier")
@@ -468,6 +485,16 @@ $$
 The diagnostic distributions show why a secondary classifier can detect attacks: clean and attacked batches tend to separate through uncertainty, neighborhood size, consistency, and diversity.
 
 ![Diagnostic feature distributions]({figures["diagnostics"]})
+
+### Engineered Features Used by the Models
+
+The binary detector uses the full aggregated diagnostic vector. The optimized exact attack and attack family classifiers use selected diagnostic features after variance filtering, correlation handling, and top-k selection.
+
+{feature_list_block("Binary attack identifier feature set", binary_features)}
+
+{feature_list_block("Optimized exact attack classifier feature set", exact_features)}
+
+{feature_list_block("Optimized attack family classifier feature set", family_features)}
 
 ## 3. Binary Attack Identification
 
@@ -572,6 +599,9 @@ def main() -> None:
     type_params = read_json(RESULTS_DIR / "attack_type_best_params.json")
     exact_config = read_json(MODELS_DIR / "attack_type_optimized" / "attack_type_optimized_config.json")
     family_config = read_json(MODELS_DIR / "attack_type_optimized" / "attack_family_optimized_config.json")
+    binary_features = read_json(MODELS_DIR / "binary_attack" / "binary_rf_features.json")
+    exact_features = read_json(MODELS_DIR / "attack_type_optimized" / "attack_type_optimized_features.json")
+    family_features = read_json(MODELS_DIR / "attack_type_optimized" / "attack_family_optimized_features.json")
     exact_family = exact_config.get("selected_family", "extratrees")
     family_family = family_config.get("selected_family", exact_family)
 
@@ -614,6 +644,9 @@ def main() -> None:
         "type_params": type_params,
         "exact_config": exact_config,
         "family_config": family_config,
+        "binary_features": binary_features,
+        "exact_features": exact_features,
+        "family_features": family_features,
     }
 
     report = build_report(figures, tables, configs)
