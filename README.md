@@ -40,7 +40,7 @@ The implemented tasks are:
 Project responsibilities:
 
 - Pham Ngoc Tho: attack generation and testing.
-- Doan Quoc Kien: attack classification.
+- Doan Quoc Kien: attack classification and demo.
 
 ## Datasets
 
